@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Re:ゼロから始める異世界生活 帝国編・同人体験版</title>
+<title>Re:从零开始的异世界生活 帝国篇 · 同人试玩版</title>
 <style>
 @font-face{font-family:"VNSerif";src:url(fonts/serif-regular.woff2) format("woff2");font-weight:400}
 @font-face{font-family:"VNSerif";src:url(fonts/serif-bold.woff2) format("woff2");font-weight:700}
 :root{--gold1:#fff1c2;--gold2:#d7a94b;--gold3:#8a5d1c;--cyan:#5ee6f2;--cyan2:#1aa7c4;--ink:#3b3440;--parch1:#fdf8ea;--parch2:#efe2c0;--purple:#5a3f9a}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:"VNSerif","Noto Serif JP","Noto Serif CJK JP","Hiragino Mincho ProN",serif;color:var(--ink);user-select:none}
+html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:"VNSerif","Noto Serif SC","Noto Serif CJK SC","Songti SC",serif;color:var(--ink);user-select:none}
 #wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
 #stage{position:relative;width:1280px;height:720px;overflow:hidden;background:#000;transform-origin:center center}
 .layer{position:absolute;inset:0}
@@ -160,64 +160,64 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="layer" id="overlay"></div>
   <div class="layer" id="flash"></div>
   <div class="layer" id="chapter"><div class="card"></div></div>
-  <div id="aff">♥ レムの信頼 <span id="affv">0</span></div>
+  <div id="aff">♥ 雷姆的信赖 <span id="affv">0</span></div>
   <div id="mode"></div>
   <div id="box"><div class="panelbg"></div><div id="emblem"></div><div id="name" class="empty"><span></span></div><div id="text"></div><span id="cursor"></span></div>
   <div id="bar">
-    <button data-a="auto">自動</button><button data-a="skip">早送り</button><button data-a="log">ログ</button>
-    <button data-a="save">セーブ</button><button data-a="load">ロード</button><button data-a="ch">章</button><button data-a="cfg">設定</button><button data-a="hide">非表示</button><button data-a="title">タイトル</button>
+    <button data-a="auto">自动</button><button data-a="skip">快进</button><button data-a="log">记录</button>
+    <button data-a="save">存档</button><button data-a="load">读档</button><button data-a="ch">章节</button><button data-a="cfg">设置</button><button data-a="hide">隐藏</button><button data-a="title">标题</button>
   </div>
   <div class="layer" id="choices"></div>
 
   <div class="layer panel" id="logP"><div class="bokeh"></div>
-    <div class="phead"><div class="gem"></div><h2>会話ログ</h2><small>BACKLOG</small></div><button class="obtn pclose" data-close>戻る</button>
+    <div class="phead"><div class="gem"></div><h2>对话记录</h2><small>BACKLOG</small></div><button class="obtn pclose" data-close>返回</button>
     <div class="pbody"><div class="parch" style="flex:1;display:flex;flex-direction:column;min-height:0;margin-bottom:16px"><div id="logList"></div></div></div>
-    <div class="pfoot">ホイールでログを閲覧　｜　Esc／戻るで閉じる</div></div>
+    <div class="pfoot">滚轮浏览记录　｜　Esc / 返回 关闭</div></div>
   <div class="layer panel" id="slotP"><div class="bokeh"></div>
-    <div class="phead"><div class="gem"></div><h2 id="slotTitle">セーブ</h2><small id="slotEn">SAVE</small></div><button class="obtn pclose" data-close>戻る</button>
+    <div class="phead"><div class="gem"></div><h2 id="slotTitle">存档</h2><small id="slotEn">SAVE</small></div><button class="obtn pclose" data-close>返回</button>
     <div class="pbody"><div class="slots" id="slots"></div></div>
-    <div class="pfoot" id="slotHint">スロットを選択してください</div></div>
+    <div class="pfoot" id="slotHint">请选择栏位</div></div>
   <div class="layer panel" id="cfgP"><div class="bokeh"></div>
-    <div class="phead"><div class="gem"></div><h2>設定</h2><small>CONFIG</small></div><button class="obtn pclose" data-close>戻る</button>
+    <div class="phead"><div class="gem"></div><h2>设置</h2><small>CONFIG</small></div><button class="obtn pclose" data-close>返回</button>
     <div class="pbody"><div class="parch card2" id="cfg">
       <div class="row"><label>文字速度</label><input type="range" id="ts" min="5" max="80" step="5"><span class="v" id="tsv"></span></div>
-      <div class="row"><label>自動待機</label><input type="range" id="as" min="400" max="4000" step="200"><span class="v" id="asv"></span></div>
-      <div class="row"><label>音楽音量</label><input type="range" id="vb" min="0" max="100" step="5"><span class="v" id="vbv"></span></div>
-      <div class="row"><label>効果音音量</label><input type="range" id="vs" min="0" max="100" step="5"><span class="v" id="vsv"></span></div>
-      <div class="row"><label>ボイス音量</label><input type="range" id="vv" min="0" max="100" step="5"><span class="v" id="vvv"></span></div>
-      <div class="row"><label>好感度表示</label><div class="tog" id="affTog"></div><input type="checkbox" id="showAff" style="display:none"><span class="v">レムの信頼値</span></div>
+      <div class="row"><label>自动等待</label><input type="range" id="as" min="400" max="4000" step="200"><span class="v" id="asv"></span></div>
+      <div class="row"><label>音乐音量</label><input type="range" id="vb" min="0" max="100" step="5"><span class="v" id="vbv"></span></div>
+      <div class="row"><label>音效音量</label><input type="range" id="vs" min="0" max="100" step="5"><span class="v" id="vsv"></span></div>
+      <div class="row"><label>语音音量</label><input type="range" id="vv" min="0" max="100" step="5"><span class="v" id="vvv"></span></div>
+      <div class="row"><label>显示好感度</label><div class="tog" id="affTog"></div><input type="checkbox" id="showAff" style="display:none"><span class="v">雷姆的信赖值</span></div>
     </div></div>
-    <div class="pfoot">設定はブラウザに自動保存されます　｜　Escで戻る</div></div>
+    <div class="pfoot">设置会自动保存在浏览器本地　｜　Esc 返回</div></div>
   <div class="layer panel" id="helpP"><div class="bokeh"></div>
-    <div class="phead"><div class="gem"></div><h2>操作説明</h2><small>HELP</small></div><button class="obtn pclose" data-close>戻る</button>
+    <div class="phead"><div class="gem"></div><h2>操作说明</h2><small>HELP</small></div><button class="obtn pclose" data-close>返回</button>
     <div class="pbody"><div class="parch card2" id="help">
-      <p><b>左クリック／スペース／Enter</b>：会話を進める（文字表示中にクリックすると全文を即表示）</p>
-      <p><b>Ctrl長押し</b>：一時早送り　｜　<b>A</b>：自動　｜　<b>S</b>：早送り切替　｜　<b>L／ホイール上</b>：会話ログ</p>
-      <p><b>H／右クリック</b>：ダイアログ非表示　｜　<b>Esc</b>：パネルを閉じる　｜　タイトル画面では <b>↑ ↓</b> で選択可</p>
-      <p>セーブ／ロード：計3スロット、ブラウザのローカルに保存（localStorage）。会話ログの <b>▶</b> でボイスを再聴できます。</p>
-      <p>本作は個人・非商用の同人体験版です。物語はオリジナルの改作で、画像はAI生成のもので差し替え可能です。ボイス・音楽・効果音の出典はCREDITS.txtをご覧ください。</p>
+      <p><b>左键 / 空格 / 回车</b>：推进对话（打字中点击会立刻显示整句）</p>
+      <p><b>按住 Ctrl</b>：临时快进　｜　<b>A</b>：自动　｜　<b>S</b>：快进开关　｜　<b>L / 滚轮上</b>：对话记录</p>
+      <p><b>H / 右键</b>：隐藏对话框　｜　<b>Esc</b>：关闭面板　｜　标题画面可用 <b>↑ ↓</b> 选择</p>
+      <p>存档 / 读档：共 3 个栏位，保存在浏览器本地（localStorage）。对话记录中点 <b>▶</b> 可重听语音。</p>
+      <p>本作为个人非商业同人试玩，剧情为原创改写，图片为 AI 生成，可自行替换；配音、音乐、音效来源见 CREDITS.txt。</p>
     </div></div>
-    <div class="pfoot">Esc／戻るで閉じる</div></div>
+    <div class="pfoot">Esc / 返回 关闭</div></div>
 
   <div class="layer panel" id="chP"><div class="bokeh"></div>
-    <div class="phead"><div class="gem"></div><h2>章選択</h2><small>CHAPTERS</small></div><button class="obtn pclose" data-close>戻る</button>
+    <div class="phead"><div class="gem"></div><h2>章节选择</h2><small>CHAPTERS</small></div><button class="obtn pclose" data-close>返回</button>
     <div class="pbody"><div class="parch card2" id="chList"></div></div>
-    <div class="pfoot">ジャンプすると新しい状態から始まり、好感度は0に戻り、未保存の進行状況は失われます　｜　Esc／戻るで閉じる</div></div>
+    <div class="pfoot">跳转会从新状态开始，好感度归零，当前未保存的进度将会丢失　｜　Esc / 返回 关闭</div></div>
 
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div id="motes"></div>
     <div id="logo">
       <div class="re">Re:</div>
-      <span class="l1">ゼロから始める</span>
-      <span class="l2">異世界生活</span>
+      <span class="l1">从零开始的</span>
+      <span class="l2">异世界生活</span>
       <div class="rule"></div>
-      <div class="sub">帝国編・体験版<em>第一章「洗礼」</em></div>
+      <div class="sub">帝国篇 · 试玩版<em>第一章「洗礼」</em></div>
     </div>
     <div class="menu">
-      <button class="obtn sel" id="tStart">ゲーム開始</button><button class="obtn" id="tCh">章選択</button><button class="obtn" id="tLoad">続きから</button><button class="obtn" id="tCfg">設定</button><button class="obtn" id="tHelp">操作説明</button>
+      <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v1.4</div>
-    <div class="note">個人・非商用同人作品・物語はオリジナル改作・画像はAI生成・ボイス／音楽／効果音はCREDITS.txt参照</div>
+    <div id="ver">v1.5</div>
+    <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
 </div></div>
@@ -266,14 +266,14 @@ document.querySelectorAll('.bokeh').forEach(b=>{for(let k=0;k<16;k++){const i=do
 for(let k=0;k<26;k++){const i=document.createElement('i');i.style.cssText='left:'+(Math.random()*100)+'%;top:'+(30+Math.random()*70)+'%;animation-duration:'+(6+Math.random()*8)+'s;animation-delay:-'+(Math.random()*8)+'s;transform:scale('+(.5+Math.random())+')';$('motes').appendChild(i);}
 
 // ---------- characters ----------
-const CHARS={'スバル':{id:'subaru'},'レム':{id:'rem'},'ルイ':{id:'louis'},'仮面の男':{id:'masked_man'},'シュドラクの女猟師':{id:'shudraq_hunter'},'トッド':{id:'todd'},'ジャマル':{id:'jamal'},'ミゼルダ':{id:'mizelda'},'タリッタ':{id:'taritta'},'ウタカタ':{id:'utakata'},'ヴィンセント':{id:'vincent'},'フロップ':{id:'flop'},'メディウム':{id:'medium'},'クーナ':{id:'kuna'},'ホリー':{id:'holly'},'ジークル':{id:'zikr'},'アラキア':{id:'arakiya'},'プリシラ':{id:'priscilla'}};
+const CHARS={'昴':{id:'subaru'},'雷姆':{id:'rem'},'路易':{id:'louis'},'蒙面男子':{id:'masked_man'},'褐肤的女猎人':{id:'shudraq_hunter'},'托德':{id:'todd'},'贾马尔':{id:'jamal'},'米泽尔达':{id:'mizelda'},'塔莉塔':{id:'taritta'},'乌塔卡塔':{id:'utakata'},'文森特':{id:'vincent'},'弗洛普':{id:'flop'},'梅蒂姆':{id:'medium'},'库娜':{id:'kuna'},'霍莉':{id:'holly'},'齐克尔':{id:'zikr'},'阿拉基亚':{id:'arakiya'},'普莉希拉':{id:'priscilla'}};
 const SCALE={subaru:1.06,rem:0.95,louis:0.78,masked_man:1.08,shudraq_hunter:1.02,utakata:0.78};
 const POS={left:24,center:50,right:76,farleft:14,farright:86};
-// 閉眼画像（img/xxx_blink.png）のある立ち絵；立ち絵を差し替えて目の位置が変わった場合は対応する _blink.png を削除すればよい（自動で瞬きしなくなる）
+// 有闭眼图（img/xxx_blink.png）的立绘；替换立绘后若眼睛位置不同，删除对应 _blink.png 即可（会自动不眨眼）
 const BLINK={arakiya_normal:1,flop_normal:1,louis_normal:1,masked_man_normal:1,masked_man_smirk:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,todd_normal:1,vincent_normal:1,zikr_normal:1};
-// 表情切替時のリアクション
+// 表情切换时的反应动作
 const REACT={angry:'shake',soft:'hop',shy:'hop',pain:'shudder',shock:'hop',arrow:'shudder',hurt:'shudder'};
-// 口パク画像（img/xxx_mouth.png 大開き、xxx_mouth2.png 半開き）のある立ち絵；発話時は音声の音量に応じて切り替える（仮面の男は口が見えないため対象外）
+// 有张嘴图（img/xxx_mouth.png 大张、xxx_mouth2.png 半张）的立绘；说话时根据语音音量切换（蒙面男看不到嘴，不做）
 const MOUTH={arakiya_normal:1,flop_normal:1,holly_normal:1,jamal_normal:1,kuna_normal:1,louis_normal:1,medium_normal:1,mizelda_normal:1,priscilla_normal:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,shudraq_hunter_normal:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,taritta_normal:1,todd_normal:1,utakata_normal:1,vincent_normal:1,zikr_normal:1};
 
 // ---------- Live2D-like sprite renderer ----------
@@ -319,7 +319,7 @@ function frame(){
     if(a.prev){a.xf=Math.min(1,(T-a.xfT)/280);if(a.xf>=1)a.prev=null;}
     const talking=a.speaking&&(typing||voiceOn());
     a.talk+=((talking?1:0)-a.talk)*0.15;
-    // 口パク：音声があるときは音声の音量に、ないときは文字表示のリズムに合わせる
+    // 口型：有语音时按语音音量，没有语音时按打字节奏
     let mt=0;if(talking){const lv=voiceLevel();mt=lv>=0?lv:(0.5+0.5*Math.sin(t*17+a.ph))*(0.6+0.4*Math.sin(t*5.3));}
     a.mo+=(mt-a.mo)*(mt>a.mo?0.55:0.35);
     let gx=a.off,gy=-Math.abs(Math.sin(t*8.6))*5*a.talk;
@@ -369,8 +369,8 @@ const sleep=ms=>new Promise(r=>setTimeout(r,(skip||ctrl)?Math.min(ms,60):ms));
 let lastTick=Date.now();setInterval(()=>{const n=Date.now();if(inGame&&S)S.play+=n-lastTick;lastTick=n;},1000);
 
 // ---------- audio（BGM / 环境音 / 音效 / 语音）----------
-// すべて <audio> 要素で再生する（Web Audio アナライザは使わない）。これにより index.html を直接ダブルクリック（file://）しても正常に音が出る。
-// 口パクには事前に算出した音声の音量エンベロープ（voice/voice_data.js）を使う。
+// 全部用 <audio> 元素播放（不用 Web Audio 分析器），这样直接双击 index.html（file://）也能正常出声。
+// 口型用预先算好的语音音量包络（voice/voice_data.js）。
 const VD=window.VOICE_DATA||{},AD=window.AUDIO_DATA||{bgm:{},se:{}};
 const vol=k=>Math.max(0,Math.min(1,(cfg[k]==null?100:cfg[k])/100));
 function mkTrack(){const a=new Audio();a.loop=true;a.preload='auto';return {el:a,name:null,g:0,tg:0};}
@@ -400,7 +400,7 @@ function voiceOn(){return !!vCur&&!vEl.paused&&!vEl.ended;}
 function voiceLevel(){if(!voiceOn())return -1;const d=VD[vCur];if(!d||!d.e)return -1;const k=Math.floor(vEl.currentTime*d.r);const c=d.e.charCodeAt(Math.min(k,d.e.length-1))-48;return Math.max(0,c)/9;}
 vEl.addEventListener('ended',()=>{vCur=null;scheduleAuto();});
 function restoreAudio(){if(S.bgm)bgm(S.bgm,800);else bgm('stop',600);if(S.amb)ambient(S.amb,800);else ambient('stop',600);}
-// タイトル画面の音楽：ブラウザは音を出す前に一度のクリック／キー入力を要求する
+// 标题画面音乐：浏览器要求先有一次点击/按键才能出声
 let titleMusicArmed=true;
 function armTitle(){if(!titleMusicArmed||inGame)return;titleMusicArmed=false;bgm('title',2500);}
 addEventListener('pointerdown',armTitle,true);addEventListener('keydown',armTitle,true);
@@ -508,13 +508,13 @@ function showChoice(opts){
 }
 function endGame(){
   setAuto(false);setSkip(false);
-  setTimeout(()=>{toast('体験版は終了です。遊んでくれてありがとう！');goTitle();},1800);
+  setTimeout(()=>{toast('试玩版结束，感谢游玩！');goTitle();},1800);
 }
 
 // ---------- modes ----------
 function setAuto(v){auto=v;document.querySelector('[data-a=auto]').classList.toggle('act',v);updMode();if(v&&waiting)scheduleAuto();}
 function setSkip(v){skip=v;document.querySelector('[data-a=skip]').classList.toggle('act',v);updMode();if(v){if(typing)endType();else if(waiting)scheduleAuto();}}
-function updMode(){const m=$('mode');const t=skip||ctrl?'▶▶ 早送り中':auto?'▶ 自動中':'';m.textContent=t;m.style.display=t?'block':'none';}
+function updMode(){const m=$('mode');const t=skip||ctrl?'▶▶ 快进中':auto?'▶ 自动中':'';m.textContent=t;m.style.display=t?'block':'none';}
 function toggleHide(){uiHidden=!uiHidden;$('box').classList.toggle('hide',uiHidden);$('bar').style.display=uiHidden?'none':'flex';}
 
 // ---------- panels ----------
@@ -523,7 +523,7 @@ function openP(id){setAuto(false);setSkip(false);$(id).classList.add('on');}
 function closeP(){if($('logP').classList.contains('on'))stopVoice();document.querySelectorAll('.panel.on').forEach(p=>p.classList.remove('on'));}
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=e=>{e.stopPropagation();closeP();});
 function openLog(){const l=$('logList');l.innerHTML='';log.forEach(x=>{const d=document.createElement('div');
-  if(x.v&&VD[x.v]){const r=document.createElement('button');r.className='vr';r.title='ボイスを再聴';r.textContent='▶';r.onclick=e=>{e.stopPropagation();playVoice(x.v);};d.appendChild(r);}
+  if(x.v&&VD[x.v]){const r=document.createElement('button');r.className='vr';r.title='重听语音';r.textContent='▶';r.onclick=e=>{e.stopPropagation();playVoice(x.v);};d.appendChild(r);}
   if(x.name){const b=document.createElement('b');b.textContent=x.name;d.appendChild(b);}
   d.appendChild(document.createTextNode(x.text));l.appendChild(d);});openP('logP');l.scrollTop=l.scrollHeight;}
 const SK=n=>'re0demo_slot_'+n;
@@ -531,21 +531,21 @@ const pad=n=>String(n).padStart(2,'0');
 function fmtPlay(ms){const s=Math.floor((ms||0)/1000);return pad(Math.floor(s/3600))+':'+pad(Math.floor(s/60)%60)+':'+pad(s%60);}
 function esc(t){return String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function openSlots(mode){
-  $('slotTitle').textContent=mode==='save'?'セーブ':'ロード';$('slotEn').textContent=mode==='save'?'SAVE':'LOAD';
-  $('slotHint').textContent=mode==='save'?'スロットをクリックして現在の進行状況を保存します（既存のセーブを上書きします）　｜　Escで戻る':'スロットをクリックして進行状況を読み込みます　｜　Escで戻る';
+  $('slotTitle').textContent=mode==='save'?'存　档':'读　档';$('slotEn').textContent=mode==='save'?'SAVE':'LOAD';
+  $('slotHint').textContent=mode==='save'?'点击栏位保存当前进度（会覆盖原有存档）　｜　Esc 返回':'点击栏位读取进度　｜　Esc 返回';
   const w=$('slots');w.innerHTML='';
   for(let n=1;n<=3;n++){const d=JSON.parse(localStorage.getItem(SK(n))||'null');const el=document.createElement('div');el.className='slot parch';
     let h='<div class="no">'+pad(n)+'</div>';
     if(d){h+='<div class="thumb" style="background-image:url('+(d.bg?bgUrl(d.bg):'')+')"></div><div class="info">'+
       '<div class="r1"><span class="ch">第一章　洗礼</span><span class="dt">'+esc(d.date||'')+'<b>'+esc(d.clock||d.time||'')+'</b></span></div>'+
-      '<div class="r1"><span class="sc">◆ '+esc(d.scene||'—')+'</span><span class="pt">プレイ時間 '+fmtPlay(d.play)+'</span></div>'+
+      '<div class="r1"><span class="sc">◆ '+esc(d.scene||'—')+'</span><span class="pt">游戏时间 '+fmtPlay(d.play)+'</span></div>'+
       '<div class="pv">'+esc((d.preview||'').slice(0,46))+'</div></div>';}
-    else h+='<div class="empty">セーブデータなし<small>NO DATA</small></div>';
+    else h+='<div class="empty">暂无存档<small>NO DATA</small></div>';
     el.innerHTML=h;addCorners(el);
     el.onclick=e=>{e.stopPropagation();
       if(mode==='save'){if(!inGame||!preSnap)return;const D=new Date();
-        const data=Object.assign({},preSnap,{time:D.toLocaleString('ja-JP'),date:D.getFullYear()+'/'+pad(D.getMonth()+1)+'/'+pad(D.getDate()),clock:pad(D.getHours())+':'+pad(D.getMinutes()),play:S.play,preview:full});
-        try{localStorage.setItem(SK(n),JSON.stringify(data));toast('スロットに保存しました '+pad(n));}catch(err){toast('保存に失敗しました：ブラウザがローカルストレージを禁止しています');}openSlots('save');}
+        const data=Object.assign({},preSnap,{time:D.toLocaleString('zh-CN'),date:D.getFullYear()+'/'+pad(D.getMonth()+1)+'/'+pad(D.getDate()),clock:pad(D.getHours())+':'+pad(D.getMinutes()),play:S.play,preview:full});
+        try{localStorage.setItem(SK(n),JSON.stringify(data));toast('已保存到栏位 '+pad(n));}catch(err){toast('保存失败：浏览器禁止本地存储');}openSlots('save');}
       else{if(!d)return;closeP();loadData(d);}};
     w.appendChild(el);}
   openP('slotP');
@@ -557,7 +557,7 @@ function loadData(d){
   S.black=!!d.black;$('overlay').style.opacity=S.black?1:0;
   for(const id in d.sprites)showSprite(id,d.sprites[id].expr,d.sprites[id].pos,true);
   S.bgm=d.bgm||null;S.amb=d.amb||null;restoreAudio();stopVoice();
-  updAff();busy=false;toast('読み込み完了');
+  updAff();busy=false;toast('读取完成');
   run();
 }
 
@@ -567,8 +567,8 @@ function goTitle(){inGame=false;stopVoice();ambient('stop',1200);bgm('title',200
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
 function startNew(){enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
-const CHAPTERS=[['start','第27巻 序章・プロローグ'],['ch1_baptism','第27巻第1章・洗礼'],['c3_merge','第27巻第2章・死に戻り・仮面の男'],['c4_merge','第27巻第2章・死に戻り・再会'],['cont_start','第27巻第3章・軍営での目覚め'],['second_loop','第27巻第3章・二周目・尋問'],['village_start','第27巻第4章・シュドラク・村'],['vol27_ritual','第27巻第4章・シュドラク・血の儀式'],['village_mask','第27巻第4章・シュドラク・仮面を外す'],['guaral_start','第27巻第5章・グアラル・城門'],['vol27_ch4','第27巻第5章・グアラル・舞団の準備'],['zikr_interlude','第27巻番外・ジークル・オスマン'],['vol27_ch6','第27巻第6章・攻城・血を流さない奪還'],['ch6_red','第27巻第6章・桀驁不遜なる赤']];
-function jumpToChapter(label){if(!(label in labels)){toast('この章はまだ公開されていません');return;}if(inGame&&!confirm('ジャンプすると新しい状態から始まり、好感度は0に戻り、未保存の進行状況は失われます。ジャンプしますか？'))return;closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
+const CHAPTERS=[['start','第27卷 序章 · 序幕'],['ch1_baptism','第27卷第1章 · 洗礼'],['c3_merge','第27卷第2章 · 死亡回归 · 蒙面的男人'],['c4_merge','第27卷第2章 · 死亡回归 · 重逢'],['cont_start','第27卷第3章 · 军营中的苏醒'],['second_loop','第27卷第3章 · 第二周目 · 审问'],['village_start','第27卷第4章 · 修德拉克 · 村庄'],['vol27_ritual','第27卷第4章 · 修德拉克 · 血之仪式'],['village_mask','第27卷第4章 · 修德拉克 · 摘面具'],['guaral_start','第27卷第5章 · 瓜拉尔 · 城门'],['vol27_ch4','第27卷第5章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第27卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第27卷第6章 · 攻城 · 不流血的夺城'],['ch6_red','第27卷第6章 · 桀骜不驯之红']];
+function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}if(inGame&&!confirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？'))return;closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
 $('tLoad').onclick=()=>openSlots('load');
@@ -581,7 +581,7 @@ tBtns.forEach((b,j)=>b.addEventListener('mouseenter',()=>selT(j)));
 // ---------- config ----------
 function syncCfg(){$('ts').value=cfg.ts;$('as').value=cfg.as;$('showAff').checked=cfg.showAff;$('affTog').classList.toggle('on',cfg.showAff);
   ['vb','vs','vv'].forEach(k=>{$(k).value=cfg[k];$(k+'v').textContent=cfg[k]+'%';});vEl.volume=vol('vv');
-  $('tsv').textContent=cfg.ts+' ミリ秒／字';$('asv').textContent=(cfg.as/1000).toFixed(1)+' 秒';if(S)updAff();}
+  $('tsv').textContent=cfg.ts+' 毫秒/字';$('asv').textContent=(cfg.as/1000).toFixed(1)+' 秒';if(S)updAff();}
 ['ts','as','vb','vs','vv'].forEach(k=>$(k).oninput=()=>{cfg[k]=+$(k).value;localStorage.setItem('re0demo_cfg',JSON.stringify(cfg));syncCfg();});
 $('affTog').onclick=e=>{e.stopPropagation();cfg.showAff=!cfg.showAff;localStorage.setItem('re0demo_cfg',JSON.stringify(cfg));syncCfg();};
 S=newState();syncCfg();
@@ -590,7 +590,7 @@ S=newState();syncCfg();
 document.querySelectorAll('#bar button').forEach(b=>b.onclick=e=>{e.stopPropagation();const a=b.dataset.a;
   if(a==='auto')setAuto(!auto);else if(a==='skip')setSkip(!skip);else if(a==='log')openLog();else if(a==='ch')openChapters();else if(a==='save')openSlots('save');
   else if(a==='load')openSlots('load');else if(a==='cfg')openP('cfgP');else if(a==='hide')toggleHide();
-  else if(a==='title'){if(confirm('タイトル画面に戻りますか？　未保存の進行状況は失われます。'))goTitle();}});
+  else if(a==='title'){if(confirm('返回标题画面？未保存的进度将会丢失。'))goTitle();}});
 stage.addEventListener('click',e=>{if(e.target.closest('.panel,#choices button,#titleScr'))return;if(anyPanel())return;if(auto)setAuto(false);advance();});
 stage.addEventListener('contextmenu',e=>{e.preventDefault();if(inGame&&!anyPanel())toggleHide();});
 stage.addEventListener('wheel',e=>{if(inGame&&!anyPanel()&&e.deltaY<0)openLog();else if(inGame&&!anyPanel()&&e.deltaY>0)advance();},{passive:true});
