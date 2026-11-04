@@ -14,7 +14,21 @@
 //   @wait 毫秒                               停顿
 //   语音：每一句「名字|台词」按出现顺序自动对应 voice/v001.mp3、v002.mp3……（旁白不配音）
 //   ※ 增删对白行会让后面的语音编号错位，改剧本时请同步重命名语音文件（对照 voice_script.csv）
+// ===== 27 卷正式版 v1.3（已整合，已配音）=====
+// 来源：原剧本 ~/workspace/re0-chapters/script.js + 扩充草稿 ~/workspace/re0-vol27-draft-script.js
+// 血之仪式场景：艾尔吉纳斯立绘已上传（1248x1728 透明底），@show elginas normal center 已加回；
+//   魔兽无配音，该场景仍为旁白 + @se snake，不占语音编号。
+// 章节标签：新增 vol27_ritual、vol27_ch4、zikr_interlude、vol27_ch6；原 ch6_red 保留为第 27 卷完的结尾卡入口。
+// 配音：本文件共 315 句带说话人台词，按出现顺序对应 v001-v315；被替换删除的原台词与新增台词见 voice-mapping.md。
+// 注意：@bg ritual、@bg guaral_hall 已替换为新版背景，@bg guaral_gate 为新增背景（随本版一同上传）。
 window.SCRIPT = String.raw`
+// ===== 27 卷正式版结构（v1.3）=====
+// 结构：序章 + 第1章 想要守护的人们 + 第2章 迫近的邪恶 + 第3章 瓜拉尔要塞都市之战
+//        + 第4章 皇帝/商人/菜月昴 + 番外 齐克尔·奥斯曼（第4章后，独立章节入口）
+//        + 第5章 音乐家娜姿蜜·施瓦茨 + 第6章 桀骜不驯之红
+// 原则：原创同人台词，不抄小说原文；主线结局不变；全部 315 句台词已按 v001-v315 重排配音。
+// 已定决策：库娜的“三个”=昴、文森特、弗洛普；文森特/弗洛普女装用旁白说明、保留原立绘；
+// 比安卡/芙萝拉只提名字不出场；番外在第4章后；短篇排除；配音见 re0-vol27-draft-notes.md。
 @label start
 @black
 @bgm tension 1500
@@ -410,6 +424,28 @@ window.SCRIPT = String.raw`
 昴|（不放开……这次，绝对不放开……！）
 @amb amb_night 2500
 @bg jungle_night black
+@scene 河岸·三人的约定
+@bgm warm 2500
+@amb amb_night 2000
+河水还在脚边轻轻拍打。昴先看了一眼雷姆，又看了一眼缩成一团的路易。
+昴|（刚才跳下去的时候，我抓住了两只手。这一次，我没有放开。）
+@show rem cold right
+雷姆|……别用那种眼神看我。我还没原谅你。
+@show subaru serious left
+昴|我知道。所以我不求你原谅，我只求你让我跟着。
+@show rem soft right
+雷姆|……哼。你的气味还是很难闻。
+她顿了一下，目光落在路易身上，又很快移开。
+雷姆|……但是，你跳下来的时候，手没有松开。这件事，我记住了。
+@show subaru normal left
+昴|一次就够了。真的，一次就够了。
+@se rustle
+@show louis normal center
+路易|啊……呜。
+小女孩抬起头，看了看昴，又看了看雷姆，然后把头靠向了雷姆的肩膀。
+昴|（她在害怕，但她没有跑。这孩子，也在找一个可以待着的地方。）
+@wait 800
+
 @scene 修德拉格之民
 ……
 不知过了多久。
@@ -514,6 +550,30 @@ window.SCRIPT = String.raw`
 贾马尔|哈？帝国军做事，轮不到你来教。
 @hide subaru
 
+@scene 军营·夜话
+@bgm sorrow 2500
+@bg military_camp fade
+@show subaru serious left
+昴|（白天搬东西的时候，我听见士兵在谈丛林。谈火，谈围猎，谈得像在谈一场演习。）
+@show rem cold right
+雷姆|……你又在发呆了。
+@show subaru normal left
+昴|雷姆。你看，今晚的月亮很亮。
+@show rem soft right
+雷姆|……嗯。很亮。
+两人都没有再说话。篝火的光在她眼睛里跳了一下，又暗了下去。
+昴|（她还没有想起我。但她愿意和我一起看月亮。这已经是很大的一步了。）
+@se footsteps
+@show todd normal center
+托德|哟，还没睡？明天可有活干。
+@show subaru calm left
+昴|托德。你……有没有过那种感觉？明明知道前面是错的，却还是得往前走？
+@show todd normal center
+托德|……有啊。士兵天天都有。不过，停下来的人，死得更快。
+@wait 800
+@show subaru serious left
+昴|（停下来会死，往前走也会死。那我只能选一种死法：死在保护她们的那条路上。）
+
 @scene 烧林
 @bgm tension 2500
 @bg forest fade
@@ -594,6 +654,20 @@ window.SCRIPT = String.raw`
 @show subaru serious left
 昴|……外面那些人，是修德拉克？
 蒙面男子|嗯。接下来，我会提出一个办法。你只需要，照我说的做。
+@scene 笼中·约定
+@bgm tension 2000
+@bg jungle_night fade
+@show masked_man normal right
+蒙面男子|……昴。别急着绝望。笼子关得住人，关不住主意。
+@show subaru serious left
+昴|……你到底是什么人？为什么总是在我最狼狈的时候出现？
+@show masked_man smirk right
+蒙面男子|……一个也在找路的人。等到了村子，你自然会知道。
+@show subaru calm left
+昴|……好。我信你这一次。但如果这是陷阱，我第一个拿你垫背。
+蒙面男子|……呵。成交。
+@se rustle
+昴|（雷姆，路易。等我。我一定会带着一个能让你们安全待着的答案，回到你们身边。）
 @bgm title 2000
 @black
 @title 第一章　完
@@ -641,7 +715,8 @@ window.SCRIPT = String.raw`
 @show rem soft right
 雷姆|……哼。别死。
 
-@scene 血之仪式
+@label vol27_ritual
+@scene 血之仪式·前夜
 @bgm tension 2500
 @bg ritual fade
 @show mizelda normal center
@@ -650,24 +725,57 @@ window.SCRIPT = String.raw`
 米泽尔达|一个人，独自面对一只魔兽。活下来，你就是我们的兄弟。死……就不用我说了。
 @show subaru serious left
 昴|……我接受。
-米泽尔达|……你确定？你看起来，可不像能打赢魔兽的样子。
+@show rem cold right
+雷姆|……等一下。你连对手是什么都不知道，就说接受？
 @show subaru calm left
-昴|我打不赢，也得打。因为我要带她们活着离开这片森林。
+昴|我知道。就是因为不知道，我才更要接受——我不能再让你们替我挡在前面了。
+@show rem soft right
+雷姆|……哼。别死。
+雷姆说完就转过头去，不再看他。但昴看见，她的手指在袖口处攥得很紧。
+@se footsteps
+@show taritta normal right
+塔莉塔|……喂，昴。仪式不是比力气，是比谁先活下来。记住，魔兽也会累，也会怕。
+@show subaru serious left
+昴|……谢谢，塔莉塔。这句话，我记住了。
+@wait 1000
+@black
+@scene 血之仪式·艾尔吉纳斯
+@bgm danger 2500
+@bg forest fade
+@se snake
 @se rumble
 @shake
+灌木被压倒的声音从四面八方传来。林子里，有什么巨大的东西在游动。
+昴|（来了……这就是血命之仪的对手，丛林里的魔兽，艾尔吉纳斯。）
+@show elginas normal center
+灌木深处传来一声低沉的嘶鸣，巨大的身影碾过灌木，丛林里的魔兽艾尔吉纳斯到了。
+@se snake
+@show subaru shock center
+昴|……好大……！这根本不是“打一架”的体型！
 @show subaru pain center
-昴|……来了……！
+昴|（正面打不过。塔莉塔说得对：它也会累，也会怕。让我怕的，是它；让它怕的，是地形。）
 @se run
 @se dagger
+@shake
 @show subaru hurt center
-昴|（不行……正面打不过……只能用陷阱，用地形，用它自己的力量对付它……）
+昴|……陷阱……树根……还有它自己的冲力……！
+@se fall_thud
+@se rumble
+@flash red
+@show subaru hurt center
+昴|……还没完……！再来一次……！
+@se dagger
 @se fall_thud
 @bgm warm 2000
 @show mizelda surprised center
 米泽尔达|……你……居然真的赢了。
 @show subaru pain left
 昴|……运气……好而已……
+@show rem soft right
+雷姆|……活着就好。
 米泽尔达|……不。运气，也是实力的一部分。从今天起，你是修德拉克的兄弟。
+@show subaru serious left
+昴|……谢谢。从今天起，我也是你们的兄弟了。
 
 @label village_mask
 @scene 摘面具
@@ -702,6 +810,24 @@ window.SCRIPT = String.raw`
 文森特|别谢得太早，昴。瓜拉尔的仗，才刚刚开始。
 @show rem cold right
 雷姆|……走吧。再磨蹭，天就要黑了。
+@scene 出村·行军
+@bgm shudraq 2000
+@bg forest fade
+@show mizelda normal center
+米泽尔达|……兄弟。记住，修德拉克不会丢下自己人。你去瓜拉尔，我们就跟你去。
+@show taritta normal right
+塔莉塔|……我会盯着这个男人，不让他再一个人乱来。
+@show holly normal left
+霍莉|嘻嘻，放心吧。路上我来负责逗大家笑，免得气氛太沉。
+@show kuna normal right
+库娜|……哼。别在路上出丑就行。
+@show subaru normal left
+昴|……谢谢你们。真的，谢谢。
+@show vincent normal center
+文森特|别谢得太早，昴。瓜拉尔的仗，才刚刚开始。
+@se footsteps
+@show rem cold right
+雷姆|……走吧。再磨蹭，天就要黑了。
 @bgm title 2000
 @black
 @title 第二章　完
@@ -724,16 +850,37 @@ window.SCRIPT = String.raw`
 @show subaru normal left
 昴|（弗洛普和梅蒂姆……意外的可靠。这两个人，也许能成为同伴。）
 
+@label vol27_ch4
+@scene 舞团准备
+@bgm warm 2000
+@bg guaral_city fade
+@show flop normal center
+弗洛普|哟哟，听好了，几位客人。想混进一座要塞都市，光靠一张嘴可不行，得靠一张脸、一支舞、还有一个让人记不住真名的名字。
+@show medium normal right
+梅蒂姆|哥哥，别光说大话。先把马车藏好，再把乐器擦亮。
+@show subaru serious left
+昴|……所以，我们真的要扮成舞团？
+@show vincent normal left
+文森特|嗯。城门检查只认“看起来无害的人”。舞团，就是最无害的模样。
+@show subaru normal left
+昴|（舞团……好吧。只要能进城，扮什么都行。）
+@show flop normal center
+弗洛普|哈哈，那就这么定了。你们三个——昴、文森特、我——负责上台；其他人负责接应和望风。
+@wait 800
+
 @scene 女装潜入
 @bgm warm 2000
 @bg guaral_city fade
-@show subaru pain center
+昴、文森特、弗洛普三人换了女装，扮成舞团。昴化名娜姿蜜，文森特和弗洛普也换了装，但画面上仍用他们原来的立绘，只用旁白说明这层伪装，不另画女装立绘。
+@show natsumi normal center
 昴|……为什么……为什么是我要穿裙子啊？！
 @show vincent normal left
 文森特|因为你最合适，昴。别抱怨了，比安卡和芙萝拉都准备好了。
 @show flop normal right
 弗洛普|哈哈，娜姿蜜小姐，你今天可真漂亮。
 昴|……闭嘴，弗洛普。你自己的裙子也好不到哪去。
+昴的目光扫过文森特和弗洛普，又飞快地移开——三个人都换了装，谁也别笑谁。
+文森特的目光很稳，仿佛在说：别慌，照计划走。
 @show taritta normal left
 塔莉塔|……行了，别闹了。城门检查一过，我们就分头行动。
 @show kuna normal right
@@ -749,11 +896,30 @@ window.SCRIPT = String.raw`
 齐克尔|……哦？舞团？最近城里气氛紧张，正好需要一点音乐。
 昴|（他就是齐克尔·奥斯曼，瓜拉尔的二等将军。看起来……完全不像将军。）
 齐克尔|哈哈，别看我这样，我可是很懂欣赏的。你们，就在士兵面前表演一场吧。
-@show subaru serious left
+@show natsumi normal left
 昴|……好。我们表演。
 @show zikr normal center
 齐克尔|……嗯。你们的舞，很有意思。尤其是你，娜姿蜜小姐。
+昴|（他的目光停在我身上，比停在别人身上久了一点。是欣赏，还是怀疑？）
+@show natsumi normal left
+昴|（别慌。舞团的娜姿蜜，不会慌。）
 昴|（糟了……他是不是看出来了？）
+
+@label zikr_interlude
+@title 番外　齐克尔·奥斯曼
+@scene 番外·齐克尔的目光
+@bgm tension 2000
+@bg guaral_hall fade
+@show zikr normal center
+齐克尔|……舞团。最近城里气氛紧张，正好需要一点音乐——这话，我是真心的。
+齐克尔|……不过，音乐好听是一回事，人可疑是另一回事。
+@show zikr normal center
+齐克尔|（那个叫娜姿蜜的舞者，舞步很稳，眼神却不像舞者。像一个在战场上数过脚步的人。）
+@se footsteps
+齐克尔|……有意思。瓜拉尔最近，来了不少“有意思”的人。
+齐克尔|（不管你们是谁，只要不先动手，我就先看你们跳完这一支舞。）
+@wait 800
+@bgm guaral 2000
 
 @scene 托德追杀
 @bgm danger 2500
@@ -776,6 +942,20 @@ window.SCRIPT = String.raw`
 @show subaru normal right
 昴|（……死亡回归？不，这次还没死。只是……又回到了原点。）
 
+@label vol27_ch6
+@scene 城外·换回
+@bgm tension 2000
+@bg guaral_city fade
+表演结束，昴换回了男装，文森特也恢复了皇帝的装束，重新以皇帝的身份站在齐克尔面前。
+@show subaru normal left
+昴|（裙子终于脱下来了……呼。娜姿蜜这个名字，先收起来吧。）
+@show vincent normal center
+文森特|……昴。接下来，不再是舞团的事了。是皇帝和将军的事。
+@show subaru serious left
+昴|……嗯。我知道了。
+@se footsteps
+文森特的脚步声很稳，一步一步，像在数着城门到大厅的距离。
+
 @scene 攻城·不流血的夺城
 @bgm tension 2000
 @bg guaral_city fade
@@ -784,10 +964,19 @@ window.SCRIPT = String.raw`
 @show zikr normal right
 齐克尔|……皇帝陛下。您亲自来，瓜拉尔……就没有再抵抗的理由了。
 文森特|嗯。打开城门，不要流血。
+@flash white
+@se footsteps
+@show zikr normal right
 齐克尔|……遵命。瓜拉尔，归顺于您。
+齐克尔的目光扫过文森特，又扫过昴，最后落回文森特身上，轻轻点了点头。
 @show subaru normal left
 昴|……真的……不流血就拿下了？
+@show vincent normal center
 文森特|因为齐克尔不是为了打仗而打仗的人。这座城，从一开始就不是我们的敌人。
+@show subaru serious left
+昴|（没有箭，没有火，没有人倒下。这座城，就这样换了一个主人。）
+@show zikr normal right
+齐克尔|……皇帝陛下。城里的士兵，我会亲自去说。不会有人因为今天的事流血。
 
 @scene 阿拉基亚
 @bgm horror 2500
@@ -818,10 +1007,29 @@ window.SCRIPT = String.raw`
 @show subaru shock center
 昴|米泽尔达！先退后！我来挡——
 
+@scene 阿拉基亚·高光
+@bgm horror 2500
+@bg guaral_city fade
+@se splash
+@shake
+@show mizelda pain left
+米泽尔达|……呃……！腿……！站不起来了……！
+@show subaru shock center
+昴|米泽尔达！先退后！我来挡——
+@show vincent normal right
+文森特|……昴，退下。她的目标是我。
+@show arakiya normal center
+阿拉基亚|……皇帝。你以为，躲在这里就安全了吗？
+@se splash
+@flash red
+@show subaru serious center
+昴|（不行……这样下去，所有人都会死在这里……必须有人，打破这个局面。）
+@wait 1000
+@flash white
+@se teleport
 @scene 桀骜不驯之红
 @bgm title 2500
 @bg guaral_city fade
-@se teleport
 @show priscilla normal center
 普莉希拉|……呵呵。真是的，在我的美貌面前，连神将都要失态了吗？
 @show arakiya normal left
@@ -829,20 +1037,26 @@ window.SCRIPT = String.raw`
 普莉希拉|普莉希拉·巴利耶尔。太阳的加护者，注定要成为王的人。
 @show subaru shock center
 昴|……那把剑……红色的光……！
+普莉希拉抬起手，红色的光在她掌心聚拢，又顺着剑身流淌开来。
+@show priscilla normal center
 普莉希拉|阳剑啊，回应我的呼唤吧。
 @se dagger
-@show priscilla normal center
+@flash white
 普莉希拉|……我的美，是世界都无法拒绝的东西。阿拉基亚，你的对手，是我。
 @show vincent normal right
 文森特|……普莉希拉。你果然，也来到了这里。
 @show subaru serious left
 昴|（她是谁……？为什么，站在我们这一边？）
+@show arakiya normal left
+阿拉基亚|……哼。有意思。那就让我看看，你的美，能不能挡住我的血。
+@show priscilla normal center
+普莉希拉|……来吧。我可不会输给一个只会躲在血后面的家伙。
 @black
 @bgm title 2000
-@title 第三章　完
+@title 第 27 卷　完
 @label ch6_red
 @title 第 27 卷第 6 章「桀骜不驯之红」
-@scene 续作第一部分完·下一卷接普莉希拉与阿拉基亚的正面交锋
+普莉希拉与阿拉基亚的正面交锋，留待下一卷。27 卷的故事，到这里先告一段落。
 
 @end
 `;

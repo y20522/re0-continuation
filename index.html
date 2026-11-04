@@ -216,7 +216,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v1.2</div>
+    <div id="ver">v1.3</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -567,7 +567,7 @@ function goTitle(){inGame=false;stopVoice();ambient('stop',1200);bgm('title',200
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
 function startNew(){enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
-const CHAPTERS=[['start','第27卷 序章 · 序幕'],['ch1_baptism','第27卷第1章 · 洗礼'],['c3_merge','第27卷第2章 · 死亡回归 · 蒙面的男人'],['c4_merge','第27卷第2章 · 死亡回归 · 重逢'],['cont_start','第27卷第3章 · 军营中的苏醒'],['second_loop','第27卷第3章 · 第二周目 · 审问'],['village_start','第27卷第4章 · 修德拉克 · 村庄'],['village_mask','第27卷第4章 · 修德拉克 · 摘面具'],['guaral_start','第27卷第5章 · 瓜拉尔 · 城门'],['ch6_red','第27卷第6章 · 桀骜不驯之红']];
+const CHAPTERS=[['start','第27卷 序章 · 序幕'],['ch1_baptism','第27卷第1章 · 洗礼'],['c3_merge','第27卷第2章 · 死亡回归 · 蒙面的男人'],['c4_merge','第27卷第2章 · 死亡回归 · 重逢'],['cont_start','第27卷第3章 · 军营中的苏醒'],['second_loop','第27卷第3章 · 第二周目 · 审问'],['village_start','第27卷第4章 · 修德拉克 · 村庄'],['vol27_ritual','第27卷第4章 · 修德拉克 · 血之仪式'],['village_mask','第27卷第4章 · 修德拉克 · 摘面具'],['guaral_start','第27卷第5章 · 瓜拉尔 · 城门'],['vol27_ch4','第27卷第5章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第27卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第27卷第6章 · 攻城 · 不流血的夺城'],['ch6_red','第27卷第6章 · 桀骜不驯之红']];
 function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}if(inGame&&!confirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？'))return;closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
