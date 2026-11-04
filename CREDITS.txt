@@ -1,0 +1,43 @@
+Re:从零开始 · 帝国篇序章「洗礼」同人试玩版 —— 制作与素材来源（个人非商业）
+================================================================
+
+【角色配音】（日语，全部由 ElevenLabs 文字转语音生成，模型 eleven_v3，2026-11-03 生成）
+  菜月昴    —— ElevenLabs 自定义音色「菜月昴2」（voice_id: I3xNWCjkgeTxRIRbjZRx）
+              原始录音：中国同人配音爱好者，本人同意后录制并授权用于本作
+  雷姆      —— ElevenLabs 自定义音色「雷姆」（voice_id: iQ7FJlN6gAPb76lVrQfr）
+              原始录音：中国同人配音爱好者，本人同意后录制并授权用于本作
+  路易      —— ElevenLabs 官方预置音色 Jessica（cgSgspJ2msm6clMCkdW9），加「幼女声」语气提示
+  蒙面男子  —— ElevenLabs 官方预置音色 Adam（pNInz6obpgDQGcFmaJgB）
+  褐肤的女猎人 —— ElevenLabs 官方预置音色 Sarah（EXAVITQu4vr4xnSDxMaL）
+  ※ 本作没有使用、也没有模仿任何职业声优（包括动画/游戏原版声优）的录音。
+  ※ 日语台词为根据本作中文改写台词翻译的原创文本，全部对照见 voice_script.csv。
+
+【背景音乐】（audio/bgm/，全部由 ElevenLabs Music 生成的原创纯音乐，付费 Starter 套餐账号生成）
+  title.mp3    标题 / 片尾：钢琴 + 弦乐，温柔怀念
+  forest.mp3   密林探索：木笛、拇指琴、轻打击乐，神秘
+  tension.mp3  紧张对峙：低音大提琴、拨弦，压抑不安
+  sorrow.mp3   悲伤：钢琴 + 小提琴，后悔与孤独
+  danger.mp3   危险 / 逃跑：太鼓、急促弦乐、铜管
+  horror.mp3   死亡：低沉嗡鸣、不协和弦乐
+  warm.mp3     劫后余生：钢琴 + 木吉他，温暖
+  shudraq.mp3  修德拉格之民：部族鼓、木笛、夜晚篝火
+  （已在本地做了首尾交叉淡化，方便无缝循环，并统一了响度）
+
+【音效 / 环境音】（audio/se/，全部由 ElevenLabs Sound Effects 生成）
+  teleport 传送白光　arrow_hit 中箭　arrow_whoosh 箭擦过钉进树干　bow_draw 拉弓
+  stagger 摇晃踉跄　kneel 跪倒　fall_thud 倒地　crawl 趴在地上爬行拖动
+  footsteps 草地脚步　run 林中奔跑　rustle 灌木沙沙声　tackle 扑倒扭打　grab 掐住挣扎
+  heartbeat 心跳　rbd 死亡回归　gasp_wake 惊醒　trap 绳套陷阱　snake 巨蛇嘶鸣压断树木
+  rumble 地面震动　splash 跳水　underwater 水下　torch 火把点燃　dagger 短剑落地
+  amb_forest 丛林环境音　amb_night 夜晚河岸环境音　amb_waterfall 瀑布环境音
+
+【授权说明】
+  以上语音、音乐、音效均由账号持有人（本作作者）通过付费 ElevenLabs 账号生成，
+  依照 ElevenLabs 服务条款，付费套餐生成的内容可由用户使用。
+  预置音色语音按 ElevenLabs 要求在此注明「由 ElevenLabs 生成」。
+  本作只作个人非商业用途；如需公开发布，请再次确认 ElevenLabs 当期条款，并取得两位配音爱好者的书面同意。
+
+【其他素材】
+  图片：AI 生成的原创风格立绘与背景（非官方插画）；张嘴口型图（*_mouth.png / *_mouth2.png）由原立绘程序化改绘。
+  字体：Noto Serif SC（思源宋体）子集，SIL Open Font License 1.1。
+  原作：《Re:从零开始的异世界生活》长月达平 / KADOKAWA。本作为粉丝同人，与官方无关。
