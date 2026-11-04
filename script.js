@@ -26,6 +26,7 @@ window.SCRIPT = String.raw`
 狂风、星光、龙的咆哮——还有某种从背后伸来、想把一切都吞下去的「东西」。
 在意识被白光撕碎的最后一瞬，他用尽全力抓住了一只手。
 那是他绝不会再放开的手。
+@label ch1_baptism
 @title 第一章　洗礼
 @scene 密林中的苏醒
 @bgm forest 2500
@@ -540,6 +541,7 @@ window.SCRIPT = String.raw`
 昴|（……又来了吗。死亡回归。）
 @title 死亡回归
 
+@label second_loop
 @scene 第二周目·审问
 @bgm tension 2000
 @bg military_camp black
@@ -667,6 +669,7 @@ window.SCRIPT = String.raw`
 昴|……运气……好而已……
 米泽尔达|……不。运气，也是实力的一部分。从今天起，你是修德拉克的兄弟。
 
+@label village_mask
 @scene 摘面具
 @bgm title 2000
 @bg shudrak_village fade
@@ -837,6 +840,7 @@ window.SCRIPT = String.raw`
 @black
 @bgm title 2000
 @title 第三章　完
+@label ch6_red
 @title 第 27 卷第 6 章「桀骜不驯之红」
 @scene 续作第一部分完·下一卷接普莉希拉与阿拉基亚的正面交锋
 

@@ -145,6 +145,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 #logo .sub em{font-style:normal;font-size:16px;letter-spacing:.3em;color:#9a7a3a}
 #titleScr .menu{position:absolute;left:120px;top:388px;display:flex;flex-direction:column;gap:16px;width:300px;animation:logoIn 1.6s .4s ease-out both}
 #titleScr .note{position:absolute;right:20px;bottom:12px;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 3px #000}
+#titleScr #ver{position:absolute;left:20px;bottom:12px;font-size:13px;letter-spacing:.15em;color:rgba(255,255,255,.9);text-shadow:0 1px 3px #000}
+#chList{display:flex;flex-direction:column;gap:10px;overflow-y:auto;padding:18px 22px}
+#chList button{width:100%;padding:13px 18px;font-family:"VNSerif",serif;font-size:19px;letter-spacing:.08em;text-align:left;color:#3b2c48;cursor:pointer;background:linear-gradient(180deg,#fdf8ea,#efe2c0);border:1px solid #d7a94b;border-radius:6px}
+#chList button:hover{background:linear-gradient(180deg,#fffbe8,#f7e9c0);color:#0b5f73}
 #toast{position:absolute;top:60px;left:50%;transform:translateX(-50%);color:#3b2c48;padding:8px 30px;font-size:17px;letter-spacing:.1em;opacity:0;transition:opacity .4s;z-index:60;pointer-events:none;
   background:linear-gradient(180deg,var(--parch1),var(--parch2));box-shadow:0 0 0 1.5px var(--gold2),0 0 14px rgba(94,230,242,.6)}
 </style>
@@ -161,7 +165,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div id="box"><div class="panelbg"></div><div id="emblem"></div><div id="name" class="empty"><span></span></div><div id="text"></div><span id="cursor"></span></div>
   <div id="bar">
     <button data-a="auto">自动</button><button data-a="skip">快进</button><button data-a="log">记录</button>
-    <button data-a="save">存档</button><button data-a="load">读档</button><button data-a="cfg">设置</button><button data-a="hide">隐藏</button><button data-a="title">标题</button>
+    <button data-a="save">存档</button><button data-a="load">读档</button><button data-a="ch">章节</button><button data-a="cfg">设置</button><button data-a="hide">隐藏</button><button data-a="title">标题</button>
   </div>
   <div class="layer" id="choices"></div>
 
@@ -195,6 +199,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     </div></div>
     <div class="pfoot">Esc / 返回 关闭</div></div>
 
+  <div class="layer panel" id="chP"><div class="bokeh"></div>
+    <div class="phead"><div class="gem"></div><h2>章节选择</h2><small>CHAPTERS</small></div><button class="obtn pclose" data-close>返回</button>
+    <div class="pbody"><div class="parch card2" id="chList"></div></div>
+    <div class="pfoot">跳转会从新状态开始，好感度归零，当前未保存的进度将会丢失　｜　Esc / 返回 关闭</div></div>
+
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div id="motes"></div>
     <div id="logo">
@@ -205,8 +214,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
       <div class="sub">帝国篇 · 试玩版<em>第一章「洗礼」</em></div>
     </div>
     <div class="menu">
-      <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
+      <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
+    <div id="ver">v1.1</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -557,6 +567,10 @@ function goTitle(){inGame=false;stopVoice();ambient('stop',1200);bgm('title',200
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
 function startNew(){enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
+const CHAPTERS=[['start','第27卷 序章 · 序幕'],['ch1_baptism','第27卷第1章 · 洗礼'],['c3_merge','第27卷第2章 · 死亡回归 · 蒙面的男人'],['c4_merge','第27卷第2章 · 死亡回归 · 重逢'],['cont_start','第27卷第3章 · 军营中的苏醒'],['second_loop','第27卷第3章 · 第二周目 · 审问'],['village_start','第27卷第4章 · 修德拉克 · 村庄'],['village_mask','第27卷第4章 · 修德拉克 · 摘面具'],['guaral_start','第27卷第5章 · 瓜拉尔 · 城门'],['ch6_red','第27卷第6章 · 桀骜不驯之红']];
+function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}if(inGame&&!confirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？'))return;closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
+function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
+$('tCh').onclick=openChapters;
 $('tLoad').onclick=()=>openSlots('load');
 $('tCfg').onclick=()=>openP('cfgP');
 $('tHelp').onclick=()=>openP('helpP');
@@ -574,7 +588,7 @@ S=newState();syncCfg();
 
 // ---------- input ----------
 document.querySelectorAll('#bar button').forEach(b=>b.onclick=e=>{e.stopPropagation();const a=b.dataset.a;
-  if(a==='auto')setAuto(!auto);else if(a==='skip')setSkip(!skip);else if(a==='log')openLog();else if(a==='save')openSlots('save');
+  if(a==='auto')setAuto(!auto);else if(a==='skip')setSkip(!skip);else if(a==='log')openLog();else if(a==='ch')openChapters();else if(a==='save')openSlots('save');
   else if(a==='load')openSlots('load');else if(a==='cfg')openP('cfgP');else if(a==='hide')toggleHide();
   else if(a==='title'){if(confirm('返回标题画面？未保存的进度将会丢失。'))goTitle();}});
 stage.addEventListener('click',e=>{if(e.target.closest('.panel,#choices button,#titleScr'))return;if(anyPanel())return;if(auto)setAuto(false);advance();});
