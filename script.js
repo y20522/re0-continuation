@@ -470,7 +470,7 @@ window.SCRIPT = String.raw`
 在火光和喊声之间，昴最后的感觉，是有人把他从碎石地上拖了起来。
 @black
 @scene 军营中的苏醒
-@bgm forest 2000
+@bgm tension 2000
 @bg military_camp black
 @show subaru pain center
 昴|……头……好痛……这里是……？
