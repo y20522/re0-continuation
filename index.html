@@ -211,7 +211,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v2.1</div>
+    <div id="ver">v2.2</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -272,6 +272,7 @@ const REACT={angry:'shake',soft:'hop',shy:'hop',pain:'shudder',shock:'hop',arrow
 const MOUTH={arakiya_normal:1,flop_normal:1,holly_normal:1,jamal_normal:1,kuna_normal:1,louis_normal:1,medium_normal:1,mizelda_normal:1,priscilla_normal:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,shudraq_hunter_normal:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,taritta_normal:1,todd_normal:1,utakata_normal:1,vincent_normal:1,zikr_normal:1};
 
 // ---------- Live2D-like sprite renderer ----------
+let dancing=false; // 舞蹈模式：表演时立绘随节拍起伏摇摆（@dance on/off）
 const CW=1000,CH=1220,REFH=1150;
 const actors={};
 const now=()=>performance.now();
@@ -294,9 +295,10 @@ function react(a,type){a.react={type,t:now()};}
 function drawWarp(ctx,im,alpha,t,a,gx,gy){
   if(!im||!im.complete||!im.naturalWidth||alpha<=0.003)return;
   const iw=im.naturalWidth,ih=im.naturalHeight,s=REFH/ih,dw=iw*s,dh=REFH,ox=(CW-dw)/2,oy=CH-dh;
-  const sway=Math.sin(t*0.82+a.ph)*3.4+Math.sin(t*0.37+a.ph*2)*1.6;
-  const tilt=Math.sin(t*0.55+a.ph*1.7)*2.6;
-  const breath=(Math.sin(t*1.55+a.ph)+1)*0.5*5.2;
+  const DA=dancing?2.4:1; // 跳舞时摇摆与呼吸幅度放大
+  const sway=(Math.sin(t*0.82+a.ph)*3.4+Math.sin(t*0.37+a.ph*2)*1.6)*DA;
+  const tilt=Math.sin(t*0.55+a.ph*1.7)*2.6*DA;
+  const breath=(Math.sin(t*1.55+a.ph)+1)*0.5*5.2*DA;
   const wy=y=>{const v=y/dh;const f=v<0.58?Math.pow(1-v/0.58,1.2):0;return y-breath*f;};
   ctx.globalAlpha=alpha;const ST=5;
   for(let y=0;y<dh;y+=ST){const h=Math.min(ST,dh-y),v=(y+h/2)/dh;
@@ -318,6 +320,7 @@ function frame(){
     let mt=0;if(talking){const lv=voiceLevel();mt=lv>=0?lv:(0.5+0.5*Math.sin(t*17+a.ph))*(0.6+0.4*Math.sin(t*5.3));}
     a.mo+=(mt-a.mo)*(mt>a.mo?0.55:0.35);
     let gx=a.off,gy=-Math.abs(Math.sin(t*8.6))*5*a.talk;
+    if(dancing)gy-=Math.abs(Math.sin(t*4.2+a.ph))*15; // 跳舞节拍起伏（各人相位不同，像群舞）
     if(a.react){const d=(T-a.react.t)/1000;
       if(a.react.type==='shake'&&d<0.5)gx+=Math.sin(d*62)*11*(1-d/0.5);
       else if(a.react.type==='hop'&&d<0.42)gy-=Math.sin(Math.PI*d/0.42)*26;
@@ -476,6 +479,7 @@ async function run(){
       case 'hideall':clearSprites();break;
       case 'flash':await flash(c.args[0]);break;
       case 'shake':shake();break;
+      case 'dance':dancing=(c.args[0]==='on');break;
       case 'jump':S.i=labels[c.args[0]];continue;
       case 'if':{const m=c.args[0].match(/aff>=(\d+)/);if(m&&S.aff>=+m[1]){S.i=labels[c.args[1]];continue;}break;}
       case 'end':busy=false;endGame();return;
@@ -562,12 +566,12 @@ function loadData(d){
 
 // ---------- title ----------
 function enterGame(){$('titleScr').classList.add('off');inGame=true;uiHidden=false;$('box').classList.remove('hide');$('bar').style.display='flex';$('bar').style.opacity=1;$('choices').classList.remove('on');}
-function goTitle(){inGame=false;stopVoice();ambient('stop',1200);bgm('title',2000);setAuto(false);setSkip(false);closeP();clearTimeout(autoTimer);clearInterval(tTimer);typing=false;waiting=false;
+function goTitle(){inGame=false;dancing=false;stopVoice();ambient('stop',1200);bgm('title',2000);setAuto(false);setSkip(false);closeP();clearTimeout(autoTimer);clearInterval(tTimer);typing=false;waiting=false;
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
-function startNew(){enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
+function startNew(){enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
 const CHAPTERS=[['start','第二十七卷 序章 · 序幕'],['ch1_baptism','第二十七卷第一章 · 洗礼'],['c3_merge','第二十七卷第二章 · 死亡回归 · 蒙面的男人'],['c4_merge','第二十七卷第二章 · 死亡回归 · 重逢'],['cont_start','第二十七卷第三章 · 军营中的苏醒'],['second_loop','第二十七卷第三章 · 第二周目 · 审问'],['village_start','第二十七卷第四章 · 修德拉克 · 村庄'],['vol27_ritual','第二十七卷第四章 · 修德拉克 · 血之仪式'],['village_mask','第二十七卷第四章 · 修德拉克 · 摘面具'],['guaral_start','第二十七卷第四章 · 瓜拉尔 · 城门'],['vol27_ch4','第二十七卷第四章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第二十七卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第二十七卷第六章 · 攻城 · 不流血的夺城'],['ch6_red','第二十七卷第六章 · 桀骜不驯之红']];
-function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
+function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{closeP();enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
 $('tLoad').onclick=()=>openSlots('load');

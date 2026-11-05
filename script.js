@@ -964,22 +964,47 @@ window.SCRIPT = String.raw`
 昴|（别慌。舞团的娜姿蜜，不会慌。）
 昴|（糟了……他是不是看出来了？）
 
-一支舞跳完，齐克尔没有留他们，只说了一句“跳得不错”，便让士兵放行。可昴走出大厅的时候，后背一直发凉——那位二等将军的目光，像是在数他脚步里的破绽。
-按计划，表演一结束，三人就分头行动。昴换回了男装——裙子只为骗过城门和大厅，穿着它走夜路，反而更显眼。文森特则换回了皇帝的装束，径直去见齐克尔。
-
-@label vol27_ch6
-@scene 攻城·不流血的夺城
-@bgm tension 2000
-@bg guaral_city fade
-@show vincent normal center
-文森特|……昴。接下来，不再是舞团的事了。是皇帝和将军的事。
-@show subaru serious left
-昴|……嗯。我知道了。
+@bgm warm 2000
+@bg guaral_hall fade
+音乐响起。五个人走上大厅中央——娜姿蜜、比安卡、芙萝拉，还有库娜和塔莉塔。裙摆展开，像五朵同时绽开的花。
+@hide zikr
+@dance on
+@show natsumi normal center
+@show vincent_dress normal left
+@show flop_dress normal right
+@se rustle
+昴|（……开始了。别去想剑，别去想齐克尔。想舞步，想音乐，想——活下去。）
 @se footsteps
-文森特的脚步声很稳，一步一步，像在数着城门到大厅的距离。
+弗洛普|（小声）哟，娜姿蜜，笑一个。台下可全是拿剑的人。
+@se rustle
+文森特|（小声）……别说话。跳。
+昴|（音乐……比排练的时候更快。心跳也更快。）
+齐克尔|……哦？
+@se heartbeat
+齐克尔|（这支舞……不只是好看。每个人的脚步，都像在数着什么。）
+昴|（他的目光……一直在我身上。不对，是在比安卡身上。）
+@se footsteps
+文森特|（……很好。他的注意力，全在我这里。）
+齐克尔|哈哈哈！好！跳得好！
+@se rustle
+大厅里的士兵，全都看得入了迷。有人忘了手里的酒杯，有人忘了腰间的剑——所有人的目光，都被台上的五个人吸住了。
+齐克尔|（……太美了。这支舞，像有什么魔力。）
+@se heartbeat
+@show zikr normal right
+齐克尔站起身，解下腰间的佩剑，朝领舞的比安卡走去。
+@label vol27_ch6
+齐克尔|……跳得太好了。这把剑，配得上今晚的舞——拿着它，再跳一支。
+@dance off
+@bgm tension 2000
+@se dagger
+比安卡接过剑。下一瞬，剑尖已经抵在了齐克尔的咽喉上。
+比安卡抬手扯下了假发——那张脸，是文森特·佛拉基亚。
 @show vincent normal center
-文森特的剑已经出鞘，剑尖抵在齐克尔的咽喉上——大厅里没有人敢动。
-文森特|齐克尔，我不是来和你打仗的。我是来，拿回属于我的东西的。
+文森特|齐克尔·奥斯曼。我不是来和你打仗的。我是来，拿回属于我的东西的。
+@show zikr normal right
+齐克尔|……你……！
+文森特|我是文森特·佛拉基亚，第七十七代皇帝。瓜拉尔，从今夜起，回到我的手中。
+大厅里一片死寂。士兵们的手按在剑柄上，却没有一个人敢动——他们的将军，咽喉上正抵着他自己的剑。
 @show zikr normal right
 齐克尔|……皇帝陛下。您亲自来，瓜拉尔……就没有再抵抗的理由了。
 文森特|嗯。打开城门，不要流血。
@@ -987,20 +1012,24 @@ window.SCRIPT = String.raw`
 @se footsteps
 @show zikr normal right
 齐克尔|……遵命。瓜拉尔，归顺于您。
-齐克尔的目光扫过文森特，又扫过昴，最后落回文森特身上，轻轻点了点头。
-@show subaru normal left
+士兵们一个接一个跪了下去。
+@show natsumi normal left
 昴|……真的……不流血就拿下了？
 @show vincent normal center
 文森特|因为齐克尔不是为了打仗而打仗的人。这座城，从一开始就不是我们的敌人。
-@show subaru serious left
+@show natsumi normal left
 昴|（没有箭，没有火，没有人倒下——至少，夺城的这一刻是这样。这座城，就这样换了一个主人。）
 @show zikr normal right
 齐克尔|……皇帝陛下。城里的士兵，我会亲自去说。这一刻，不会有人因为今天的事流血。
+@show vincent normal center
+文森特|昴。去烧了市政厅屋顶上的旗。让整座城都看见，瓜拉尔换了主人。
+@show natsumi normal left
+昴|……嗯。我知道了。
 
 @scene 屋顶·旗
 @bgm tension 2000
 @bg guaral_city fade
-文森特的命令很简单：烧了市政厅屋顶上的旗。昴爬上屋顶，火把一点，旗帜在夜风里烧了起来——整座城都看得见。
+昴换回了男装——穿着裙子爬屋顶，反而更显眼。火把一点，旗帜在夜风里烧了起来——整座城都看得见。
 @show todd normal center
 屋顶上，托德盯着那个烧旗的背影——男装、短发，可那张脸，分明就是刚才在台上跳舞的娜姿蜜。
 托德|……那个烧旗的人……是昴。
