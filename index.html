@@ -199,13 +199,19 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="pbody"><div class="parch card2" id="chList"></div></div>
     <div class="pfoot">跳转会从新状态开始，好感度归零，当前未保存的进度将会丢失　｜　Esc / 返回 关闭</div></div>
 
+  <div class="layer panel" id="cfmP"><div class="bokeh"></div>
+    <div class="phead"><div class="gem"></div><h2>确认</h2><small>CONFIRM</small></div>
+    <div class="pbody"><div class="parch card2" id="cfmMsg" style="text-align:center;padding:20px 12px;font-size:18px;line-height:1.9"></div></div>
+    <div class="pbody" style="display:flex;gap:16px;justify-content:center;padding:0 20px 18px"><button class="obtn" id="cfmOk">确定</button><button class="obtn" id="cfmCancel">取消</button></div>
+    <div class="pfoot">Esc / 取消 关闭</div></div>
+
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div class="glow"></div><canvas id="embers"></canvas><div id="motes"></div>
     <div id="logo"><img src="img/title_logo.png" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v1.9</div>
+    <div id="ver">v2.0</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -511,6 +517,10 @@ function anyPanel(){return !!document.querySelector('.panel.on');}
 function openP(id){setAuto(false);setSkip(false);$(id).classList.add('on');}
 function closeP(){if($('logP').classList.contains('on'))stopVoice();document.querySelectorAll('.panel.on').forEach(p=>p.classList.remove('on'));}
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=e=>{e.stopPropagation();closeP();});
+let cfmCb=null;
+function askConfirm(msg,cb){$('cfmMsg').textContent=msg;cfmCb=cb;openP('cfmP');}
+$('cfmOk').onclick=e=>{e.stopPropagation();const cb=cfmCb;cfmCb=null;closeP();if(cb)cb();};
+$('cfmCancel').onclick=e=>{e.stopPropagation();cfmCb=null;closeP();};
 function openLog(){const l=$('logList');l.innerHTML='';log.forEach(x=>{const d=document.createElement('div');
   if(x.v&&VD[x.v]){const r=document.createElement('button');r.className='vr';r.title='重听语音';r.textContent='▶';r.onclick=e=>{e.stopPropagation();playVoice(x.v);};d.appendChild(r);}
   if(x.name){const b=document.createElement('b');b.textContent=x.name;d.appendChild(b);}
@@ -557,7 +567,7 @@ function goTitle(){inGame=false;stopVoice();ambient('stop',1200);bgm('title',200
 function startNew(){enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
 const CHAPTERS=[['start','第二十七卷 序章 · 序幕'],['ch1_baptism','第二十七卷第一章 · 洗礼'],['c3_merge','第二十七卷第二章 · 死亡回归 · 蒙面的男人'],['c4_merge','第二十七卷第二章 · 死亡回归 · 重逢'],['cont_start','第二十七卷第三章 · 军营中的苏醒'],['second_loop','第二十七卷第三章 · 第二周目 · 审问'],['village_start','第二十七卷第四章 · 修德拉克 · 村庄'],['vol27_ritual','第二十七卷第四章 · 修德拉克 · 血之仪式'],['village_mask','第二十七卷第四章 · 修德拉克 · 摘面具'],['guaral_start','第二十七卷第四章 · 瓜拉尔 · 城门'],['vol27_ch4','第二十七卷第四章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第二十七卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第二十七卷第六章 · 攻城 · 不流血的夺城'],['ch6_red','第二十七卷第六章 · 桀骜不驯之红']];
-function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}if(inGame&&!confirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？'))return;closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
+function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
 $('tLoad').onclick=()=>openSlots('load');
@@ -579,7 +589,7 @@ S=newState();syncCfg();
 document.querySelectorAll('#bar button').forEach(b=>b.onclick=e=>{e.stopPropagation();const a=b.dataset.a;
   if(a==='auto')setAuto(!auto);else if(a==='skip')setSkip(!skip);else if(a==='log')openLog();else if(a==='ch')openChapters();else if(a==='save')openSlots('save');
   else if(a==='load')openSlots('load');else if(a==='cfg')openP('cfgP');else if(a==='hide')toggleHide();
-  else if(a==='title'){if(confirm('返回标题画面？未保存的进度将会丢失。'))goTitle();}});
+  else if(a==='title'){askConfirm('返回标题画面？未保存的进度将会丢失。',goTitle);}});
 stage.addEventListener('click',e=>{if(e.target.closest('.panel,#choices button,#titleScr'))return;if(anyPanel())return;if(auto)setAuto(false);advance();});
 stage.addEventListener('contextmenu',e=>{e.preventDefault();if(inGame&&!anyPanel())toggleHide();});
 stage.addEventListener('wheel',e=>{if(inGame&&!anyPanel()&&e.deltaY<0)openLog();else if(inGame&&!anyPanel()&&e.deltaY>0)advance();},{passive:true});
