@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Re:从零开始的异世界生活 帝国篇 · 同人试玩版</title>
+<title>Re:从零开始的异世界生活 帝国篇第二十七卷</title>
 <style>
 @font-face{font-family:"VNSerif";src:url(fonts/serif-regular.woff2) format("woff2");font-weight:400}
 @font-face{font-family:"VNSerif";src:url(fonts/serif-bold.woff2) format("woff2");font-weight:700}
@@ -129,21 +129,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 #titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg) center/cover;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{0%{transform:scale(1.02) translate(0,0)}100%{transform:scale(1.08) translate(-14px,-8px)}}
 #titleScr .vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.28),transparent 45%),radial-gradient(ellipse at 60% 50%,transparent 55%,rgba(10,20,30,.45)),linear-gradient(0deg,rgba(10,25,20,.45),transparent 30%)}
+#titleScr .glow{position:absolute;left:50%;top:64%;width:940px;height:320px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,222,150,.30),rgba(255,200,120,.12) 45%,transparent 70%);animation:glowPulse 5s ease-in-out infinite alternate;pointer-events:none}
+@keyframes glowPulse{0%{opacity:.5;transform:translate(-50%,-50%) scale(1)}100%{opacity:1;transform:translate(-50%,-50%) scale(1.12)}}
+#embers{position:absolute;inset:0;pointer-events:none}
 #motes{position:absolute;inset:0;pointer-events:none}
 #motes i{position:absolute;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle,#fffbd0,rgba(255,240,150,.4) 50%,transparent 70%);animation:mote linear infinite}
 @keyframes mote{0%{transform:translate(0,0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(40px,-160px);opacity:0}}
-#logo{position:absolute;left:70px;top:46px;width:560px;animation:logoIn 1.6s ease-out both}
+#logo{position:absolute;left:calc(50% - 180px);top:8px;width:360px;animation:logoIn 1.6s ease-out both}
 @keyframes logoIn{0%{opacity:0;transform:translateY(-10px);filter:blur(6px)}100%{opacity:1;transform:none;filter:none}}
-#logo .re{font-weight:700;font-style:italic;font-size:118px;line-height:1;letter-spacing:-.02em;background:linear-gradient(180deg,#b9a2ff 0%,#7a5ad6 45%,#3f2a8c 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 1px #fff) drop-shadow(0 4px 8px rgba(40,20,90,.45))}
-#logo .re::after{content:"";display:inline-block;width:10px;height:10px;margin-left:8px;transform:rotate(45deg) translateY(-50px);background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
-#logo .l1{display:block;margin:4px 0 0 8px;font-weight:700;font-size:32px;letter-spacing:.36em;color:#2a2148;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)}
-#logo .l2{display:block;margin:2px 0 0 4px;font-weight:700;font-size:66px;letter-spacing:.1em;background:linear-gradient(180deg,#2c2450,#120d26);-webkit-background-clip:text;background-clip:text;color:transparent;
-  filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 1px #fff) drop-shadow(0 5px 8px rgba(20,10,50,.35))}
-#logo .rule{height:16px;margin:10px 0 6px;background:var(--rule) no-repeat left center/contain}
-#logo .sub{display:flex;align-items:center;gap:14px;font-weight:700;font-size:25px;letter-spacing:.42em;color:#5a3f9a;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff)}
-#logo .sub em{font-style:normal;font-size:16px;letter-spacing:.3em;color:#9a7a3a}
-#titleScr .menu{position:absolute;left:120px;top:388px;display:flex;flex-direction:column;gap:16px;width:300px;animation:logoIn 1.6s .4s ease-out both}
+#logo img{width:100%;display:block;filter:drop-shadow(0 4px 10px rgba(20,10,50,.35))}
+#titleScr .menu{position:absolute;left:calc(50% - 150px);top:388px;display:flex;flex-direction:column;gap:10px;width:300px;animation:logoIn 1.6s .4s ease-out both}
 #titleScr .note{position:absolute;right:20px;bottom:12px;font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.85);text-shadow:0 1px 3px #000}
 #titleScr #ver{position:absolute;left:20px;bottom:12px;font-size:13px;letter-spacing:.15em;color:rgba(255,255,255,.9);text-shadow:0 1px 3px #000}
 #chList{display:flex;flex-direction:column;gap:10px;overflow-y:auto;padding:18px 22px}
@@ -195,7 +190,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
       <p><b>按住 Ctrl</b>：临时快进　｜　<b>A</b>：自动　｜　<b>S</b>：快进开关　｜　<b>L / 滚轮上</b>：对话记录</p>
       <p><b>H / 右键</b>：隐藏对话框　｜　<b>Esc</b>：关闭面板　｜　标题画面可用 <b>↑ ↓</b> 选择</p>
       <p>存档 / 读档：共 3 个栏位，保存在浏览器本地（localStorage）。对话记录中点 <b>▶</b> 可重听语音。</p>
-      <p>本作为个人非商业同人试玩，剧情为原创改写，图片为 AI 生成，可自行替换；配音、音乐、音效来源见 CREDITS.txt。</p>
+      <p>本作为个人非商业同人作品，剧情为原创改写，图片为 AI 生成，可自行替换；配音、音乐、音效来源见 CREDITS.txt。</p>
     </div></div>
     <div class="pfoot">Esc / 返回 关闭</div></div>
 
@@ -205,18 +200,12 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="pfoot">跳转会从新状态开始，好感度归零，当前未保存的进度将会丢失　｜　Esc / 返回 关闭</div></div>
 
   <div class="layer" id="titleScr">
-    <div class="cov"></div><div class="vig"></div><div id="motes"></div>
-    <div id="logo">
-      <div class="re">Re:</div>
-      <span class="l1">从零开始的</span>
-      <span class="l2">异世界生活</span>
-      <div class="rule"></div>
-      <div class="sub">帝国篇 · 试玩版<em>第一章「洗礼」</em></div>
-    </div>
+    <div class="cov"></div><div class="vig"></div><div class="glow"></div><canvas id="embers"></canvas><div id="motes"></div>
+    <div id="logo"><img src="img/title_logo.png" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v1.5</div>
+    <div id="ver">v1.6</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -508,7 +497,7 @@ function showChoice(opts){
 }
 function endGame(){
   setAuto(false);setSkip(false);
-  setTimeout(()=>{toast('试玩版结束，感谢游玩！');goTitle();},1800);
+  setTimeout(()=>{toast('第二十七卷结束，未完待续！');goTitle();},1800);
 }
 
 // ---------- modes ----------
@@ -567,7 +556,7 @@ function goTitle(){inGame=false;stopVoice();ambient('stop',1200);bgm('title',200
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
 function startNew(){enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
-const CHAPTERS=[['start','第27卷 序章 · 序幕'],['ch1_baptism','第27卷第1章 · 洗礼'],['c3_merge','第27卷第2章 · 死亡回归 · 蒙面的男人'],['c4_merge','第27卷第2章 · 死亡回归 · 重逢'],['cont_start','第27卷第3章 · 军营中的苏醒'],['second_loop','第27卷第3章 · 第二周目 · 审问'],['village_start','第27卷第4章 · 修德拉克 · 村庄'],['vol27_ritual','第27卷第4章 · 修德拉克 · 血之仪式'],['village_mask','第27卷第4章 · 修德拉克 · 摘面具'],['guaral_start','第27卷第5章 · 瓜拉尔 · 城门'],['vol27_ch4','第27卷第5章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第27卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第27卷第6章 · 攻城 · 不流血的夺城'],['ch6_red','第27卷第6章 · 桀骜不驯之红']];
+const CHAPTERS=[['start','第二十七卷 序章 · 序幕'],['ch1_baptism','第二十七卷第一章 · 洗礼'],['c3_merge','第二十七卷第二章 · 死亡回归 · 蒙面的男人'],['c4_merge','第二十七卷第二章 · 死亡回归 · 重逢'],['cont_start','第二十七卷第三章 · 军营中的苏醒'],['second_loop','第二十七卷第三章 · 第二周目 · 审问'],['village_start','第二十七卷第四章 · 修德拉克 · 村庄'],['vol27_ritual','第二十七卷第四章 · 修德拉克 · 血之仪式'],['village_mask','第二十七卷第四章 · 修德拉克 · 摘面具'],['guaral_start','第二十七卷第五章 · 瓜拉尔 · 城门'],['vol27_ch4','第二十七卷第五章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第二十七卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第二十七卷第六章 · 攻城 · 不流血的夺城'],['ch6_red','第二十七卷第六章 · 桀骜不驯之红']];
 function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}if(inGame&&!confirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？'))return;closeP();enterGame();stopVoice();bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
@@ -612,6 +601,35 @@ addEventListener('keyup',e=>{if(e.key==='Control'){ctrl=false;updMode();}});
 ['bg_forest','bg_clearing','bg_waterfall','bg_jungle_night'].forEach(n=>{new Image().src='img/'+n+'.jpg';});
 ['subaru_calm','subaru_normal','subaru_serious','subaru_pain','subaru_shock','subaru_sad','subaru_hurt','subaru_arrow','rem_cold','rem_angry','rem_soft','rem_confused','rem_shy','masked_man_normal','masked_man_smirk','louis_normal','shudraq_hunter_normal'].forEach(n=>{new Image().src='img/'+n+'.png';if(BLINK[n])new Image().src='img/'+n+'_blink.png';if(MOUTH[n]){new Image().src='img/'+n+'_mouth.png';new Image().src='img/'+n+'_mouth2.png';}});
 window.__VN={cmds,labels,get S(){return S},advance,startNew,actors,music,amb,vEl,get vCur(){return vCur},setSkip};
+})();
+</script>
+<script>
+// Title-screen embers: rising gold sparks + glow, only while the title is visible.
+(function(){
+  var cv=document.getElementById('embers'),ts=document.getElementById('titleScr');
+  if(!cv||!ts)return; var ctx=cv.getContext('2d'),W=1280,H=720,ps=[],run=true;
+  function size(){cv.width=W;cv.height=H;}
+  size();
+  function mk(top){return {x:Math.random()*W,y:top?Math.random()*H*0.4:H+10+Math.random()*40,
+    r:1+Math.random()*2.6,vy:0.25+Math.random()*0.7,sw:0.3+Math.random()*0.9,ph:Math.random()*6.28,
+    a:0.35+Math.random()*0.55};}
+  for(var i=0;i<34;i++)ps.push(mk(true));
+  var t=0;
+  function frame(){
+    requestAnimationFrame(frame);
+    if(ts.classList.contains('off'))return;
+    t+=0.016; ctx.clearRect(0,0,W,H);
+    for(var i=0;i<ps.length;i++){var p=ps[i];
+      p.y-=p.vy; p.x+=Math.sin(t*p.sw+p.ph)*0.35;
+      var tw=0.55+0.45*Math.sin(t*3+p.ph*2);
+      ctx.globalAlpha=p.a*tw;
+      var g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);
+      g.addColorStop(0,'rgba(255,236,170,1)');g.addColorStop(0.4,'rgba(255,180,80,.85)');g.addColorStop(1,'rgba(255,150,40,0)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.arc(p.x,p.y,p.r*4,0,6.283); ctx.fill();
+      if(p.y<-12){ps[i]=mk(false);} }
+    ctx.globalAlpha=1;
+  }
+  frame();
 })();
 </script>
 </body>

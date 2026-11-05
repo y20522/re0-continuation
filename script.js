@@ -491,7 +491,7 @@ window.SCRIPT = String.raw`
 @amb stop 2000
 @bgm title 3000
 @black
-@title 试玩版　完
+@title 序章　完
 感谢游玩。续章从这里开始——
 @jump cont_start
 
@@ -1053,10 +1053,10 @@ window.SCRIPT = String.raw`
 普莉希拉|……来吧。我可不会输给一个只会躲在血后面的家伙。
 @black
 @bgm title 2000
-@title 第 27 卷　完
+@title 第二十七卷　完
 @label ch6_red
-@title 第 27 卷第 6 章「桀骜不驯之红」
-普莉希拉与阿拉基亚的正面交锋，留待下一卷。27 卷的故事，到这里先告一段落。
+@title 第二十七卷第六章「桀骜不驯之红」
+普莉希拉与阿拉基亚的正面交锋，留待下一卷。第二十七卷的故事，到这里先告一段落。
 
 @end
 `;
