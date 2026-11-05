@@ -205,7 +205,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v1.8</div>
+    <div id="ver">v1.9</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -255,7 +255,7 @@ document.querySelectorAll('.bokeh').forEach(b=>{for(let k=0;k<16;k++){const i=do
 for(let k=0;k<26;k++){const i=document.createElement('i');i.style.cssText='left:'+(Math.random()*100)+'%;top:'+(30+Math.random()*70)+'%;animation-duration:'+(6+Math.random()*8)+'s;animation-delay:-'+(Math.random()*8)+'s;transform:scale('+(.5+Math.random())+')';$('motes').appendChild(i);}
 
 // ---------- characters ----------
-const CHARS={'昴':{id:'subaru'},'雷姆':{id:'rem'},'露伊':{id:'louis'},'蒙面男子':{id:'masked_man'},'褐肤的女猎人':{id:'shudraq_hunter'},'托德':{id:'todd'},'贾马尔':{id:'jamal'},'米泽尔达':{id:'mizelda'},'塔莉塔':{id:'taritta'},'乌塔卡塔':{id:'utakata'},'文森特':{id:'vincent'},'弗洛普':{id:'flop'},'梅蒂姆':{id:'medium'},'库娜':{id:'kuna'},'霍莉':{id:'holly'},'齐克尔':{id:'zikr'},'阿拉基亚':{id:'arakiya'},'普莉希拉':{id:'priscilla'}};
+const CHARS={'昴':{id:'subaru'},'雷姆':{id:'rem'},'露伊':{id:'louis'},'蒙面男子':{id:'masked_man'},'褐肤的女猎人':{id:'shudraq_hunter'},'托德':{id:'todd'},'贾马尔':{id:'jamal'},'米泽尔达':{id:'mizelda'},'塔莉塔':{id:'taritta'},'乌塔卡塔':{id:'utakata'},'文森特':{id:'vincent'},'弗洛普':{id:'flop'},'米蒂安':{id:'medium'},'库娜':{id:'kuna'},'霍莉':{id:'holly'},'齐克尔':{id:'zikr'},'阿拉基亚':{id:'arakiya'},'普莉希拉':{id:'priscilla'}};
 const SCALE={subaru:1.06,rem:0.95,louis:0.78,masked_man:1.08,shudraq_hunter:1.02,utakata:0.78};
 const POS={left:24,center:50,right:76,farleft:14,farright:86};
 // 有闭眼图（img/xxx_blink.png）的立绘；替换立绘后若眼睛位置不同，删除对应 _blink.png 即可（会自动不眨眼）
