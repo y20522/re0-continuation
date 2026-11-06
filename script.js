@@ -999,6 +999,7 @@ window.SCRIPT = String.raw`
 @dance off
 @bgm tension 150
 @se dagger
+音乐，戛然而止。
 比安卡接过剑。下一瞬，剑尖已经抵在了齐克尔的咽喉上。
 比安卡抬手扯下了假发——那张脸，是文森特·佛拉基亚。
 @hide vincent_dress

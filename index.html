@@ -126,7 +126,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 /* ===== title ===== */
 #titleScr{z-index:30;overflow:hidden}
 #titleScr.off{display:none}
-#titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg?v2.5) center/cover;animation:kb 26s ease-in-out infinite alternate}
+#titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg?v2.6) center/cover;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{0%{transform:scale(1.02) translate(0,0)}100%{transform:scale(1.08) translate(-14px,-8px)}}
 #titleScr .vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.28),transparent 45%),radial-gradient(ellipse at 60% 50%,transparent 55%,rgba(10,20,30,.45)),linear-gradient(0deg,rgba(10,25,20,.45),transparent 30%)}
 #titleScr .glow{position:absolute;left:50%;top:64%;width:940px;height:320px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,222,150,.30),rgba(255,200,120,.12) 45%,transparent 70%);animation:glowPulse 5s ease-in-out infinite alternate;pointer-events:none}
@@ -207,21 +207,21 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div class="glow"></div><canvas id="embers"></canvas><div id="motes"></div>
-    <div id="logo"><img src="img/title_logo.png?v2.5" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
+    <div id="logo"><img src="img/title_logo.png?v2.6" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v2.5</div>
+    <div id="ver">v2.6</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
 </div></div>
-<script src="script.js?v2.5"></script>
-<script src="voice/voice_data.js?v2.5"></script>
-<script src="audio/audio_data.js?v2.5"></script>
+<script src="script.js?v2.6"></script>
+<script src="voice/voice_data.js?v2.6"></script>
+<script src="audio/audio_data.js?v2.6"></script>
 <script>
 // 资源版本号：每次发版改这里，所有图片/音频/剧本 URL 都会带上它，浏览器就不会再用旧缓存。
-const VER='v2.5';
+const VER='v2.6';
 const av=u=>u+(u.includes('?')?'&':'?')+'v='+VER;
 (function(){
 const $=s=>document.getElementById(s);
