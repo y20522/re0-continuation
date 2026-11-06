@@ -1,4 +1,4 @@
-Re:从零开始 · 帝国篇序章「洗礼」同人试玩版 —— 制作与素材来源（个人非商业）
+Re:从零开始 · 帝国篇（第二十六卷至第二十七卷第六章）同人试玩版 —— 制作与素材来源（个人非商业）
 ================================================================
 
 【角色配音】（日语，全部由 ElevenLabs 文字转语音生成，模型 eleven_v3，2026-11-03 生成）
@@ -6,11 +6,24 @@ Re:从零开始 · 帝国篇序章「洗礼」同人试玩版 —— 制作与�
               原始录音：中国同人配音爱好者，本人同意后录制并授权用于本作
   雷姆      —— ElevenLabs 自定义音色「雷姆」（voice_id: iQ7FJlN6gAPb76lVrQfr）
               原始录音：中国同人配音爱好者，本人同意后录制并授权用于本作
-  路易      —— ElevenLabs 官方预置音色 Jessica（cgSgspJ2msm6clMCkdW9），加「幼女声」语气提示
-  蒙面男子  —— ElevenLabs 官方预置音色 Adam（pNInz6obpgDQGcFmaJgB）
-  褐肤的女猎人 —— ElevenLabs 官方预置音色 Sarah（EXAVITQu4vr4xnSDxMaL）
+  露伊      —— ElevenLabs 官方预置音色 Jessica（cgSgspJ2msm6clMCkdW9），加「幼女声」语气提示
+  蒙面男子 / 文森特 —— ElevenLabs 官方预置音色 Adam（pNInz6obpgDQGcFmaJgB）
+  塔莉塔（河岸两句 v121、v122）—— ElevenLabs 官方预置音色 Sarah（EXAVITQu4vr4xnSDxMaL）
+  塔莉塔（村中及之后）、阿拉基亚 —— ElevenLabs 预置音色（voice_id: Xb7hH8MSUJpSbSDYk0k2）
+  托德      —— ElevenLabs 预置音色（voice_id: bIHbv24MWmeRgasZH58o）
+  贾马尔    —— ElevenLabs 预置音色（voice_id: SOYHLrjzK2X1ezoPC6cr）
+  米泽尔达  —— ElevenLabs 预置音色（voice_id: hpp4J3VqNfWAUOO0d1Us）
+  乌塔卡塔、米蒂安 —— ElevenLabs 预置音色（voice_id: FGY2WhTYpPnrIDTdsKH5）
+  弗洛普    —— ElevenLabs 预置音色（voice_id: TX3LPaxmHKxFdv7VOQHJ）
+  库娜、普莉希拉 —— ElevenLabs 预置音色（voice_id: pFZP5JQG7iQjIQuC4Bku）
+  霍莉      —— ElevenLabs 预置音色（voice_id: XrExE9yKIg1WjnnlVkGX）
+  齐克尔    —— ElevenLabs 预置音色（voice_id: pqHfZKP75CvOlQylNhV4）
+  阿尔      —— 有 v341.mp3，生成记录里没有单独的 voice_id，此处不编造
+  ※ 第 106 句之后的音色沿用上表。voice_script.csv 的 playback 列写明每一句是否播放。
+  ※ 台词改写后与旧录音对不上的句子，游戏不播放旧 mp3，文件名也没有改。
+  ※ 删去的重复句原来对应 v237、v238，文件还在，剧本不再引用。
   ※ 本作没有使用、也没有模仿任何职业声优（包括动画/游戏原版声优）的录音。
-  ※ 日语台词为根据本作中文改写台词翻译的原创文本，全部对照见 voice_script.csv。
+  ※ 日语台词是根据本作中文改写台词翻译的原创文本，对照见 voice_script.csv。不是小说原文。
 
 【背景音乐】（audio/bgm/，全部由 ElevenLabs Music 生成的原创纯音乐，付费 Starter 套餐账号生成）
   title.mp3    标题 / 片尾：钢琴 + 弦乐，温柔怀念
@@ -21,6 +34,7 @@ Re:从零开始 · 帝国篇序章「洗礼」同人试玩版 —— 制作与�
   horror.mp3   死亡：低沉嗡鸣、不协和弦乐
   warm.mp3     劫后余生：钢琴 + 木吉他，温暖
   shudraq.mp3  修德拉格之民：部族鼓、木笛、夜晚篝火
+  guaral.mp3   瓜拉尔：城市场景
   （已在本地做了首尾交叉淡化，方便无缝循环，并统一了响度）
 
 【音效 / 环境音】（audio/se/，全部由 ElevenLabs Sound Effects 生成）

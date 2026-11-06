@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Re:从零开始的异世界生活 帝国篇第二十七卷</title>
+<title>Re:从零开始的异世界生活 帝国篇 第二十六卷至第二十七卷</title>
 <style>
 @font-face{font-family:"VNSerif";src:url(fonts/serif-regular.woff2) format("woff2");font-weight:400}
 @font-face{font-family:"VNSerif";src:url(fonts/serif-bold.woff2) format("woff2");font-weight:700}
@@ -207,11 +207,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div class="glow"></div><canvas id="embers"></canvas><div id="motes"></div>
-    <div id="logo"><img src="img/title_logo.png" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
+    <div id="logo"><img src="img/title_logo.png" alt="Re:从零开始的异世界生活"></div>
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v2.3</div>
+    <div id="ver">v2.4</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
@@ -261,15 +261,15 @@ document.querySelectorAll('.bokeh').forEach(b=>{for(let k=0;k<16;k++){const i=do
 for(let k=0;k<26;k++){const i=document.createElement('i');i.style.cssText='left:'+(Math.random()*100)+'%;top:'+(30+Math.random()*70)+'%;animation-duration:'+(6+Math.random()*8)+'s;animation-delay:-'+(Math.random()*8)+'s;transform:scale('+(.5+Math.random())+')';$('motes').appendChild(i);}
 
 // ---------- characters ----------
-const CHARS={'昴':{id:'subaru'},'雷姆':{id:'rem'},'露伊':{id:'louis'},'蒙面男子':{id:'masked_man'},'褐肤的女猎人':{id:'shudraq_hunter'},'托德':{id:'todd'},'贾马尔':{id:'jamal'},'米泽尔达':{id:'mizelda'},'塔莉塔':{id:'taritta'},'乌塔卡塔':{id:'utakata'},'文森特':{id:'vincent'},'弗洛普':{id:'flop'},'米蒂安':{id:'medium'},'库娜':{id:'kuna'},'霍莉':{id:'holly'},'齐克尔':{id:'zikr'},'阿拉基亚':{id:'arakiya'},'普莉希拉':{id:'priscilla'}};
-const SCALE={subaru:1.06,rem:0.95,louis:0.78,masked_man:1.08,shudraq_hunter:1.02,utakata:0.78};
+const CHARS={'昴':{id:'subaru'},'雷姆':{id:'rem'},'露伊':{id:'louis'},'蒙面男子':{id:'masked_man'},'托德':{id:'todd'},'贾马尔':{id:'jamal'},'米泽尔达':{id:'mizelda'},'塔莉塔':{id:'taritta'},'乌塔卡塔':{id:'utakata'},'文森特':{id:'vincent'},'弗洛普':{id:'flop'},'米蒂安':{id:'medium'},'库娜':{id:'kuna'},'霍莉':{id:'holly'},'齐克尔':{id:'zikr'},'阿拉基亚':{id:'arakiya'},'普莉希拉':{id:'priscilla'},'阿尔':{id:null,offstage:true}};
+const SCALE={subaru:1.06,rem:0.95,louis:0.78,masked_man:1.08,utakata:0.78};
 const POS={left:24,center:50,right:76,farleft:14,farright:86};
-// 有闭眼图（img/xxx_blink.png）的立绘；替换立绘后若眼睛位置不同，删除对应 _blink.png 即可（会自动不眨眼）
-const BLINK={arakiya_normal:1,flop_normal:1,louis_normal:1,masked_man_normal:1,masked_man_smirk:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,todd_normal:1,vincent_normal:1,zikr_normal:1};
+// 有闭眼图（与底图同尺寸）的立绘。尺寸不一致的眨眼图不要登记。
+const BLINK={arakiya_normal:1,flop_normal:1,jamal_normal:1,louis_normal:1,masked_man_normal:1,masked_man_smirk:1,mizelda_normal:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,taritta_normal:1,todd_normal:1,vincent_normal:1,zikr_normal:1};
 // 表情切换时的反应动作
 const REACT={angry:'shake',soft:'hop',shy:'hop',pain:'shudder',shock:'hop',arrow:'shudder',hurt:'shudder'};
-// 有张嘴图（img/xxx_mouth.png 大张、xxx_mouth2.png 半张）的立绘；说话时根据语音音量切换（蒙面男看不到嘴，不做）
-const MOUTH={arakiya_normal:1,flop_normal:1,holly_normal:1,jamal_normal:1,kuna_normal:1,louis_normal:1,medium_normal:1,mizelda_normal:1,priscilla_normal:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,shudraq_hunter_normal:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,taritta_normal:1,todd_normal:1,utakata_normal:1,vincent_normal:1,zikr_normal:1};
+// 有张嘴图的立绘。没有口型的表情会在说话时退回同角色的 normal 口型（整张替换）。蒙面男看不到嘴。
+const MOUTH={arakiya_normal:1,flop_normal:1,flop_dress_normal:1,holly_normal:1,jamal_normal:1,kuna_normal:1,louis_normal:1,medium_normal:1,mizelda_normal:1,natsumi_normal:1,priscilla_normal:1,rem_angry:1,rem_cold:1,rem_confused:1,rem_shy:1,rem_soft:1,subaru_arrow:1,subaru_calm:1,subaru_hurt:1,subaru_normal:1,subaru_pain:1,subaru_sad:1,subaru_serious:1,subaru_shock:1,taritta_normal:1,todd_normal:1,utakata_normal:1,vincent_normal:1,vincent_dress_normal:1,zikr_normal:1};
 
 // ---------- Live2D-like sprite renderer ----------
 let dancing=false; // 舞蹈模式：表演时立绘随节拍起伏摇摆（@dance on/off）
@@ -288,7 +288,8 @@ function setExpr(a,id,expr,instant){const src='img/'+id+'_'+expr+'.png';
   if(a.src===src)return false;
   if(a.im&&a.im.complete&&a.im.naturalWidth&&!instant&&a.al>0.05){a.prev=a.im;a.xf=0;a.xfT=now();}else{a.prev=null;a.xf=1;}
   a.src=src;a.im=img(src,()=>{a.im=null;});a.bl=null;a.m1=a.m2=null;
-  if(MOUTH[id+'_'+expr]){const m1=img('img/'+id+'_'+expr+'_mouth.png',()=>{if(a.m1===m1)a.m1=null;}),m2=img('img/'+id+'_'+expr+'_mouth2.png',()=>{if(a.m2===m2)a.m2=null;});a.m1=m1;a.m2=m2;}
+  const mouthExpr=MOUTH[id+'_'+expr]?expr:(MOUTH[id+'_normal']?'normal':null);
+  if(mouthExpr){const m1=img('img/'+id+'_'+mouthExpr+'_mouth.png',()=>{if(a.m1===m1)a.m1=null;}),m2=img('img/'+id+'_'+mouthExpr+'_mouth2.png',()=>{if(a.m2===m2)a.m2=null;});a.m1=m1;a.m2=m2;}
   if(BLINK[id+'_'+expr]){const b=img('img/'+id+'_'+expr+'_blink.png',()=>{if(a.bl===b)a.bl=null;});a.bl=b;}
   return true;}
 function react(a,type){a.react={type,t:now()};}
@@ -353,7 +354,14 @@ for(let i=0;i<L.length;i++){
     cmds.push({op,args:p.slice(1),raw:s.slice(op.length+2)});
   }else{
     const k=s.indexOf('|');
-    if(k>0&&k<10)cmds.push({op:'say',name:s.slice(0,k),text:s.slice(k+1),v:'v'+String(++vn).padStart(3,'0')});
+    if(k>0&&k<10){
+      let name=s.slice(0,k),text=s.slice(k+1),v=null;
+      const pin=text.match(/^(.*?)\|\|(v\d{3})?$/);
+      if(pin){text=pin[1];v=pin[2]||null;}
+      const thought=/^[（(]/.test(text);
+      // 内心不占播放：名字牌、语音、口型都关掉。||vNNN 仍写在剧本里，供对照表使用，这里不播。
+      cmds.push({op:'say',name:thought?'':name,text,v:thought?null:v,thought});
+    }
     else cmds.push({op:'say',name:'',text:s});
   }
 }
@@ -361,10 +369,10 @@ for(let i=0;i<L.length;i++){
 // ---------- state ----------
 let S,log=[];
 const cfg=Object.assign({ts:30,as:1400,showAff:false,vb:60,vs:80,vv:100},JSON.parse(localStorage.getItem('re0demo_cfg')||'{}'));
-function newState(){return {i:0,aff:0,bg:null,black:true,sprites:{},scene:'序幕',play:0,bgm:null,amb:null};}
+function newState(){return {i:0,aff:0,bg:null,black:true,sprites:{},scene:'序幕',chapter:'第二十六卷　序章',play:0,bgm:null,amb:null};}
 let typing=false,full='',tTimer=null,waiting=false,auto=false,skip=false,ctrl=false,busy=false,inGame=false,autoTimer=null,uiHidden=false;
 const sleep=ms=>new Promise(r=>setTimeout(r,(skip||ctrl)?Math.min(ms,60):ms));
-let lastTick=Date.now();setInterval(()=>{const n=Date.now();if(inGame&&S)S.play+=n-lastTick;lastTick=n;},1000);
+let lastTick=Date.now();setInterval(()=>{const n=Date.now();if(inGame&&S&&!document.querySelector('.panel.on'))S.play+=n-lastTick;lastTick=n;},1000);
 
 // ---------- audio（BGM / 环境音 / 音效 / 语音）----------
 // 全部用 <audio> 元素播放（不用 Web Audio 分析器），这样直接双击 index.html（file://）也能正常出声。
@@ -393,7 +401,7 @@ function se(name){if(skip||ctrl)return;const info=AD.se[name];if(!info)return;co
 // voice
 const vEl=new Audio();vEl.preload='auto';let vCur=null;
 function stopVoice(){if(!vEl.paused)vEl.pause();vCur=null;}
-function playVoice(id){stopVoice();if(!id||!VD[id]||vol('vv')<=0)return;vCur=id;vEl.src='voice/'+id+'.mp3';vEl.volume=vol('vv');vEl.currentTime=0;const p=vEl.play();if(p&&p.catch)p.catch(()=>{vCur=null;});}
+function playVoice(id){stopVoice();if(!id||!VD[id]||vol('vv')<=0)return;vCur=id;vEl.src='voice/'+id+'.mp3';vEl.volume=vol('vv');vEl.currentTime=0;const p=vEl.play();if(p&&p.catch)p.catch(()=>{if(vCur===id){vCur=null;scheduleAuto();}});}
 function voiceOn(){return !!vCur&&!vEl.paused&&!vEl.ended;}
 function voiceLevel(){if(!voiceOn())return -1;const d=VD[vCur];if(!d||!d.e)return -1;const k=Math.floor(vEl.currentTime*d.r);const c=d.e.charCodeAt(Math.min(k,d.e.length-1))-48;return Math.max(0,c)/9;}
 vEl.addEventListener('ended',()=>{vCur=null;scheduleAuto();});
@@ -409,14 +417,21 @@ function bgUrl(n){return 'img/bg_'+n+'.jpg';}
 function setBgInstant(n){S.bg=n;const a=$(front);a.style.backgroundImage=n?'url('+bgUrl(n)+')':'none';a.style.transition='none';a.style.opacity=1;
   const b=$(front==='bgA'?'bgB':'bgA');b.style.opacity=0;requestAnimationFrame(()=>{a.style.transition='';});}
 async function changeBg(n,mode){
+  const gen=runGen;
+  // 同一地点再淡入一次时不清人，避免同场景连续 @bg 把立绘闪退再进。
+  if((!mode||mode==='fade')&&S.bg===n&&!S.black)return;
   if(mode==='black'||mode==='white'){
     const o=$('overlay');o.style.background=mode==='white'?'#fff':'#000';o.style.opacity=1;await sleep(850);
-    clearSprites(true);setBgInstant(n);S.black=false;await sleep(200);o.style.opacity=0;await sleep(800);o.style.background='#000';
+    if(gen!==runGen)return;
+    clearSprites(true);setBgInstant(n);S.black=false;await sleep(200);
+    if(gen!==runGen)return;
+    o.style.opacity=0;await sleep(800);if(gen!==runGen)return;o.style.background='#000';
   }else{
     const back=front==='bgA'?'bgB':'bgA';const b=$(back),a=$(front);
-    b.style.backgroundImage='url('+bgUrl(n)+')';b.style.opacity=1;a.style.opacity=0;front=back;S.bg=n;
+    b.style.backgroundImage='url('+bgUrl(n)+')';b.style.opacity=1;a.style.opacity=0;front=back;
+    const same=S.bg===n;S.bg=n;
     if(S.black){$('overlay').style.opacity=0;S.black=false;}
-    clearSprites();await sleep(900);
+    if(!same)clearSprites();await sleep(900);if(gen!==runGen)return;
   }
 }
 function showSprite(id,expr,pos,instant){
@@ -431,7 +446,19 @@ function showSprite(id,expr,pos,instant){
 function hideSprite(id,instant){delete S.sprites[id];const a=actors[id];if(!a)return;
   a.gone=true;a.ta=0;a.toff=(a.x>=50?50:-50);if(instant){a.cv.remove();delete actors[id];}}
 function clearSprites(instant){for(const id in actors)hideSprite(id,instant);S.sprites={};}
-function dimOthers(speakerId){for(const id in actors){const a=actors[id];a.speaking=id===speakerId;a.cv.classList.toggle('dim',!!speakerId&&id!==speakerId);}}
+function spriteOn(id){const a=actors[id];return !!(a&&!a.gone&&a.al>0.05);}
+function resolveSpeaker(name){
+  if(!name)return {id:null,offstage:false};
+  const c=CHARS[name];
+  if(!c)return {id:null,offstage:false};
+  if(c.offstage)return {id:null,offstage:true};
+  let id=c.id;
+  if(name==='昴'&&spriteOn('natsumi')&&!spriteOn('subaru'))id='natsumi';
+  if(name==='文森特'&&spriteOn('vincent_dress')&&!spriteOn('vincent'))id='vincent_dress';
+  if(name==='弗洛普'&&spriteOn('flop_dress')&&!spriteOn('flop'))id='flop_dress';
+  return {id,offstage:false};
+}
+function dimOthers(speakerId,offstage){for(const id in actors){const a=actors[id];a.speaking=!offstage&&id===speakerId;a.cv.classList.toggle('dim',!!offstage||(!!speakerId&&id!==speakerId));}}
 async function flash(c){const f=$('flash');f.style.transition='none';f.style.background=c==='red'?'rgba(200,0,0,.75)':'#fff';f.style.opacity=1;
   await new Promise(r=>requestAnimationFrame(r));f.style.transition='opacity .9s';f.style.opacity=0;await sleep(500);}
 function shake(){stage.classList.remove('shake');void stage.offsetWidth;stage.classList.add('shake');}
@@ -442,9 +469,10 @@ function toast(t){const e=$('toast');e.textContent=t;e.style.opacity=1;clearTime
 let curVoice=null,lastVoiced=false;
 function showText(name,text){
   const n=$('name'),tx=$('text');
-  if(name){n.firstChild.textContent=name;n.classList.remove('empty');const c=CHARS[name];
-    tx.classList.remove('narr');full='「'+text+'」';dimOthers(c?c.id:null);}
-  else{n.classList.add('empty');tx.classList.add('narr');full=text;dimOthers(null);}
+  if(name){n.firstChild.textContent=name;n.classList.remove('empty');
+    tx.classList.remove('narr');full='「'+text+'」';
+    const sp=resolveSpeaker(name);dimOthers(sp.id,sp.offstage);}
+  else{n.classList.add('empty');tx.classList.add('narr');full=text;dimOthers(null,false);}
   log.push({name,text:full,v:(name&&curVoice&&VD[curVoice])?curVoice:null});if(log.length>300)log.shift();
   if(name&&!(skip||ctrl))playVoice(curVoice);else stopVoice();
   lastVoiced=!!vCur;
@@ -457,39 +485,43 @@ function scheduleAuto(){clearTimeout(autoTimer);if(!waiting)return;
   if(skip||ctrl)autoTimer=setTimeout(advance,70);else if(auto){if(voiceOn())return;autoTimer=setTimeout(advance,vCur===null&&lastVoiced?Math.max(600,cfg.as*0.6):cfg.as+full.length*35);}}
 
 // ---------- runner ----------
+let runGen=0;
+function alive(gen){return gen===runGen;}
 async function run(){
-  if(busy)return;busy=true;waiting=false;
+  const gen=++runGen;
+  busy=true;waiting=false;
   try{
   while(S.i<cmds.length){
+    if(!alive(gen))return;
     const c=cmds[S.i];
     switch(c.op){
-      case 'say':snapPre();curVoice=c.v||null;showText(c.name,c.text);S.i++;busy=false;return;
-      case 'choice':snapPre();stopVoice();showChoice(c.opts);busy=false;return;
-      case 'title':{snapPre();const ch=$('chapter');ch.firstChild.textContent=c.raw;ch.classList.add('on');$('box').classList.add('hide');$('bar').style.opacity=0;S.i++;
-        await sleep(2000);ch.classList.remove('on');await sleep(900);if(!uiHidden){$('box').classList.remove('hide');$('bar').style.opacity=1;}continue;}
+      case 'say':snapPre(c.name?'「'+c.text+'」':c.text);curVoice=c.v||null;showText(c.name,c.text);S.i++;if(alive(gen))busy=false;return;
+      case 'choice':snapPre();stopVoice();showChoice(c.opts);if(alive(gen))busy=false;return;
+      case 'title':{S.chapter=c.raw;snapPre(c.raw);const ch=$('chapter');ch.firstChild.textContent=c.raw;ch.classList.add('on');$('box').classList.add('hide');$('bar').style.opacity=0;S.i++;
+        await sleep(2000);if(!alive(gen))return;ch.classList.remove('on');await sleep(900);if(!alive(gen))return;if(!uiHidden){$('box').classList.remove('hide');$('bar').style.opacity=1;}continue;}
       case 'scene':S.scene=c.raw;break;
       case 'bgm':bgm(c.args[0],c.args[1]?+c.args[1]:null);break;
       case 'amb':ambient(c.args[0],c.args[1]?+c.args[1]:null);break;
       case 'se':se(c.args[0]);break;
-      case 'wait':await sleep(+c.args[0]||500);break;
-      case 'bg':await changeBg(c.args[0],c.args[1]||'fade');break;
-      case 'black':$('overlay').style.opacity=1;S.black=true;clearSprites(true);$('text').textContent='';$('name').classList.add('empty');await sleep(900);break;
+      case 'wait':await sleep(+c.args[0]||500);if(!alive(gen))return;break;
+      case 'bg':await changeBg(c.args[0],c.args[1]||'fade');if(!alive(gen))return;break;
+      case 'black':$('overlay').style.opacity=1;S.black=true;clearSprites(true);$('text').textContent='';$('name').classList.add('empty');await sleep(900);if(!alive(gen))return;break;
       case 'show':showSprite(c.args[0],c.args[1],c.args[2]);break;
       case 'hide':hideSprite(c.args[0]);break;
       case 'hideall':clearSprites();break;
-      case 'flash':await flash(c.args[0]);break;
+      case 'flash':await flash(c.args[0]);if(!alive(gen))return;break;
       case 'shake':shake();break;
       case 'dance':dancing=(c.args[0]==='on');break;
       case 'jump':S.i=labels[c.args[0]];continue;
       case 'if':{const m=c.args[0].match(/aff>=(\d+)/);if(m&&S.aff>=+m[1]){S.i=labels[c.args[1]];continue;}break;}
-      case 'end':busy=false;endGame();return;
+      case 'end':if(alive(gen)){busy=false;endGame();}return;
     }
     S.i++;
   }
-  }finally{busy=false;}
+  }finally{if(alive(gen))busy=false;}
 }
 let preSnap=null;
-function snapPre(){preSnap={i:S.i,aff:S.aff,bg:S.bg,black:S.black,scene:S.scene,bgm:S.bgm,amb:S.amb,sprites:JSON.parse(JSON.stringify(S.sprites)),log:log.slice(-80)};}
+function snapPre(preview){preSnap={i:S.i,aff:S.aff,bg:S.bg,black:S.black,scene:S.scene,chapter:S.chapter||S.scene,bgm:S.bgm,amb:S.amb,sprites:JSON.parse(JSON.stringify(S.sprites)),log:log.slice(),preview:preview!=null?preview:(full||'')};}
 function advance(){
   clearTimeout(autoTimer);
   if(anyPanel()||$('choices').classList.contains('on')||!inGame)return;
@@ -518,8 +550,13 @@ function toggleHide(){uiHidden=!uiHidden;$('box').classList.toggle('hide',uiHidd
 
 // ---------- panels ----------
 function anyPanel(){return !!document.querySelector('.panel.on');}
-function openP(id){setAuto(false);setSkip(false);$(id).classList.add('on');}
-function closeP(){if($('logP').classList.contains('on'))stopVoice();document.querySelectorAll('.panel.on').forEach(p=>p.classList.remove('on'));}
+let holdAuto=false,holdSkip=false;
+function openP(id){
+  if(!document.querySelector('.panel.on')){holdAuto=auto;holdSkip=skip;if(auto)setAuto(false);if(skip)setSkip(false);}
+  $(id).classList.add('on');
+}
+function closeP(){if($('logP').classList.contains('on'))stopVoice();document.querySelectorAll('.panel.on').forEach(p=>p.classList.remove('on'));
+  if(!document.querySelector('.panel.on')){if(holdAuto)setAuto(true);if(holdSkip)setSkip(true);holdAuto=false;holdSkip=false;}}
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=e=>{e.stopPropagation();closeP();});
 let cfmCb=null;
 function askConfirm(msg,cb){$('cfmMsg').textContent=msg;cfmCb=cb;openP('cfmP');}
@@ -540,21 +577,21 @@ function openSlots(mode){
   for(let n=1;n<=3;n++){const d=JSON.parse(localStorage.getItem(SK(n))||'null');const el=document.createElement('div');el.className='slot parch';
     let h='<div class="no">'+pad(n)+'</div>';
     if(d){h+='<div class="thumb" style="background-image:url('+(d.bg?bgUrl(d.bg):'')+')"></div><div class="info">'+
-      '<div class="r1"><span class="ch">第一章　洗礼</span><span class="dt">'+esc(d.date||'')+'<b>'+esc(d.clock||d.time||'')+'</b></span></div>'+
+      '<div class="r1"><span class="ch">'+esc(d.chapter||d.scene||'—')+'</span><span class="dt">'+esc(d.date||'')+'<b>'+esc(d.clock||d.time||'')+'</b></span></div>'+
       '<div class="r1"><span class="sc">◆ '+esc(d.scene||'—')+'</span><span class="pt">游戏时间 '+fmtPlay(d.play)+'</span></div>'+
       '<div class="pv">'+esc((d.preview||'').slice(0,46))+'</div></div>';}
     else h+='<div class="empty">暂无存档<small>NO DATA</small></div>';
     el.innerHTML=h;addCorners(el);
     el.onclick=e=>{e.stopPropagation();
       if(mode==='save'){if(!inGame||!preSnap)return;const D=new Date();
-        const data=Object.assign({},preSnap,{time:D.toLocaleString('zh-CN'),date:D.getFullYear()+'/'+pad(D.getMonth()+1)+'/'+pad(D.getDate()),clock:pad(D.getHours())+':'+pad(D.getMinutes()),play:S.play,preview:full});
+        const data=Object.assign({},preSnap,{time:D.toLocaleString('zh-CN'),date:D.getFullYear()+'/'+pad(D.getMonth()+1)+'/'+pad(D.getDate()),clock:pad(D.getHours())+':'+pad(D.getMinutes()),play:S.play});
         try{localStorage.setItem(SK(n),JSON.stringify(data));toast('已保存到栏位 '+pad(n));}catch(err){toast('保存失败：浏览器禁止本地存储');}openSlots('save');}
       else{if(!d)return;closeP();loadData(d);}};
     w.appendChild(el);}
   openP('slotP');
 }
 function loadData(d){
-  enterGame();S=newState();S.i=d.i;S.aff=d.aff||0;S.scene=d.scene||'';S.play=d.play||0;log=d.log||[];
+  runGen++;enterGame();S=newState();S.i=d.i;S.aff=d.aff||0;S.scene=d.scene||'';S.chapter=d.chapter||d.scene||'';S.play=d.play||0;log=d.log||[];
   clearSprites(true);
   if(d.bg){setBgInstant(d.bg);}
   S.black=!!d.black;$('overlay').style.opacity=S.black?1:0;
@@ -566,12 +603,32 @@ function loadData(d){
 
 // ---------- title ----------
 function enterGame(){$('titleScr').classList.add('off');inGame=true;uiHidden=false;$('box').classList.remove('hide');$('bar').style.display='flex';$('bar').style.opacity=1;$('choices').classList.remove('on');}
-function goTitle(){inGame=false;dancing=false;stopVoice();ambient('stop',1200);bgm('title',2000);setAuto(false);setSkip(false);closeP();clearTimeout(autoTimer);clearInterval(tTimer);typing=false;waiting=false;
+function goTitle(){runGen++;busy=false;inGame=false;dancing=false;stopVoice();ambient('stop',1200);bgm('title',2000);holdAuto=false;holdSkip=false;setAuto(false);setSkip(false);closeP();clearTimeout(autoTimer);clearInterval(tTimer);typing=false;waiting=false;
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
 function startNew(){enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
-const CHAPTERS=[['start','第二十七卷 序章 · 序幕'],['ch1_baptism','第二十七卷第一章 · 洗礼'],['c3_merge','第二十七卷第二章 · 死亡回归 · 蒙面的男人'],['c4_merge','第二十七卷第二章 · 死亡回归 · 重逢'],['cont_start','第二十七卷第三章 · 军营中的苏醒'],['second_loop','第二十七卷第三章 · 第二周目 · 审问'],['village_start','第二十七卷第四章 · 修德拉克 · 村庄'],['vol27_ritual','第二十七卷第四章 · 修德拉克 · 血之仪式'],['village_mask','第二十七卷第四章 · 修德拉克 · 摘面具'],['guaral_start','第二十七卷第四章 · 瓜拉尔 · 城门'],['vol27_ch4','第二十七卷第四章 · 瓜拉尔 · 舞团准备'],['zikr_interlude','第二十七卷番外 · 齐克尔·奥斯曼'],['vol27_ch6','第二十七卷第六章 · 攻城 · 不流血的夺城'],['ch6_red','第二十七卷第六章 · 桀骜不驯之红']];
-function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{closeP();enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
+const CHAPTERS=[
+ ['start','第二十六卷　序章 · 序幕'],
+ ['ch1_baptism','第二十六卷第一章 · 洗礼'],
+ ['vol26_ch2','第二十六卷第二章 · 有勇气的选择'],
+ ['vol26_ch3','第二十六卷第三章 · 身为男人真辛苦'],
+ ['c4_merge','第二十六卷第三章 · 瀑布重逢'],
+ ['vol26_ch4','第二十六卷第四章 · 帝国的流仪'],
+ ['cont_start','第二十六卷第五章 · 佛拉基亚帝国'],
+ ['vol27_ch1','第二十七卷第一章 · 想要守护的人们'],
+ ['vol27_ch2','第二十七卷第二章 · 悄然逼近的凶意'],
+ ['second_loop','第二十七卷第二章 · 第二周目'],
+ ['village_start','第二十七卷 · 修德拉格村落'],
+ ['vol27_ritual','第二十七卷 · 血之仪式'],
+ ['village_mask','第二十七卷 · 摘下面具'],
+ ['guaral_start','第二十七卷第三章 · 城塞都市瓜拉尔'],
+ ['vol27_ch4','第二十七卷第四章 · 皇帝、商人与菜月昴'],
+ ['zikr_interlude','幕间 · 齐克尔·奥斯曼'],
+ ['vol27_ch5','第二十七卷第五章 · 乐师·娜姿蜜'],
+ ['vol27_ch6','第二十七卷第五章 · 不流血的夺城'],
+ ['ch6_red','第二十七卷第六章 · 桀骜不驯之红']
+];
+function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{runGen++;closeP();enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;S.black=true;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
 $('tLoad').onclick=()=>openSlots('load');
@@ -594,7 +651,7 @@ document.querySelectorAll('#bar button').forEach(b=>b.onclick=e=>{e.stopPropagat
   if(a==='auto')setAuto(!auto);else if(a==='skip')setSkip(!skip);else if(a==='log')openLog();else if(a==='ch')openChapters();else if(a==='save')openSlots('save');
   else if(a==='load')openSlots('load');else if(a==='cfg')openP('cfgP');else if(a==='hide')toggleHide();
   else if(a==='title'){askConfirm('返回标题画面？未保存的进度将会丢失。',goTitle);}});
-stage.addEventListener('click',e=>{if(e.target.closest('.panel,#choices button,#titleScr'))return;if(anyPanel())return;if(auto)setAuto(false);advance();});
+stage.addEventListener('click',e=>{if(e.target.closest('.panel,#choices button,#titleScr'))return;if(anyPanel())return;if(auto){setAuto(false);return;}advance();});
 stage.addEventListener('contextmenu',e=>{e.preventDefault();if(inGame&&!anyPanel())toggleHide();});
 stage.addEventListener('wheel',e=>{if(inGame&&!anyPanel()&&e.deltaY<0)openLog();else if(inGame&&!anyPanel()&&e.deltaY>0)advance();},{passive:true});
 addEventListener('keydown',e=>{
@@ -610,10 +667,11 @@ addEventListener('keydown',e=>{
   else if(e.key==='h'||e.key==='H')toggleHide();
 });
 addEventListener('keyup',e=>{if(e.key==='Control'){ctrl=false;updMode();}});
+addEventListener('blur',()=>{if(ctrl){ctrl=false;updMode();}});
 
 // preload
-['bg_forest','bg_clearing','bg_waterfall','bg_jungle_night'].forEach(n=>{new Image().src='img/'+n+'.jpg';});
-['subaru_calm','subaru_normal','subaru_serious','subaru_pain','subaru_shock','subaru_sad','subaru_hurt','subaru_arrow','rem_cold','rem_angry','rem_soft','rem_confused','rem_shy','masked_man_normal','masked_man_smirk','louis_normal','shudraq_hunter_normal'].forEach(n=>{new Image().src='img/'+n+'.png';if(BLINK[n])new Image().src='img/'+n+'_blink.png';if(MOUTH[n]){new Image().src='img/'+n+'_mouth.png';new Image().src='img/'+n+'_mouth2.png';}});
+['bg_forest','bg_clearing','bg_waterfall','bg_jungle_night','bg_military_camp','bg_shudrak_village','bg_ritual','bg_guaral_gate','bg_guaral_city','bg_guaral_hall'].forEach(n=>{new Image().src='img/'+n+'.jpg';});
+['subaru_calm','subaru_normal','subaru_serious','subaru_pain','subaru_shock','subaru_sad','subaru_hurt','subaru_arrow','rem_cold','rem_angry','rem_soft','rem_confused','rem_shy','masked_man_normal','masked_man_smirk','louis_normal','taritta_normal','todd_normal','mizelda_normal','jamal_normal','vincent_normal','priscilla_normal','natsumi_normal','vincent_dress_normal','flop_dress_normal','flop_normal','zikr_normal','arakiya_normal'].forEach(n=>{new Image().src='img/'+n+'.png';if(BLINK[n])new Image().src='img/'+n+'_blink.png';if(MOUTH[n]){new Image().src='img/'+n+'_mouth.png';new Image().src='img/'+n+'_mouth2.png';}});
 window.__VN={cmds,labels,get S(){return S},advance,startNew,actors,music,amb,vEl,get vCur(){return vCur},setSkip};
 })();
 </script>

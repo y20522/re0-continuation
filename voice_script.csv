@@ -1,253 +1,344 @@
-﻿id,speaker,chinese,japanese,emotion_tag,voice_id
-v001,昴,咳、咳……这是哪……？,ゴホッ、ゴホッ……ここ、どこだ……？,"[in pain, coughing]",I3xNWCjkgeTxRIRbjZRx
-v002,昴,冷静，菜月昴。先确认状况……手脚都在，脑袋也还在。然后——,落ち着け、菜月昴。まず状況確認だ……手足はある、頭もついてる。それから——,"[serious, muttering to himself]",I3xNWCjkgeTxRIRbjZRx
-v003,昴,雷姆！雷姆呢！？,レム！レムはどこだ！？,[panicked],I3xNWCjkgeTxRIRbjZRx
-v004,昴,雷、雷姆……你醒了？你真的醒了！？,レ、レム……目、覚めたのか？本当に起きたんだな！？,"[trembling, overjoyed]",I3xNWCjkgeTxRIRbjZRx
-v005,昴,太好了……太好了啊……！我一直、一直在等你——,よかった……本当によかった……！俺、ずっと、ずっと待ってたんだ——,[crying with joy],I3xNWCjkgeTxRIRbjZRx
-v006,雷姆,……请不要再靠近了。,……それ以上、近づかないでください。,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr
-v007,昴,……诶？,……え？,[confused],I3xNWCjkgeTxRIRbjZRx
-v008,雷姆,我在问你话。你是谁？……这里，又是哪里？,質問しているのはこちらです。あなたは誰ですか？……それに、ここはどこなんですか？,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr
-v009,昴,我叫菜月昴！是……是你的英雄。你以前经常这么说的！,俺は菜月昴！お前の……お前の英雄だ。前はよくそう言ってくれただろ！,"[cheerful, playful]",I3xNWCjkgeTxRIRbjZRx
-v010,雷姆,英雄……？,えいゆう……？,"[cold, puzzled]",iQ7FJlN6gAPb76lVrQfr
-v011,雷姆,会自己说出这种话的人，我想，一般被叫作骗子才对。,自分でそんなことを言う人は、普通、嘘つきと呼ばれると思いますけど。,"[cold, deadpan]",iQ7FJlN6gAPb76lVrQfr
-v012,昴,呜……这吐槽也太犀利了吧。不，被你这么说反而有点怀念……,うっ……ツッコミが鋭すぎるだろ。いや、そう言われるとむしろ懐かしいっていうか……,"[wry, embarrassed laugh]",I3xNWCjkgeTxRIRbjZRx
-v013,雷姆,……我完全听不懂你在说什么。,……何を言っているのか、まったくわかりません。,"[cold, annoyed]",iQ7FJlN6gAPb76lVrQfr
-v014,昴,我是谁等会再说。你刚醒过来对吧？有没有哪里痛？头晕吗？,俺が誰かは後でいい。今目が覚めたばっかだろ？どっか痛くないか？めまいは？,"[serious, concerned]",I3xNWCjkgeTxRIRbjZRx
-v015,雷姆,……！,……っ！,[surprised gasp],iQ7FJlN6gAPb76lVrQfr
-v016,雷姆,……身体很重。手脚使不上力气。但这跟你没有关系。,……体が重いです。手足に力が入りません。でも、あなたには関係のないことです。,"[cold, guarded, weak]",iQ7FJlN6gAPb76lVrQfr
-v017,昴,怎么会没关系。你可是睡了很久很久啊。,関係なくなんかないって。お前、ずっとずっと眠ってたんだぞ。,"[softly, earnest]",I3xNWCjkgeTxRIRbjZRx
-v018,雷姆,……一个陌生人，为什么要用那种表情看着我。,……見ず知らずの人が、どうしてそんな顔で私を見るんですか。,"[softly, hesitant]",iQ7FJlN6gAPb76lVrQfr
-v019,昴,喂……别开玩笑了。你真的什么都不记得了？我的名字、宅邸、姐姐……全部？,おい……冗談だろ。本当に何も覚えてないのか？俺の名前も、屋敷も、姉様も……全部？,"[desperate, shaky]",I3xNWCjkgeTxRIRbjZRx
-v020,雷姆,请不要擅自逼问我！,勝手に問い詰めないでください！,"[angry, sharp]",iQ7FJlN6gAPb76lVrQfr
-v021,雷姆,……我连自己是谁都不知道。你满意了吗？,……自分が誰なのかもわからないんです。これで満足ですか？,"[angry, bitter]",iQ7FJlN6gAPb76lVrQfr
-v022,昴,……抱歉。是我太急了。,……悪い。焦りすぎた。,"[quietly, apologetic]",I3xNWCjkgeTxRIRbjZRx
-v023,昴,……你的名字叫雷姆。这个，你还记得吗？,……お前の名前はレムだ。それは、覚えてるか？,"[serious, gentle]",I3xNWCjkgeTxRIRbjZRx
-v024,雷姆,雷姆……,レム……,"[softly, uncertain]",iQ7FJlN6gAPb76lVrQfr
-v025,雷姆,……没有任何感觉。,……何も感じません。,"[cold, flat]",iQ7FJlN6gAPb76lVrQfr
-v026,雷姆,不要过来！,来ないでください！,"[angry, shouting]",iQ7FJlN6gAPb76lVrQfr
-v027,路易,啊——呜！,あう——うー！,"[childlike, small girl voice, wordless cry]",cgSgspJ2msm6clMCkdW9
-v028,雷姆,唔……！,うっ……！,"[in pain, struggling]",iQ7FJlN6gAPb76lVrQfr
-v029,昴,……喂，放开她！,……おい、離してやれ！,"[serious, urgent]",I3xNWCjkgeTxRIRbjZRx
-v030,昴,这家伙……,こいつ……,"[disgusted, low voice]",I3xNWCjkgeTxRIRbjZRx
-v031,雷姆,……那么，这孩子怎么办？,……それで、この子はどうするんですか？,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr
-v032,雷姆,她刚才保护了我。看起来，她也什么都不知道。,この子はさっき私を守ってくれました。見たところ、この子も何もわからないようです。,"[cold, firm]",iQ7FJlN6gAPb76lVrQfr
-v033,昴,（怎么办……？）,（どうする……？）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v034,昴,（她是罪有应得。她做过的事，就算变成这副样子也不会被抵消。）,（自業自得だ。こいつのやったことは、こんな姿になったって帳消しにはならない。）,"[whispering, bitter, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v035,昴,（我现在要保护的只有雷姆。带着这种家伙，只会让我们两个都陷入危险。）,（今の俺が守るべきなのはレムだけだ。こんな奴を連れてたら、二人とも危険になるだけだ。）,"[whispering, serious, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v036,昴,丢下她吧。她不是什么需要我们保护的人。,置いていこう。こいつは俺たちが守るような奴じゃない。,"[cold, serious]",I3xNWCjkgeTxRIRbjZRx
-v037,雷姆,……你是认真的吗？把这么小的孩子，扔在这种森林里？,……本気ですか？こんなに小さな子を、こんな森に置き去りにするなんて。,"[angry, disbelieving]",iQ7FJlN6gAPb76lVrQfr
-v038,昴,你不知道她是什么人。我知道。所以我说，丢下她。,お前はこいつが何者か知らない。俺は知ってる。だから言ってるんだ、置いていけって。,"[cold, harsh]",I3xNWCjkgeTxRIRbjZRx
-v039,雷姆,……我果然没有看错。从你身上，有一股非常、非常难闻的气味。,……やっぱり、見間違いではありませんでした。あなたからは、ひどく、ひどく嫌な臭いがします。,"[cold, disgusted]",iQ7FJlN6gAPb76lVrQfr
-v040,雷姆,像是把邪恶本身熬煮出来的味道。,まるで、悪意そのものを煮詰めたような臭いです。,"[cold, disgusted]",iQ7FJlN6gAPb76lVrQfr
-v041,昴,……随你吧。要带她走也可以。不过别指望我照顾她。,……好きにしろよ。連れていきたきゃそれでいい。ただし、俺に面倒見させようとか思うなよ。,"[grumbling, reluctant]",I3xNWCjkgeTxRIRbjZRx
-v042,雷姆,嘴上这么说，可你看她的眼神，就像在看一只想要掐死的虫子。,口ではそう言っても、あなたがこの子を見る目は、握り潰したい虫を見る目です。,"[cold, piercing]",iQ7FJlN6gAPb76lVrQfr
-v043,昴,那、那是……,そ、それは……,[flustered],I3xNWCjkgeTxRIRbjZRx
-v044,雷姆,而且——你身上那股气味。从刚才开始就一直让我想吐。,それに——あなたのその臭い。さっきからずっと、吐き気がするんです。,"[angry, disgusted]",iQ7FJlN6gAPb76lVrQfr
-v045,雷姆,像是邪恶本身被熬煮出来的味道。这样的人说的话，我没有办法相信。,悪意そのものを煮詰めたような臭い。そんな人の言葉を、信じることはできません。,"[cold, resolute]",iQ7FJlN6gAPb76lVrQfr
-v046,昴,等等，雷姆，听我说——,待ってくれ、レム、話を——,"[panicked, pleading]",I3xNWCjkgeTxRIRbjZRx
-v047,雷姆,……再见了。不要来找我们。,……さようなら。私たちを探さないでください。,"[cold, quiet, final]",iQ7FJlN6gAPb76lVrQfr
-v048,昴,……哈啊！？,……はあっ！？,[gasping awake],I3xNWCjkgeTxRIRbjZRx
-v049,昴,没死……？不是「回来」了……我还活着。,死んでない……？「戻った」わけじゃない……俺、生きてる。,"[breathless, confused]",I3xNWCjkgeTxRIRbjZRx
-v050,昴,……被丢下了啊，我。,……置いていかれたのか、俺。,"[quietly, dejected]",I3xNWCjkgeTxRIRbjZRx
-v051,昴,……这不是怎么看都是坏人吗。,……これ、どう見ても悪者じゃねえか。,[self-deprecating sigh],I3xNWCjkgeTxRIRbjZRx
-v052,昴,笨蛋。我这个大笨蛋！,バカ。俺の大バカ野郎！,"[frustrated, shouting at himself]",I3xNWCjkgeTxRIRbjZRx
-v053,昴,雷姆——！雷姆！你在哪里！？,レム——！レム！どこにいるんだ！？,"[shouting, desperate]",I3xNWCjkgeTxRIRbjZRx
-v054,昴,是我错了！我道歉！所以，拜托你回答我——！,俺が悪かった！謝る！だから、頼むから返事してくれ——！,"[shouting, desperate, pleading]",I3xNWCjkgeTxRIRbjZRx
-v055,昴,……咕、啊……？,……ぐ、あ……？,"[in pain, gasping, choking]",I3xNWCjkgeTxRIRbjZRx
-v056,昴,雷……姆……,レ……ム……,"[in pain, dying whisper]",I3xNWCjkgeTxRIRbjZRx
-v057,昴,——————！！,うわああああっ！！,"[screaming, waking in terror]",I3xNWCjkgeTxRIRbjZRx
-v058,昴,……回来了。是在被丢下之后……醒来的地方。,……戻ってきた。置いていかれた後……目が覚めた場所だ。,"[breathless, shaky]",I3xNWCjkgeTxRIRbjZRx
-v059,昴,好啊……行啊。死一次就能明白的事，那就算便宜的了。,いいぜ……上等だ。一回死んでわかることなら、安いもんだ。,"[determined, bitter laugh]",I3xNWCjkgeTxRIRbjZRx
-v060,昴,这片森林里有「猎人」。不能再那样大喊大叫地乱跑了。,この森には「狩人」がいる。前みたいに大声で叫びながら走り回るのはダメだ。,"[serious, determined]",I3xNWCjkgeTxRIRbjZRx
-v061,蒙面男子,……喂。那边那个形迹可疑的。,……おい。そこの怪しい奴。,"[cold, commanding]",pNInz6obpgDQGcFmaJgB
-v062,昴,（又是哪来的家伙！？是射箭的那个人吗？不，他手上没有弓……）,（今度はどこのどいつだ！？矢を射ったのはこいつか？いや、弓は持ってない……）,"[whispering, panicked, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v063,昴,等一下等一下！我没有武器，也没有敌意！看，两手空空！,待った待った！武器もないし、敵意もない！ほら、手ぶらだ！,"[panicked, nervous]",I3xNWCjkgeTxRIRbjZRx
-v064,蒙面男子,……哼。至少还懂得在比自己强的人面前低头。不算太蠢。,……ふん。自分より強い者に頭を下げる程度の知恵はあるか。そこまで愚かではないらしい。,"[cold, condescending]",pNInz6obpgDQGcFmaJgB
-v065,昴,这种夸法一点都不让人高兴……,そういう褒め方、全然嬉しくないんだけど……,"[mumbling, sulky]",I3xNWCjkgeTxRIRbjZRx
-v066,蒙面男子,我没有在夸你。,褒めてなどいない。,"[cold, dry]",pNInz6obpgDQGcFmaJgB
-v067,昴,你是什么人？在这片森林里放冷箭的，是你吗！？,お前は何者だ？この森で矢を射ってきたのは、お前か！？,"[angry, suspicious]",I3xNWCjkgeTxRIRbjZRx
-v068,蒙面男子,放箭？若我想要你的命，你现在已经不会站着说话了。,矢だと？貴様の命が欲しければ、今頃こうして口をきいてはいない。,"[cold, scornful]",pNInz6obpgDQGcFmaJgB
-v069,蒙面男子,还有——在搞清楚对方是谁之前就大呼小叫，只会让你死得更快。,それと——相手が何者かも確かめずに騒ぎ立てれば、死期を早めるだけだ。,"[cold, stern]",pNInz6obpgDQGcFmaJgB
-v070,昴,……这句话，我刚刚才亲身体会过。,……その言葉、ついさっき身をもって知ったとこだよ。,"[wry, rueful]",I3xNWCjkgeTxRIRbjZRx
-v071,昴,我在找人。一个蓝头发的女孩，身边还跟着一个金发的小孩。你有没有看到？,人を探してるんだ。青い髪の女の子と、金髪の小さい子が一緒にいるはずなんだ。見てないか？,"[serious, urgent]",I3xNWCjkgeTxRIRbjZRx
-v072,蒙面男子,没有。,知らん。,"[cold, curt]",pNInz6obpgDQGcFmaJgB
-v073,蒙面男子,拿着。赤手空拳地在这片林子里乱走，跟把自己送进野兽嘴里没有区别。,持っていけ。素手でこの森をうろつくのは、獣の口に自ら飛び込むのと変わらん。,"[cold, dismissive]",pNInz6obpgDQGcFmaJgB
-v074,昴,……给我的？为什么？,……俺に？なんでだ？,"[surprised, puzzled]",I3xNWCjkgeTxRIRbjZRx
-v075,蒙面男子,一时兴起罢了。往河的方向走，地势会开阔些。找人也好，逃命也罢，随你。,ただの気まぐれだ。川の方へ向かえ、少しは地形が開ける。人探しでも、逃げるのでも、好きにしろ。,"[cold, indifferent]",pNInz6obpgDQGcFmaJgB
-v076,昴,……这个世界的人，怎么一个个都这么不讲解释的啊。,……この世界の人間って、なんでどいつもこいつも説明しないんだよ。,[exasperated sigh],I3xNWCjkgeTxRIRbjZRx
-v077,昴,找到了……！是雷姆和那家伙的！,見つけた……！レムとあいつの足跡だ！,"[excited, hopeful]",I3xNWCjkgeTxRIRbjZRx
-v078,昴,痛痛痛痛——！？,いててててっ——！？,"[in pain, yelping]",I3xNWCjkgeTxRIRbjZRx
-v079,昴,……陷阱。全都是对着追兵设的陷阱。,……罠だ。全部、追っ手用の罠じゃねえか。,"[groaning, realizing]",I3xNWCjkgeTxRIRbjZRx
-v080,昴,哈哈……失去记忆了还这么能干，不愧是雷姆啊……虽然被针对的是我。,はは……記憶がなくてもこんなに有能とか、さすがレムだな……狙われてるのは俺だけど。,"[weak laugh, in pain]",I3xNWCjkgeTxRIRbjZRx
-v081,雷姆,……停下。再往前一步，我就不客气了。,……止まってください。あと一歩でも近づいたら、容赦しません。,"[cold, threatening]",iQ7FJlN6gAPb76lVrQfr
-v082,昴,找到你了……总算是……,やっと見つけた……ようやく……,"[exhausted, relieved]",I3xNWCjkgeTxRIRbjZRx
-v083,雷姆,你为什么追过来？我应该说过了，不要来找我们。,どうして追ってきたんですか？言ったはずです、私たちを探さないでと。,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr
-v084,昴,嗯，你说过。但我有话必须当面跟你说。,ああ、言われた。でも、どうしても直接言わなきゃいけないことがあるんだ。,"[serious, sincere]",I3xNWCjkgeTxRIRbjZRx
-v085,昴,……刚才的事，是我不对。说要丢下那孩子，是我最差劲的一面。对不起。,……さっきのことは、俺が悪かった。あの子を置いていこうなんて、俺の一番最低なところだった。ごめん。,"[sincere, apologetic]",I3xNWCjkgeTxRIRbjZRx
-v086,雷姆,……道歉的话谁都会说。你的气味，可一点都没有变。,……謝るだけなら誰にでもできます。あなたの臭いは、少しも変わっていません。,"[cold, unconvinced]",iQ7FJlN6gAPb76lVrQfr
-v087,雷姆,……,……はぁ。,[sighs softly],iQ7FJlN6gAPb76lVrQfr
-v088,雷姆,……你的气味还是很难闻。但是……至少，你看起来不像在说谎。,……あなたの臭いは、まだひどいです。でも……少なくとも、嘘をついているようには見えません。,"[softly, hesitant]",iQ7FJlN6gAPb76lVrQfr
-v089,雷姆,别误会。我还没有相信你。,勘違いしないでください。まだあなたを信じたわけではありません。,"[softly, slightly flustered, firm]",iQ7FJlN6gAPb76lVrQfr
-v090,昴,那就够了。不相信我也没关系，只要让我跟着就——,それで十分だ。信じてくれなくてもいい、ついていかせてくれさえすれば——,"[relieved, earnest]",I3xNWCjkgeTxRIRbjZRx
-v091,昴,趴下！！,伏せろ！！,"[shouting, panicked]",I3xNWCjkgeTxRIRbjZRx
-v092,雷姆,……！又是你的同伙吗！？,……っ！またあなたの仲間ですか！？,"[angry, sharp]",iQ7FJlN6gAPb76lVrQfr
-v093,昴,怎么可能！我上一次就是被那玩意——不、没什么！总之是「猎人」！这片森林里有人在狩猎我们！,そんなわけあるか！俺はこの前あれに——いや、なんでもない！とにかく「狩人」だ！この森で誰かが俺たちを狩ってるんだ！,"[panicked, fast]",I3xNWCjkgeTxRIRbjZRx
-v094,昴,……蛇？这么大的蛇是犯规吧！？,……蛇？こんなでかい蛇は反則だろ！？,"[panicked, disbelieving]",I3xNWCjkgeTxRIRbjZRx
-v095,昴,雷姆，抓住我的手！现在不是争论的时候！,レム、俺の手をつかめ！今は言い争ってる場合じゃない！,"[serious, urgent, shouting]",I3xNWCjkgeTxRIRbjZRx
-v096,雷姆,我不会丢下这孩子一个人逃走！,この子を一人置いて逃げたりはしません！,"[angry, determined]",iQ7FJlN6gAPb76lVrQfr
-v097,昴,我知道！所以——三个人一起跑！,わかってる！だから——三人で一緒に逃げるんだ！,"[determined, shouting]",I3xNWCjkgeTxRIRbjZRx
-v098,昴,你身体还没恢复，抱不动她吧！把那孩子给我，你只管跑！,お前、まだ体が戻ってないだろ、その子は抱えられない！こっちに渡せ、お前は走ることだけ考えろ！,"[urgent, shouting]",I3xNWCjkgeTxRIRbjZRx
-v099,雷姆,……你？抱着这孩子？,……あなたが？この子を抱えて？,"[surprised, hesitant]",iQ7FJlN6gAPb76lVrQfr
-v100,昴,对！我讨厌她，但我更不想看你为了她死掉！快点！,そうだ！こいつは嫌いだけど、お前がこいつのために死ぬのはもっと嫌なんだよ！早く！,"[desperate, shouting]",I3xNWCjkgeTxRIRbjZRx
-v101,昴,前、前面没路了……！？,さ、先がねえ……！？,"[panicked, out of breath]",I3xNWCjkgeTxRIRbjZRx
-v102,昴,……雷姆。你会游泳吗？,……レム。お前、泳げるか？,"[out of breath, serious]",I3xNWCjkgeTxRIRbjZRx
-v103,雷姆,……不记得了。,……覚えていません。,"[out of breath, uncertain]",iQ7FJlN6gAPb76lVrQfr
-v104,昴,那就是会！相信你的身体！一、二——,なら泳げる！自分の体を信じろ！いち、にの——,"[desperate, forced cheer]",I3xNWCjkgeTxRIRbjZRx
-v105,昴,（不放开……这次，绝对不放开……！）,（離さない……今度こそ、絶対に離さない……！）,"[whispering, determined, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v106,昴,活……活下来了……三个人都……,い……生きてる……三人とも……,"[exhausted, panting]",I3xNWCjkgeTxRIRbjZRx
-v107,雷姆,……你，是笨蛋吗。,……あなた、バカなんですか。,"[exhausted, softly]",iQ7FJlN6gAPb76lVrQfr
-v108,雷姆,明明自己都快沉下去了，却一直抓着我们不放。,自分も沈みかけていたのに、ずっと私たちを離さなかった。,"[softly, hesitant]",iQ7FJlN6gAPb76lVrQfr
-v109,昴,笨蛋就笨蛋吧。……能抓住，就好。,バカでいいさ。……つかめたんなら、それでいい。,"[exhausted, gentle laugh]",I3xNWCjkgeTxRIRbjZRx
-v110,雷姆,……谢谢。,……ありがとうございます。,"[softly, shy]",iQ7FJlN6gAPb76lVrQfr
-v111,雷姆,……我只说这一次。,……一度だけしか、言いませんから。,"[softly, embarrassed]",iQ7FJlN6gAPb76lVrQfr
-v112,昴,……嗯。一次就够了。,……ああ。一回で十分だ。,"[softly, warm]",I3xNWCjkgeTxRIRbjZRx
-v113,褐肤的女猎人,——外来者。,——よそ者。,"[cold, commanding, low voice]",EXAVITQu4vr4xnSDxMaL
-v114,褐肤的女猎人,你们闯进了「修德拉格」的森林。,お前たちは「シュドラク」の森に踏み込んだ。,"[cold, stern]",EXAVITQu4vr4xnSDxMaL
-v115,昴,修德……拉格……？,シュド……ラク……？,"[weak, fading]",I3xNWCjkgeTxRIRbjZRx
-v116,昴,……头……好痛……这里是……？,……頭……痛い……ここは……？,"[in pain, confused]",I3xNWCjkgeTxRIRbjZRx
-v117,托德,哟，醒了？别乱动，你伤还没好。,やあ、起きた？動かないでね、怪我はまだ治ってないよ。,"[friendly, calm]",bIHbv24MWmeRgasZH58o
-v118,昴,……你是谁？雷姆呢？那个孩子呢？,……お前は誰だ？レムは？あの子は？,"[panicked]",I3xNWCjkgeTxRIRbjZRx
-v119,托德,她们在隔壁帐篷，好好的，没人动她们。只要你老实回答问题。,彼女たちは隣のテントにいる。無事だよ、誰も手を出してない。素直に質問に答えてくれればね。,"[calm, reassuring]",bIHbv24MWmeRgasZH58o
-v120,昴,（冷静。先确认状况。修德拉克的人呢？帝国军为什么会出现在这里？）,（落ち着け。まず状況確認だ。シュドラクの人たちは？帝国軍がどうしてここにいるんだ？）,"[whispering, serious, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v121,托德,我是托德，帝国军的士兵。你，还有你那把小刀，看起来可不像普通流浪者。,俺はトッド、帝国軍の兵士だ。お前、それにその小刀、普通の流れ者には見えないな。,"[friendly, probing]",bIHbv24MWmeRgasZH58o
-v122,昴,小刀……？那是别人给我的。,小刀……？それは人に貰ったんだ。,"[hesitant]",I3xNWCjkgeTxRIRbjZRx
-v123,托德,哦？那可是一把好刀。拿着这种刀的人，在帝国可不多。,へえ？それはいい刀だ。そんな刀を持ってる奴は、帝国にもそういないよ。,"[impressed]",bIHbv24MWmeRgasZH58o
-v124,昴,……我叫昴。只是个路过的人，带着两个……家人。,……俺は昴。ただの通りすがりで、連れているのは二人……家族だ。,"[guarded]",I3xNWCjkgeTxRIRbjZRx
-v125,托德,家人啊。行吧，昴。军营里不养闲人，你能干活，就先留下来。,家族か。わかったよ、昴。軍営では働かざる者食うべからずだ。働けるなら、とりあえず置いてやる。,"[easygoing]",bIHbv24MWmeRgasZH58o
-v126,雷姆,……你看起来，比在森林里的时候还要累。,……あなた、森にいたときより疲れて見えます。,"[cold, concerned]",iQ7FJlN6gAPb76lVrQfr
-v127,昴,没办法。在这里，至少不用担心下一支箭从哪棵树后面飞出来。,仕方ない。ここなら、次はどこの木の後ろから矢が飛んでくるかって心配はしなくていい。,"[wry, tired]",I3xNWCjkgeTxRIRbjZRx
-v128,雷姆,……你为什么要对我们这么好？,……どうして、あなたは私たちにそんなによくしてくれるんですか？,"[cold, suspicious]",iQ7FJlN6gAPb76lVrQfr
-v129,昴,因为……你们是我要带回去的人。就这么简单。,だって……お前たちは、俺が連れて帰らなきゃいけない人たちだから。それだけだ。,"[softly, earnest]",I3xNWCjkgeTxRIRbjZRx
-v130,雷姆,……哼。陌生人。,……ふん。見ず知らずの人。,"[cold, flat]",iQ7FJlN6gAPb76lVrQfr
-v131,昴,（这样下去不行。修德拉克还在森林里，帝国军迟早会动手。我得想办法，在事情变糟之前带她们离开。）,（このままじゃだめだ。シュドラクはまだ森にいるし、帝国軍はいずれ動く。事態が悪くなる前に、彼女たちを連れて逃げなきゃ。）,"[whispering, serious, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v132,贾马尔,喂，小子。听说你对丛林很熟？那里面，有魔兽，对吧？,おい、小僧。お前はジャングルに詳しいそうじゃないか。あの中には、魔獣がいるんだろ？,"[gruff, probing]",SOYHLrjzK2X1ezoPC6cr
-v133,昴,……是有。但你们最好不要进去。,……いるよ。でも、お前たちは入らない方がいい。,"[serious, warning]",I3xNWCjkgeTxRIRbjZRx
-v134,贾马尔,哈？帝国军做事，轮不到你来教。,はあ？帝国軍のやり方に、お前に口を出す権利はない。,"[annoyed, gruff]",SOYHLrjzK2X1ezoPC6cr
-v135,托德,昴，听我说。上面决定了，要放火烧林，把里面的人逼出来。,昴、聞いてくれ。上が決めたんだ。森に火を放って、中の奴らを追い出すって。,"[serious, uneasy]",bIHbv24MWmeRgasZH58o
-v136,昴,……什么？你们疯了吗？那里面不只有修德拉克，还有……,……何だって？お前ら正気か？あの中にはシュドラクだけじゃなくて……,"[shocked, angry]",I3xNWCjkgeTxRIRbjZRx
-v137,托德,我知道这很残忍。但这是命令。我、我也只能……,残酷なのはわかってる。でも命令なんだ。俺、俺だって……,"[conflicted, quiet]",bIHbv24MWmeRgasZH58o
-v138,昴,托德！你明明知道，烧林会死多少人！,トッド！森を焼けば何人が死ぬか、お前だってわかってるだろ！,"[angry, shouting]",I3xNWCjkgeTxRIRbjZRx
-v139,昴,是我……是我害了她们……,俺だ……俺が彼女たちを……,"[guilty, broken]",I3xNWCjkgeTxRIRbjZRx
-v140,雷姆,昴！小心！,昴！気をつけて！,"[panicked, shouting]",iQ7FJlN6gAPb76lVrQfr
-v141,昴,……雷姆……快跑……,……レム……逃げて……,"[weak, in pain]",I3xNWCjkgeTxRIRbjZRx
-v142,昴,（……又来了吗。死亡回归。）,（……またか。死に戻り。）,"[whispering, grim, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v143,昴,（这次，我不能再提丛林的事。不能让他们烧林。）,（今度は、ジャングルの話はしない。森を焼かせちゃいけない。）,"[whispering, determined, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v144,托德,哟，醒了？别乱动，你伤还没好。,やあ、起きた？動かないでね、怪我はまだ治ってないよ。,"[friendly, calm]",bIHbv24MWmeRgasZH58o
-v145,昴,……托德。我什么都不知道。我只是个路过的人。,……トッド。俺は何も知らない。ただの通りすがりだ。,"[guarded, careful]",I3xNWCjkgeTxRIRbjZRx
-v146,托德,……是吗？你的眼神，可不像什么都不知道。,……そうか？でもお前の目つきは、何も知らない奴の目じゃないな。,"[probing, calm]",bIHbv24MWmeRgasZH58o
-v147,托德,昴。你刚才，有一瞬间在害怕。害怕什么？,昴。さっき、一瞬怯えたな。何を怖がってる？,"[sharp, probing]",bIHbv24MWmeRgasZH58o
-v148,昴,（糟了。他看出来了。）,（まずい。見抜かれた。）,"[whispering, panicked, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v149,昴,……好吧，我说实话。我可以带你们进丛林，但条件是：不许动那两个女孩。,……わかった、正直に言う。俺がジャングルに案内してやる。ただし条件がある。その二人の女の子には手を出すな。,"[serious, bargaining]",I3xNWCjkgeTxRIRbjZRx
-v150,托德,……成交。不过，你最好别耍花样。,……取引成立だ。ただし、変な真似はするなよ。,"[calm, warning]",bIHbv24MWmeRgasZH58o
-v151,昴,（计划是这样：把士兵引到魔兽出没的地方，趁乱带雷姆她们走。）,（作戦はこうだ。兵士たちを魔獣の出る場所に誘い込んで、混乱に乗じてレムたちを連れて逃げる。）,"[whispering, plotting, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v152,昴,……陷阱……全都是陷阱……,……罠……全部罠だ……,"[weak, in pain]",I3xNWCjkgeTxRIRbjZRx
-v153,昴,雷姆……路易……对不起……我又……,レム……ルイ……ごめん……また……,"[guilty, broken]",I3xNWCjkgeTxRIRbjZRx
-v154,昴,……这里是……木笼？,……ここは……木の檻？,"[confused, weak]",I3xNWCjkgeTxRIRbjZRx
-v155,蒙面男子,……你也醒了。看来，我们都被抓了。,……お前も目覚めたか。どうやら、俺たちは二人とも捕まったらしい。,"[calm, dry]",pNInz6obpgDQGcFmaJgB
-v156,昴,……是你。蒙面……你怎么也在这里？,……お前か。覆面……どうしてお前もここにいるんだ？,"[surprised]",I3xNWCjkgeTxRIRbjZRx
-v157,蒙面男子,一时兴起罢了。不过现在，我们有共同的问题：怎么让外面那些人，相信我们不是敌人。,気まぐれだよ。だが今は、共通の問題がある。外の奴らに、俺たちが敵じゃないと信じさせる方法だ。,"[calm, dry]",pNInz6obpgDQGcFmaJgB
-v158,昴,……外面那些人，是修德拉克？,……外の奴らって、シュドラクなのか？,"[questioning]",I3xNWCjkgeTxRIRbjZRx
-v159,蒙面男子,嗯。接下来，我会提出一个办法。你只需要，照我说的做。,ああ。次に、俺が方法を提案する。お前は、俺の言う通りにすればいい。,"[calm, commanding]",pNInz6obpgDQGcFmaJgB
-v160,米泽尔达,……就是你们，闯进我们的森林？,……お前たちが、俺たちの森に忍び込んだ奴らか？,"[cold, stern]",hpp4J3VqNfWAUOO0d1Us
-v161,昴,……是。我们不是来打仗的。我们只是……迷路了。,……そうだ。俺たちは戦いに来たんじゃない。ただ……道に迷っただけだ。,"[guarded, earnest]",I3xNWCjkgeTxRIRbjZRx
-v162,米泽尔达,迷路？迷路的人，会带着帝国军的刀？,道に迷った？迷った人間が、帝国軍の刀を持ってるのか？,"[cold, suspicious]",hpp4J3VqNfWAUOO0d1Us
-v163,昴,那把刀……是别人给我的。我没有用它伤过任何人。,その刀は……人に貰ったんだ。俺はそれで誰も傷つけてない。,"[earnest]",I3xNWCjkgeTxRIRbjZRx
-v164,米泽尔达,撒谎的人，在这里活不长。塔莉塔，看着他。,嘘をつく奴は、ここでは長生きできない。タリッタ、こいつを見張れ。,"[stern, commanding]",hpp4J3VqNfWAUOO0d1Us
-v165,塔莉塔,……姐姐，交给我。,……姉さん、任せて。,"[firm]",Xb7hH8MSUJpSbSDYk0k2
-v166,昴,（姐姐？所以米泽尔达是族长，塔莉塔是她妹妹。）,（姉さん？つまりミゼルダが族長で、タリッタはその妹か。）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v167,昴,……我叫昴。这两位是我的家人，雷姆和路易。她们没有武器，也不会伤人。,……俺は昴。こちらの二人は家族のレムとルイだ。武器は持ってないし、誰も傷つけたりしない。,"[earnest]",I3xNWCjkgeTxRIRbjZRx
-v168,米泽尔达,……家人。好吧，昴。我给你一个机会，证明你不是帝国军的走狗。,……家族か。いいだろう、昴。お前が帝国軍の手先じゃないと証明する機会をやる。,"[stern, measured]",hpp4J3VqNfWAUOO0d1Us
-v169,乌塔卡塔,……你、你别过来！外人……不许碰我们的东西！,……こ、こっち来ないで！よそ者……俺たちの物を触っちゃいけないの！,"[frightened, wary]",FGY2WhTYpPnrIDTdsKH5
-v170,路易,……没关系，我不碰。我只是……想看看你的弓。,……大丈夫、触らないよ。ただ……君の弓を見てみたかっただけ。,"[childlike, gentle]",cgSgspJ2msm6clMCkdW9
-v171,乌塔卡塔,……我的弓……是妈妈给我的。,……俺の弓……お母さんがくれたの。,"[hesitant, proud]",FGY2WhTYpPnrIDTdsKH5
-v172,路易,……你的妈妈，一定很厉害。,……君のお母さん、きっとすごい人だね。,"[childlike, admiring]",cgSgspJ2msm6clMCkdW9
-v173,乌塔卡塔,……嗯！她是……她是最厉害的猎人！,……うん！彼女は……一番すごい狩人なの！,"[proud, bright]",FGY2WhTYpPnrIDTdsKH5
-v174,昴,（路易和这个孩子，意外地合得来。也许……这就是突破口。）,（ルイとこの子、意外と気が合うな。もしかして……これが突破口になるかもしれない。）,"[whispering, hopeful, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v175,雷姆,……你又在想什么危险的事了。,……また何か危ないことを考えてるんでしょう。,"[cold, knowing]",iQ7FJlN6gAPb76lVrQfr
-v176,昴,被你看出来了啊。,見抜かれちゃったか。,"[wry, sheepish]",I3xNWCjkgeTxRIRbjZRx
-v177,雷姆,……哼。别死。,……ふん。死ぬなよ。,"[cold, soft]",iQ7FJlN6gAPb76lVrQfr
-v178,米泽尔达,听好了，昴。想成为修德拉克的兄弟，只有一条路：血之仪式。,よく聞け、昴。シュドラクの兄弟になりたければ、道は一つだけだ。血の儀式だ。,"[stern, formal]",hpp4J3VqNfWAUOO0d1Us
-v179,昴,……血之仪式？,……血の儀式？,"[questioning]",I3xNWCjkgeTxRIRbjZRx
-v180,米泽尔达,一个人，独自面对一只魔兽。活下来，你就是我们的兄弟。死……就不用我说了。,一人で、魔獣と向き合うんだ。生き残れば、お前は俺たちの兄弟だ。死ねば……言うまでもない。,"[stern]",hpp4J3VqNfWAUOO0d1Us
-v181,昴,……我接受。,……受ける。,"[determined]",I3xNWCjkgeTxRIRbjZRx
-v182,米泽尔达,……你确定？你看起来，可不像能打赢魔兽的样子。,……本気か？お前、魔獣に勝てるようには見えないけどな。,"[doubtful]",hpp4J3VqNfWAUOO0d1Us
-v183,昴,我打不赢，也得打。因为我要带她们活着离开这片森林。,勝てなくても、戦うしかない。彼女たちを生きてこの森から連れ出すために。,"[determined, earnest]",I3xNWCjkgeTxRIRbjZRx
-v184,昴,……来了……！,……来た……！,"[tense, shouting]",I3xNWCjkgeTxRIRbjZRx
-v185,昴,（不行……正面打不过……只能用陷阱，用地形，用它自己的力量对付它……）,（だめだ……正面からは勝てない……罠を使って、地形を使って、そいつの力でそいつを倒すしかない……）,"[whispering, urgent, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v186,米泽尔达,……你……居然真的赢了。,……お前……本当に勝ったのか。,"[surprised, impressed]",hpp4J3VqNfWAUOO0d1Us
-v187,昴,……运气……好而已……,……運が……よかっただけ……,"[weak, breathless]",I3xNWCjkgeTxRIRbjZRx
-v188,米泽尔达,……不。运气，也是实力的一部分。从今天起，你是修德拉克的兄弟。,……いや。運も、実力の一部だ。今日から、お前はシュドラクの兄弟だ。,"[firm, approving]",hpp4J3VqNfWAUOO0d1Us
-v189,蒙面男子,……昴。仪式结束之后，有件事，该告诉你了。,……昴。儀式が終わった今、教えておくべきことがある。,"[calm, serious]",pNInz6obpgDQGcFmaJgB
-v190,昴,……什么事？,……何だ？,"[questioning]",I3xNWCjkgeTxRIRbjZRx
-v191,蒙面男子,我的真名，叫文森特·沃拉基亚。弗拉基亚帝国的皇帝。,俺の本名は、ヴィンセント・ヴォラキア。ヴォラキア帝国の皇帝だ。,"[calm, revealing]",pNInz6obpgDQGcFmaJgB
-v192,昴,……皇帝？！你、你就是那个皇帝？！,……皇帝！？お、お前があの皇帝なのか！？,"[shocked]",I3xNWCjkgeTxRIRbjZRx
-v193,文森特,嗯。被自己的部下背叛，流落到这里。现在，我需要你们的力量，夺回瓜拉尔。,ああ。自分の部下に裏切られ、ここに流れ着いた。今、俺はお前たちの力が必要だ。グアラルを取り戻すために。,"[calm, serious]",pNInz6obpgDQGcFmaJgB
-v194,昴,……所以，你一开始就知道我是谁？,……つまり、お前は最初から俺が誰か知ってたのか？,"[surprised, questioning]",I3xNWCjkgeTxRIRbjZRx
-v195,文森特,我知道你不是帝国军的人。我也知道，你想要的，和我想要的，刚好在同一条路上。,お前が帝国軍の人間じゃないことは知ってた。それに、お前の望みと俺の望みが、ちょうど同じ道の上にあることもな。,"[calm, knowing]",pNInz6obpgDQGcFmaJgB
-v196,米泽尔达,……既然你是兄弟，修德拉克就不会丢下你。塔莉塔，霍莉，库娜，准备出发。,……お前が兄弟なら、シュドラクはお前を見捨てない。タリッタ、ホーリィ、クーナ、出発の準備をしろ。,"[firm, commanding]",hpp4J3VqNfWAUOO0d1Us
-v197,塔莉塔,……是，姐姐。我会盯着这个男人，不让他再乱来。,……はい、姉さん。この男を見張って、もう勝手なことはさせません。,"[firm]",Xb7hH8MSUJpSbSDYk0k2
-v198,昴,……谢谢。真的，谢谢你们。,……ありがとう。本当に、ありがとう。,"[grateful, earnest]",I3xNWCjkgeTxRIRbjZRx
-v199,文森特,别谢得太早，昴。瓜拉尔的仗，才刚刚开始。,礼を言うのはまだ早い、昴。グアラルの戦いは、まだ始まったばかりだ。,"[calm, warning]",pNInz6obpgDQGcFmaJgB
-v200,雷姆,……走吧。再磨蹭，天就要黑了。,……行こう。ぐずぐずしてたら、日が暮れるよ。,"[cold, practical]",iQ7FJlN6gAPb76lVrQfr
-v201,弗洛普,哟哟，几位客人，要进城的话，检查可是很严的哦。,ようよう、お客さん方。入城するなら、検査は厳しいですよ。,"[cheerful, merchant]",TX3LPaxmHKxFdv7VOQHJ
-v202,昴,……我们没有身份证明，也没有贿赂的钱。,……俺たちには身分証明も、賄賂の金もない。,"[troubled]",I3xNWCjkgeTxRIRbjZRx
-v203,弗洛普,哈哈，那就交给我吧。商人嘛，最擅长的就是……把“没有”变成“有”。,ははは、それなら俺に任せな。商人ってのはね、一番得意なのが……「無い」を「有る」に変えることなんだよ。,"[laughing, confident]",TX3LPaxmHKxFdv7VOQHJ
-v204,梅蒂姆,哥哥，别光说大话。先帮他们把马车藏好。,お兄ちゃん、口だけじゃだめよ。まず彼らの馬車を隠してあげて。,"[cheerful, scolding]",FGY2WhTYpPnrIDTdsKH5
-v205,弗洛普,是是，妹妹大人。,はいはい、妹様。,"[easygoing]",TX3LPaxmHKxFdv7VOQHJ
-v206,昴,（弗洛普和梅蒂姆……意外的可靠。这两个人，也许能成为同伴。）,（フロップとメディウム……意外と頼りになる。この二人、仲間になれるかもしれない。）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v207,昴,……为什么……为什么是我要穿裙子啊？！,……どうして……どうして俺がスカートを穿かなきゃいけないんだよ！？,"[panicked, shouting]",I3xNWCjkgeTxRIRbjZRx
-v208,文森特,因为你最合适，昴。别抱怨了，比安卡和芙萝拉都准备好了。,お前が一番似合うからだ、昴。文句は言うな。ビアンカもフローラも準備はできてる。,"[calm, dry]",pNInz6obpgDQGcFmaJgB
-v209,弗洛普,哈哈，娜姿蜜小姐，你今天可真漂亮。,ははは、ナツミお嬢さん、今日は本当にお綺麗だ。,"[laughing, teasing]",TX3LPaxmHKxFdv7VOQHJ
-v210,昴,……闭嘴，弗洛普。你自己的裙子也好不到哪去。,……黙れ、フロップ。お前のスカートだって大して変わらないだろ。,"[annoyed]",I3xNWCjkgeTxRIRbjZRx
-v211,塔莉塔,……行了，别闹了。城门检查一过，我们就分头行动。,……いい加減にしろ。城門の検査を抜けたら、俺たちは別行動だ。,"[firm]",Xb7hH8MSUJpSbSDYk0k2
-v212,库娜,……哼。你们三个，最好别在台上出丑。,……ふん。お前たち三人、舞台で恥をかくんじゃないよ。,"[sullen]",pFZP5JQG7iQjIQuC4Bku
-v213,霍莉,嘻嘻，放心吧。库娜，你就负责在外面接应，别又和人吵起来。,ふふ、安心して。クーナは外で待機してて、また人と喧嘩しないでね。,"[playful, teasing]",XrExE9yKIg1WjnnlVkGX
-v214,库娜,……谁会和人吵起来啊！,……誰が人と喧嘩するって言うのよ！,"[annoyed, shouting]",pFZP5JQG7iQjIQuC4Bku
-v215,齐克尔,……哦？舞团？最近城里气氛紧张，正好需要一点音乐。,……ほう？舞踏団か。最近、城の中は物々しいから、ちょうど音楽が欲しかったところだ。,"[mild, interested]",pqHfZKP75CvOlQylNhV4
-v216,昴,（他就是齐克尔·奥斯曼，瓜拉尔的二等将军。看起来……完全不像将军。）,（こいつがジークル・オスマン、グアラルの二等将軍か。見た目は……全然将軍らしくない。）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v217,齐克尔,哈哈，别看我这样，我可是很懂欣赏的。你们，就在士兵面前表演一场吧。,はは、見た目はこうでも、俺は鑑賞にはうるさいんだよ。お前たち、兵士たちの前で一曲披露してくれ。,"[laughing, hearty]",pqHfZKP75CvOlQylNhV4
-v218,昴,……好。我们表演。,……わかった。披露する。,"[serious, resolved]",I3xNWCjkgeTxRIRbjZRx
-v219,齐克尔,……嗯。你们的舞，很有意思。尤其是你，娜姿蜜小姐。,……うん。お前たちの踊り、面白いな。特に君、ナツミお嬢さん。,"[pleased, probing]",pqHfZKP75CvOlQylNhV4
-v220,昴,（糟了……他是不是看出来了？）,（まずい……見抜かれたか？）,"[whispering, panicked, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v221,托德,……哟，好久不见，昴。没想到，你还活着。,……やあ、久しぶりだな、昴。まさか、まだ生きてたとは。,"[friendly, menacing]",bIHbv24MWmeRgasZH58o
-v222,昴,托德……！你怎么会在瓜拉尔？！,トッド……！どうしてグアラルにいるんだ！？,"[shocked]",I3xNWCjkgeTxRIRbjZRx
-v223,托德,我可是帝国军的士兵，追杀叛徒，是我的工作。,俺は帝国軍の兵士だ。反逆者を追うのは、俺の仕事さ。,"[calm, friendly]",bIHbv24MWmeRgasZH58o
-v224,昴,（跑！不能在这里被抓住！雷姆她们还在城里！）,（逃げろ！ここで捕まるわけにはいかない！レムたちがまだ城にいるんだ！）,"[whispering, urgent, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v225,托德,跑吧，昴。你跑得越远，我就越有兴趣。,逃げろ、昴。お前が遠くへ逃げれば逃げるほど、俺は興味が湧く。,"[playful, menacing]",bIHbv24MWmeRgasZH58o
-v226,昴,……托德。我不会再让你，用烧林那一套对付我的同伴了。,……トッド。もうお前に、森を焼くような真似で俺の仲間に手を出させはしない。,"[angry, determined]",I3xNWCjkgeTxRIRbjZRx
-v227,昴,（……死亡回归？不，这次还没死。只是……又回到了原点。）,（……死に戻り？いや、今回はまだ死んでない。ただ……振り出しに戻っただけだ。）,"[whispering, grim, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
-v228,文森特,齐克尔，我不是来和你打仗的。我是来，拿回属于我的东西的。,ジークル、俺はお前と戦いに来たんじゃない。俺のものを、取り戻しに来たんだ。,"[calm, imperial]",pNInz6obpgDQGcFmaJgB
-v229,齐克尔,……皇帝陛下。您亲自来，瓜拉尔……就没有再抵抗的理由了。,……皇帝陛下。あなた自らお越しなら、グアラルに……抵抗する理由はありません。,"[respectful, surprised]",pqHfZKP75CvOlQylNhV4
-v230,文森特,嗯。打开城门，不要流血。,うむ。城門を開けよ。血を流すな。,"[calm, commanding]",pNInz6obpgDQGcFmaJgB
-v231,齐克尔,……遵命。瓜拉尔，归顺于您。,……承知しました。グアラルは、あなたに帰順いたします。,"[respectful]",pqHfZKP75CvOlQylNhV4
-v232,昴,……真的……不流血就拿下了？,……本当に……血を流さずに落としたのか？,"[surprised]",I3xNWCjkgeTxRIRbjZRx
-v233,文森特,因为齐克尔不是为了打仗而打仗的人。这座城，从一开始就不是我们的敌人。,ジークルは戦うために戦う男じゃない。この城は、最初から俺たちの敵じゃなかったんだ。,"[calm]",pNInz6obpgDQGcFmaJgB
-v234,阿拉基亚,……皇帝……你以为，躲在这里就安全了吗？,……皇帝……ここに隠れていれば安全だと思ったのか？,"[cold, menacing]",Xb7hH8MSUJpSbSDYk0k2
-v235,米泽尔达,……什么人？！,……何者だ！？,"[shocked, shouting]",hpp4J3VqNfWAUOO0d1Us
-v236,阿拉基亚,……九神将第二，阿拉基亚。来取你性命的。,……九神将第二位、アラキア。お前の命を取りに来た。,"[cold]",Xb7hH8MSUJpSbSDYk0k2
-v237,米泽尔达,……呃……！腿……！,……うっ……！足……！,"[in pain]",hpp4J3VqNfWAUOO0d1Us
-v238,昴,米泽尔达！！,ミゼルダ！！,"[panicked, shouting]",I3xNWCjkgeTxRIRbjZRx
-v239,阿拉基亚,……下一个，就是你，皇帝。,……次は、お前だ、皇帝。,"[cold, menacing]",Xb7hH8MSUJpSbSDYk0k2
-v240,昴,……不行……这样下去，所有人都会死在这里……,……だめだ……このままじゃ、みんなここで死んでしまう……,"[desperate]",I3xNWCjkgeTxRIRbjZRx
-v241,文森特,……阿拉基亚。退下。朕还不需要你来替朕决定生死。,……アラキア。下がれ。朕の生死を、お前に決めさせる必要はない。,"[calm, imperial]",pNInz6obpgDQGcFmaJgB
-v242,阿拉基亚,……呵。皇帝的命令，对我可不管用。,……ふん。皇帝の命令なんて、俺には通じない。,"[cold, defiant]",Xb7hH8MSUJpSbSDYk0k2
-v243,米泽尔达,……呃……！站不起来了……腿……！,……うっ……！立てない……足……！,"[in pain]",hpp4J3VqNfWAUOO0d1Us
-v244,昴,米泽尔达！先退后！我来挡——,ミゼルダ！下がれ！俺が止める——,"[panicked, shouting]",I3xNWCjkgeTxRIRbjZRx
-v245,普莉希拉,……呵呵。真是的，在我的美貌面前，连神将都要失态了吗？,……ふふ。まったく、私の美しさの前では、神将さえも取り乱すのね。,"[proud, laughing]",pFZP5JQG7iQjIQuC4Bku
-v246,阿拉基亚,……你是谁……？,……お前は誰だ……？,"[cold, wary]",Xb7hH8MSUJpSbSDYk0k2
-v247,普莉希拉,普莉希拉·巴利耶尔。太阳的加护者，注定要成为王的人。,プリシラ・バーリエル。太陽の加護を受けし者、王となるべくして生まれた者よ。,"[proud, declarative]",pFZP5JQG7iQjIQuC4Bku
-v248,昴,……那把剑……红色的光……！,……あの剣……赤い光……！,"[shocked]",I3xNWCjkgeTxRIRbjZRx
-v249,普莉希拉,阳剑啊，回应我的呼唤吧。,陽剣よ、私の呼びかけに応えなさい。,"[proud, commanding]",pFZP5JQG7iQjIQuC4Bku
-v250,普莉希拉,……我的美，是世界都无法拒绝的东西。阿拉基亚，你的对手，是我。,……私の美は、世界すら拒めないもの。アラキア、お前の相手は、私よ。,"[proud, declaring]",pFZP5JQG7iQjIQuC4Bku
-v251,文森特,……普莉希拉。你果然，也来到了这里。,……プリシラ。やはり、お前もここに来たか。,"[calm, knowing]",pNInz6obpgDQGcFmaJgB
-v252,昴,（她是谁……？为什么，站在我们这一边？）,（彼女は誰だ……？どうして、俺たちの側に立ってるんだ？）,"[whispering, puzzled, inner thoughts]",I3xNWCjkgeTxRIRbjZRx
+id,speaker,chinese,japanese,emotion_tag,voice_id,playback
+v001,昴,咳、咳……这是哪……？,ゴホッ、ゴホッ……ここ、どこだ……？,"[in pain, coughing]",I3xNWCjkgeTxRIRbjZRx,播放
+v002,昴,冷静，菜月昴。先确认状况……手脚都在，脑袋也还在。然后——,落ち着け、菜月昴。まず状況確認だ……手足はある、頭もついてる。それから——,"[serious, muttering to himself]",I3xNWCjkgeTxRIRbjZRx,播放
+v003,昴,雷姆！雷姆呢！？,レム！レムはどこだ！？,[panicked],I3xNWCjkgeTxRIRbjZRx,播放
+v004,昴,雷、雷姆……你醒了？你真的醒了！？,レ、レム……目、覚めたのか？本当に起きたんだな！？,"[trembling, overjoyed]",I3xNWCjkgeTxRIRbjZRx,播放
+v005,昴,太好了……太好了啊……！我一直、一直在等你——,よかった……本当によかった……！俺、ずっと、ずっと待ってたんだ——,[crying with joy],I3xNWCjkgeTxRIRbjZRx,播放
+v006,雷姆,……请不要再靠近了。,……それ以上、近づかないでください。,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr,播放
+v007,昴,……诶？,……え？,[confused],I3xNWCjkgeTxRIRbjZRx,播放
+v008,雷姆,我在问你话。你是谁？……这里，又是哪里？,質問しているのはこちらです。あなたは誰ですか？……それに、ここはどこなんですか？,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr,播放
+v009,昴,我叫菜月昴！是……是你的英雄。你以前经常这么说的！,俺は菜月昴！お前の……お前の英雄だ。前はよくそう言ってくれただろ！,"[cheerful, playful]",I3xNWCjkgeTxRIRbjZRx,播放
+v010,雷姆,英雄……？,えいゆう……？,"[cold, puzzled]",iQ7FJlN6gAPb76lVrQfr,播放
+v011,雷姆,会自己说出这种话的人，我想，一般被叫作骗子才对。,自分でそんなことを言う人は、普通、嘘つきと呼ばれると思いますけど。,"[cold, deadpan]",iQ7FJlN6gAPb76lVrQfr,播放
+v012,昴,呜……这吐槽也太犀利了吧。不，被你这么说反而有点怀念……,うっ……ツッコミが鋭すぎるだろ。いや、そう言われるとむしろ懐かしいっていうか……,"[wry, embarrassed laugh]",I3xNWCjkgeTxRIRbjZRx,播放
+v013,雷姆,……我完全听不懂你在说什么。,……何を言っているのか、まったくわかりません。,"[cold, annoyed]",iQ7FJlN6gAPb76lVrQfr,播放
+v014,昴,我是谁等会再说。你刚醒过来对吧？有没有哪里痛？头晕吗？,俺が誰かは後でいい。今目が覚めたばっかだろ？どっか痛くないか？めまいは？,"[serious, concerned]",I3xNWCjkgeTxRIRbjZRx,播放
+v015,雷姆,……！,……っ！,[surprised gasp],iQ7FJlN6gAPb76lVrQfr,播放
+v016,雷姆,……身体很重。手脚使不上力气。但这跟你没有关系。,……体が重いです。手足に力が入りません。でも、あなたには関係のないことです。,"[cold, guarded, weak]",iQ7FJlN6gAPb76lVrQfr,播放
+v017,昴,怎么会没关系。你可是睡了很久很久啊。,関係なくなんかないって。お前、ずっとずっと眠ってたんだぞ。,"[softly, earnest]",I3xNWCjkgeTxRIRbjZRx,播放
+v018,雷姆,……一个陌生人，为什么要用那种表情看着我。,……見ず知らずの人が、どうしてそんな顔で私を見るんですか。,"[softly, hesitant]",iQ7FJlN6gAPb76lVrQfr,播放
+v019,昴,喂……别开玩笑了。你真的什么都不记得了？我的名字、宅邸、姐姐……全部？,おい……冗談だろ。本当に何も覚えてないのか？俺の名前も、屋敷も、姉様も……全部？,"[desperate, shaky]",I3xNWCjkgeTxRIRbjZRx,播放
+v020,雷姆,请不要擅自逼问我！,勝手に問い詰めないでください！,"[angry, sharp]",iQ7FJlN6gAPb76lVrQfr,播放
+v021,雷姆,……我连自己是谁都不知道。你满意了吗？,……自分が誰なのかもわからないんです。これで満足ですか？,"[angry, bitter]",iQ7FJlN6gAPb76lVrQfr,播放
+v022,昴,……抱歉。是我太急了。,……悪い。焦りすぎた。,"[quietly, apologetic]",I3xNWCjkgeTxRIRbjZRx,播放
+v023,昴,……你的名字叫雷姆。这个，你还记得吗？,……お前の名前はレムだ。それは、覚えてるか？,"[serious, gentle]",I3xNWCjkgeTxRIRbjZRx,播放
+v024,雷姆,雷姆……,レム……,"[softly, uncertain]",iQ7FJlN6gAPb76lVrQfr,播放
+v025,雷姆,……没有任何感觉。,……何も感じません。,"[cold, flat]",iQ7FJlN6gAPb76lVrQfr,播放
+v026,雷姆,不要过来！,来ないでください！,"[angry, shouting]",iQ7FJlN6gAPb76lVrQfr,播放
+v027,露伊,啊——呜！,あう——うー！,"[childlike, small girl voice, wordless cry]",cgSgspJ2msm6clMCkdW9,播放
+v028,雷姆,唔……！,うっ……！,"[in pain, struggling]",iQ7FJlN6gAPb76lVrQfr,播放
+v029,昴,……喂，放开她！,……おい、離してやれ！,"[serious, urgent]",I3xNWCjkgeTxRIRbjZRx,播放
+v030,昴,这家伙……,こいつ……,"[disgusted, low voice]",I3xNWCjkgeTxRIRbjZRx,播放
+v031,雷姆,……那么，这孩子怎么办？,……それで、この子はどうするんですか？,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr,播放
+v032,雷姆,她刚才保护了我。看起来，她也什么都不知道。,この子はさっき私を守ってくれました。見たところ、この子も何もわからないようです。,"[cold, firm]",iQ7FJlN6gAPb76lVrQfr,播放
+v033,昴,（怎么办……？）,（どうする……？）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v034,昴,（她是罪有应得。她做过的事，就算变成这副样子也不会被抵消。）,（自業自得だ。こいつのやったことは、こんな姿になったって帳消しにはならない。）,"[whispering, bitter, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v035,昴,（我现在要保护的只有雷姆。带着这种家伙，只会让我们两个都陷入危险。）,（今の俺が守るべきなのはレムだけだ。こんな奴を連れてたら、二人とも危険になるだけだ。）,"[whispering, serious, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v036,昴,丢下她吧。她不是什么需要我们保护的人。,置いていこう。こいつは俺たちが守るような奴じゃない。,"[cold, serious]",I3xNWCjkgeTxRIRbjZRx,播放
+v037,雷姆,……你是认真的吗？把这么小的孩子，扔在这种森林里？,……本気ですか？こんなに小さな子を、こんな森に置き去りにするなんて。,"[angry, disbelieving]",iQ7FJlN6gAPb76lVrQfr,播放
+v038,昴,你不知道她是什么人。我知道。所以我说，丢下她。,お前はこいつが何者か知らない。俺は知ってる。だから言ってるんだ、置いていけって。,"[cold, harsh]",I3xNWCjkgeTxRIRbjZRx,播放
+v039,雷姆,……我果然没有看错。从你身上，有一股非常、非常难闻的气味。,……やっぱり、見間違いではありませんでした。あなたからは、ひどく、ひどく嫌な臭いがします。,"[cold, disgusted]",iQ7FJlN6gAPb76lVrQfr,播放
+v040,雷姆,像是把邪恶本身熬煮出来的味道。,まるで、悪意そのものを煮詰めたような臭いです。,"[cold, disgusted]",iQ7FJlN6gAPb76lVrQfr,播放
+v041,昴,……随你吧。要带她走也可以。不过别指望我照顾她。,……好きにしろよ。連れていきたきゃそれでいい。ただし、俺に面倒見させようとか思うなよ。,"[grumbling, reluctant]",I3xNWCjkgeTxRIRbjZRx,播放
+v042,雷姆,嘴上这么说，可你看她的眼神，就像在看一只想要掐死的虫子。,口ではそう言っても、あなたがこの子を見る目は、握り潰したい虫を見る目です。,"[cold, piercing]",iQ7FJlN6gAPb76lVrQfr,播放
+v043,昴,那、那是……,そ、それは……,[flustered],I3xNWCjkgeTxRIRbjZRx,播放
+v044,雷姆,而且——你身上那股气味。从刚才开始就一直让我想吐。,それに——あなたのその臭い。さっきからずっと、吐き気がするんです。,"[angry, disgusted]",iQ7FJlN6gAPb76lVrQfr,播放
+v045,雷姆,像是邪恶本身被熬煮出来的味道。这样的人说的话，我没有办法相信。,悪意そのものを煮詰めたような臭い。そんな人の言葉を、信じることはできません。,"[cold, resolute]",iQ7FJlN6gAPb76lVrQfr,播放
+v046,昴,等等，雷姆，听我说——,待ってくれ、レム、話を——,"[panicked, pleading]",I3xNWCjkgeTxRIRbjZRx,播放
+v047,雷姆,……再见了。不要来找我们。,……さようなら。私たちを探さないでください。,"[cold, quiet, final]",iQ7FJlN6gAPb76lVrQfr,播放
+v048,昴,……哈啊！？,……はあっ！？,[gasping awake],I3xNWCjkgeTxRIRbjZRx,播放
+v049,昴,没死……？不是「回来」了……我还活着。,死んでない……？「戻った」わけじゃない……俺、生きてる。,"[breathless, confused]",I3xNWCjkgeTxRIRbjZRx,播放
+v050,昴,……被丢下了啊，我。,……置いていかれたのか、俺。,"[quietly, dejected]",I3xNWCjkgeTxRIRbjZRx,播放
+v051,昴,……这不是怎么看都是坏人吗。,……これ、どう見ても悪者じゃねえか。,[self-deprecating sigh],I3xNWCjkgeTxRIRbjZRx,播放
+v052,昴,笨蛋。我这个大笨蛋！,バカ。俺の大バカ野郎！,"[frustrated, shouting at himself]",I3xNWCjkgeTxRIRbjZRx,播放
+v053,昴,雷姆——！雷姆！你在哪里！？,レム——！レム！どこにいるんだ！？,"[shouting, desperate]",I3xNWCjkgeTxRIRbjZRx,播放
+v054,昴,是我错了！我道歉！所以，拜托你回答我——！,俺が悪かった！謝る！だから、頼むから返事してくれ——！,"[shouting, desperate, pleading]",I3xNWCjkgeTxRIRbjZRx,播放
+v055,昴,……咕、啊……？,……ぐ、あ……？,"[in pain, gasping, choking]",I3xNWCjkgeTxRIRbjZRx,播放
+v056,昴,雷……姆……,レ……ム……,"[in pain, dying whisper]",I3xNWCjkgeTxRIRbjZRx,播放
+v057,昴,——————！！,うわああああっ！！,"[screaming, waking in terror]",I3xNWCjkgeTxRIRbjZRx,播放
+v058,昴,……回来了。是在被丢下之后……醒来的地方。,……戻ってきた。置いていかれた後……目が覚めた場所だ。,"[breathless, shaky]",I3xNWCjkgeTxRIRbjZRx,播放
+v059,昴,好啊……行啊。死一次就能明白的事，那就算便宜的了。,いいぜ……上等だ。一回死んでわかることなら、安いもんだ。,"[determined, bitter laugh]",I3xNWCjkgeTxRIRbjZRx,播放
+v060,昴,这片森林里有「猎人」。不能再那样大喊大叫地乱跑了。,この森には「狩人」がいる。前みたいに大声で叫びながら走り回るのはダメだ。,"[serious, determined]",I3xNWCjkgeTxRIRbjZRx,播放
+v061,蒙面男子,……喂。那边那个形迹可疑的。,……おい。そこの怪しい奴。,"[cold, commanding]",pNInz6obpgDQGcFmaJgB,播放
+v062,昴,（又是哪来的家伙！？是射箭的那个人吗？不，他手上没有弓……）,（今度はどこのどいつだ！？矢を射ったのはこいつか？いや、弓は持ってない……）,"[whispering, panicked, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v063,昴,等一下等一下！我没有武器，也没有敌意！看，两手空空！,待った待った！武器もないし、敵意もない！ほら、手ぶらだ！,"[panicked, nervous]",I3xNWCjkgeTxRIRbjZRx,播放
+v064,蒙面男子,……哼。至少还懂得在比自己强的人面前低头。不算太蠢。,……ふん。自分より強い者に頭を下げる程度の知恵はあるか。そこまで愚かではないらしい。,"[cold, condescending]",pNInz6obpgDQGcFmaJgB,播放
+v065,昴,这种夸法一点都不让人高兴……,そういう褒め方、全然嬉しくないんだけど……,"[mumbling, sulky]",I3xNWCjkgeTxRIRbjZRx,播放
+v066,蒙面男子,我没有在夸你。,褒めてなどいない。,"[cold, dry]",pNInz6obpgDQGcFmaJgB,播放
+v067,昴,你是什么人？在这片森林里放冷箭的，是你吗！？,お前は何者だ？この森で矢を射ってきたのは、お前か！？,"[angry, suspicious]",I3xNWCjkgeTxRIRbjZRx,播放
+v068,蒙面男子,放箭？若我想要你的命，你现在已经不会站着说话了。,矢だと？貴様の命が欲しければ、今頃こうして口をきいてはいない。,"[cold, scornful]",pNInz6obpgDQGcFmaJgB,播放
+v069,蒙面男子,还有——在搞清楚对方是谁之前就大呼小叫，只会让你死得更快。,それと——相手が何者かも確かめずに騒ぎ立てれば、死期を早めるだけだ。,"[cold, stern]",pNInz6obpgDQGcFmaJgB,播放
+v070,昴,……这句话，我刚刚才亲身体会过。,……その言葉、ついさっき身をもって知ったとこだよ。,"[wry, rueful]",I3xNWCjkgeTxRIRbjZRx,播放
+v071,昴,我在找人。一个蓝头发的女孩，身边还跟着一个金发的小孩。你有没有看到？,人を探してるんだ。青い髪の女の子と、金髪の小さい子が一緒にいるはずなんだ。見てないか？,"[serious, urgent]",I3xNWCjkgeTxRIRbjZRx,播放
+v072,蒙面男子,没有。,知らん。,"[cold, curt]",pNInz6obpgDQGcFmaJgB,播放
+v073,蒙面男子,拿着。赤手空拳地在这片林子里乱走，跟把自己送进野兽嘴里没有区别。,持っていけ。素手でこの森をうろつくのは、獣の口に自ら飛び込むのと変わらん。,"[cold, dismissive]",pNInz6obpgDQGcFmaJgB,播放
+v074,昴,……给我的？为什么？,……俺に？なんでだ？,"[surprised, puzzled]",I3xNWCjkgeTxRIRbjZRx,播放
+v075,蒙面男子,一时兴起罢了。往河的方向走，地势会开阔些。找人也好，逃命也罢，随你。,ただの気まぐれだ。川の方へ向かえ、少しは地形が開ける。人探しでも、逃げるのでも、好きにしろ。,"[cold, indifferent]",pNInz6obpgDQGcFmaJgB,播放
+v076,昴,……这个世界的人，怎么一个个都这么不讲解释的啊。,……この世界の人間って、なんでどいつもこいつも説明しないんだよ。,[exasperated sigh],I3xNWCjkgeTxRIRbjZRx,播放
+v077,昴,找到了……！是雷姆和那家伙的！,見つけた……！レムとあいつの足跡だ！,"[excited, hopeful]",I3xNWCjkgeTxRIRbjZRx,播放
+v078,昴,痛痛痛痛——！？,いててててっ——！？,"[in pain, yelping]",I3xNWCjkgeTxRIRbjZRx,播放
+v079,昴,……陷阱。全都是对着追兵设的陷阱。,……罠だ。全部、追っ手用の罠じゃねえか。,"[groaning, realizing]",I3xNWCjkgeTxRIRbjZRx,播放
+v080,昴,哈哈……失去记忆了还这么能干，不愧是雷姆啊……虽然被针对的是我。,はは……記憶がなくてもこんなに有能とか、さすがレムだな……狙われてるのは俺だけど。,"[weak laugh, in pain]",I3xNWCjkgeTxRIRbjZRx,播放
+v081,雷姆,……停下。再往前一步，我就不客气了。,……止まってください。あと一歩でも近づいたら、容赦しません。,"[cold, threatening]",iQ7FJlN6gAPb76lVrQfr,播放
+v082,昴,找到你了……总算是……,やっと見つけた……ようやく……,"[exhausted, relieved]",I3xNWCjkgeTxRIRbjZRx,播放
+v083,雷姆,你为什么追过来？我应该说过了，不要来找我们。,どうして追ってきたんですか？言ったはずです、私たちを探さないでと。,"[cold, guarded]",iQ7FJlN6gAPb76lVrQfr,播放
+v084,昴,嗯，你说过。但我有话必须当面跟你说。,ああ、言われた。でも、どうしても直接言わなきゃいけないことがあるんだ。,"[serious, sincere]",I3xNWCjkgeTxRIRbjZRx,播放
+v085,昴,……刚才的事，是我不对。说要丢下那孩子，是我最差劲的一面。对不起。,……さっきのことは、俺が悪かった。あの子を置いていこうなんて、俺の一番最低なところだった。ごめん。,"[sincere, apologetic]",I3xNWCjkgeTxRIRbjZRx,播放
+v086,雷姆,……道歉的话谁都会说。你的气味，可一点都没有变。,……謝るだけなら誰にでもできます。あなたの臭いは、少しも変わっていません。,"[cold, unconvinced]",iQ7FJlN6gAPb76lVrQfr,播放
+v087,雷姆,……,……はぁ。,[sighs softly],iQ7FJlN6gAPb76lVrQfr,播放
+v088,雷姆,……你的气味还是很难闻。但是……至少，你看起来不像在说谎。,……あなたの臭いは、まだひどいです。でも……少なくとも、嘘をついているようには見えません。,"[softly, hesitant]",iQ7FJlN6gAPb76lVrQfr,播放
+v089,雷姆,别误会。我还没有相信你。,勘違いしないでください。まだあなたを信じたわけではありません。,"[softly, slightly flustered, firm]",iQ7FJlN6gAPb76lVrQfr,播放
+v090,昴,那就够了。不相信我也没关系，只要让我跟着就——,それで十分だ。信じてくれなくてもいい、ついていかせてくれさえすれば——,"[relieved, earnest]",I3xNWCjkgeTxRIRbjZRx,播放
+v091,昴,趴下！！,伏せろ！！,"[shouting, panicked]",I3xNWCjkgeTxRIRbjZRx,播放
+v092,雷姆,……！又是你的同伙吗！？,……っ！またあなたの仲間ですか！？,"[angry, sharp]",iQ7FJlN6gAPb76lVrQfr,播放
+v093,昴,怎么可能！我上一次就是被那玩意——不、没什么！总之是「猎人」！这片森林里有人在狩猎我们！,そんなわけあるか！俺はこの前あれに——いや、なんでもない！とにかく「狩人」だ！この森で誰かが俺たちを狩ってるんだ！,"[panicked, fast]",I3xNWCjkgeTxRIRbjZRx,播放
+v094,昴,……蛇？这么大的蛇是犯规吧！？,……蛇？こんなでかい蛇は反則だろ！？,"[panicked, disbelieving]",I3xNWCjkgeTxRIRbjZRx,播放
+v095,昴,雷姆，抓住我的手！现在不是争论的时候！,レム、俺の手をつかめ！今は言い争ってる場合じゃない！,"[serious, urgent, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v096,雷姆,我不会丢下这孩子一个人逃走！,この子を一人置いて逃げたりはしません！,"[angry, determined]",iQ7FJlN6gAPb76lVrQfr,播放
+v097,昴,我知道！所以——三个人一起跑！,わかってる！だから——三人で一緒に逃げるんだ！,"[determined, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v098,昴,你身体还没恢复，抱不动她吧！把那孩子给我，你只管跑！,お前、まだ体が戻ってないだろ、その子は抱えられない！こっちに渡せ、お前は走ることだけ考えろ！,"[urgent, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v099,雷姆,……你？抱着这孩子？,……あなたが？この子を抱えて？,"[surprised, hesitant]",iQ7FJlN6gAPb76lVrQfr,播放
+v100,昴,对！我讨厌她，但我更不想看你为了她死掉！快点！,そうだ！こいつは嫌いだけど、お前がこいつのために死ぬのはもっと嫌なんだよ！早く！,"[desperate, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v101,昴,前、前面没路了……！？,さ、先がねえ……！？,"[panicked, out of breath]",I3xNWCjkgeTxRIRbjZRx,播放
+v102,昴,……雷姆。你会游泳吗？,……レム。お前、泳げるか？,"[out of breath, serious]",I3xNWCjkgeTxRIRbjZRx,播放
+v103,雷姆,……不记得了。,……覚えていません。,"[out of breath, uncertain]",iQ7FJlN6gAPb76lVrQfr,播放
+v104,昴,那就是会！相信你的身体！一、二——,なら泳げる！自分の体を信じろ！いち、にの——,"[desperate, forced cheer]",I3xNWCjkgeTxRIRbjZRx,播放
+v105,昴,（不放开……这次，绝对不放开……！）,（離さない……今度こそ、絶対に離さない……！）,"[whispering, determined, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v106,昴,（刚才跳下去的时候，我抓住了两只手。这一次，我没有放开。）,（さっき飛び降りるとき、両手を掴んだ。今度は、離さなかった。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v107,雷姆,……别用那种眼神看我。我还没原谅你。,……そんな目で見ないで。まだ、許してません。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v108,昴,我知道。所以我不求你原谅，我只求你让我跟着。,分かってる。だから許しは求めない。ついていかせてくれ、それだけだ。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v109,雷姆,……哼。你的气味还是很难闻。,……ふん。あなたの臭いは、相変わらずひどいです。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v110,雷姆,……但是，你跳下来的时候，手没有松开。这件事，我记住了。,……でも、飛び降りたとき、手を離さなかった。そのことだけは、覚えておきます。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v111,昴,一次就够了。真的，一次就够了。,一回でいい。本当に、一回でいいんだ。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v112,露伊,啊……呜。,あ……う。,对白,cgSgspJ2msm6clMCkdW9,播放
+v113,昴,（她在害怕，但她没有跑。这孩子，也在找一个可以待着的地方。）,（怖がっているのに、逃げなかった。この子も、居場所を探している。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v114,昴,活……活下来了……三个人都……,い……生きてる……三人とも……,"[exhausted, panting]",I3xNWCjkgeTxRIRbjZRx,播放
+v115,雷姆,……你，是笨蛋吗。,……あなた、バカなんですか。,"[exhausted, softly]",iQ7FJlN6gAPb76lVrQfr,播放
+v116,雷姆,明明自己都快沉下去了，却一直抓着我们不放。,自分も沈みかけていたのに、ずっと私たちを離さなかった。,"[softly, hesitant]",iQ7FJlN6gAPb76lVrQfr,播放
+v117,昴,笨蛋就笨蛋吧。……能抓住，就好。,バカでいいさ。……つかめたんなら、それでいい。,"[exhausted, gentle laugh]",I3xNWCjkgeTxRIRbjZRx,播放
+v118,雷姆,……谢谢。,……ありがとうございます。,"[softly, shy]",iQ7FJlN6gAPb76lVrQfr,播放
+v119,雷姆,……我只说这一次。,……一度だけしか、言いませんから。,"[softly, embarrassed]",iQ7FJlN6gAPb76lVrQfr,播放
+v120,昴,……嗯。一次就够了。,……ああ。一回で十分だ。,"[softly, warm]",I3xNWCjkgeTxRIRbjZRx,播放
+v121,塔莉塔,——外来者。,——よそ者。,"[cold, commanding, low voice]",EXAVITQu4vr4xnSDxMaL,播放
+v122,塔莉塔,你们闯进了「修德拉格」的森林。,お前たちは「シュドラク」の森に踏み込んだ。,"[cold, stern]",EXAVITQu4vr4xnSDxMaL,播放
+v123,昴,修德拉格……？,シュドラク……？,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v124,昴,……头……好痛……这里是……？,……頭……痛い……ここは……？,"[in pain, confused]",I3xNWCjkgeTxRIRbjZRx,播放
+novoice-125,托德,哟，醒了？别乱动。伤口要是裂开，我的问题可就问不成了。,やあ、起きた？動くな。傷が開いたら、質問が終わらない。,改写,bIHbv24MWmeRgasZH58o,不播放（台词已改，旧mp3未重录）
+v126,昴,……你是谁？雷姆呢？那个孩子呢？,……お前は誰だ？レムは？あの子は？,[panicked],I3xNWCjkgeTxRIRbjZRx,播放
+v127,托德,她们在隔壁帐篷，好好的，没人动她们。只要你老实回答问题。,彼女たちは隣のテントにいる。無事だよ、誰も手を出してない。素直に質問に答えてくれればね。,"[calm, reassuring]",bIHbv24MWmeRgasZH58o,播放
+v128,昴,（冷静。先确认状况。修德拉格的人呢？帝国军为什么会出现在这里？）,（落ち着け。まず状況確認だ。シュドラクの人たちは？帝国軍がどうしてここにいるんだ？）,"[whispering, serious, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v129,托德,我是托德，帝国军的士兵。你，还有你那把小刀，看起来可不像普通流浪者。,俺はトッド、帝国軍の兵士だ。お前、それにその小刀、普通の流れ者には見えないな。,"[friendly, probing]",bIHbv24MWmeRgasZH58o,播放
+v130,昴,小刀……？那是别人给我的。,小刀……？それは人に貰ったんだ。,[hesitant],I3xNWCjkgeTxRIRbjZRx,播放
+v131,托德,哦？那可是一把好刀。拿着这种刀的人，在帝国可不多。,へえ？それはいい刀だ。そんな刀を持ってる奴は、帝国にもそういないよ。,[impressed],bIHbv24MWmeRgasZH58o,播放
+v132,昴,……我叫昴。只是个路过的人，带着两个……家人。,……俺は昴。ただの通りすがりで、連れているのは二人……家族だ。,[guarded],I3xNWCjkgeTxRIRbjZRx,播放
+v133,托德,家人啊。行吧，昴。军营里不养闲人，你能干活，就先留下来。,家族か。わかったよ、昴。軍営では働かざる者食うべからずだ。働けるなら、とりあえず置いてやる。,[easygoing],bIHbv24MWmeRgasZH58o,播放
+v134,雷姆,……你看起来，比在森林里的时候还要累。,……あなた、森にいたときより疲れて見えます。,"[cold, concerned]",iQ7FJlN6gAPb76lVrQfr,播放
+v135,昴,没办法。在这里，至少不用担心下一支箭从哪棵树后面飞出来。,仕方ない。ここなら、次はどこの木の後ろから矢が飛んでくるかって心配はしなくていい。,"[wry, tired]",I3xNWCjkgeTxRIRbjZRx,播放
+v136,雷姆,……你为什么要对我们这么好？,……どうして、あなたは私たちにそんなによくしてくれるんですか？,"[cold, suspicious]",iQ7FJlN6gAPb76lVrQfr,播放
+v137,昴,因为……你们是我要带回去的人。就这么简单。,だって……お前たちは、俺が連れて帰らなきゃいけない人たちだから。それだけだ。,"[softly, earnest]",I3xNWCjkgeTxRIRbjZRx,播放
+v138,雷姆,……哼。陌生人。,……ふん。見ず知らずの人。,"[cold, flat]",iQ7FJlN6gAPb76lVrQfr,播放
+v139,昴,（这样下去不行。修德拉格还在森林里，帝国军迟早会动手。我得想办法，在事情变糟之前带她们离开。）,（このままじゃだめだ。シュドラクはまだ森にいるし、帝国軍はいずれ動く。事態が悪くなる前に、彼女たちを連れて逃げなきゃ。）,"[whispering, serious, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v140,贾马尔,喂，小子。听说你对丛林很熟？那里面，有魔兽，对吧？,おい、小僧。お前はジャングルに詳しいそうじゃないか。あの中には、魔獣がいるんだろ？,"[gruff, probing]",SOYHLrjzK2X1ezoPC6cr,播放
+v141,昴,……我不知道什么魔兽。林子那么大，你们进去也是白费力气——除非，你们把整片林子都烧了。,……魔獣なんて知らない。森は広い。入っても無駄だ——森ごと燃やすなら別だが。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v142,贾马尔,哈？帝国军做事，轮不到你来教。,はあ？帝国軍のやり方に、お前に口を出す権利はない。,"[annoyed, gruff]",SOYHLrjzK2X1ezoPC6cr,播放
+v143,昴,（白天搬东西的时候，我听见士兵在谈丛林。谈火，谈围猎，谈得像在谈一场演习。）,（昼に荷物を運んでいるとき、兵士がジャングルの話をしていた。火、追い込み。演習の話みたいに。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v144,雷姆,……你又在发呆了。,……またぼんやりしています。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v145,昴,雷姆。你看，今晚的月亮很亮。,レム。見てくれ。今夜の月は明るい。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v146,雷姆,……嗯。很亮。,……ええ。明るいです。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v147,昴,（她还没有想起我。但她愿意和我一起看月亮。这已经是很大的一步了。）,（まだ俺のことを思い出していない。でも、一緒に月を見てくれる。それだけで大きい。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v148,托德,哟，还没睡？明天可有活干。,やあ、まだ起きてるのか。明日は仕事だぞ。,对白,bIHbv24MWmeRgasZH58o,播放
+v149,昴,托德。你……有没有过那种感觉？明明知道前面是错的，却还是得往前走？,トッド。お前……前が間違いだと分かっていても、進まなきゃいけない、そんな感じはあるか。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v150,托德,……有啊。士兵天天都有。不过，停下来的人，死得更快。,……あるさ。兵士は毎日だ。ただ、立ち止まる奴の方が先に死ぬ。,对白,bIHbv24MWmeRgasZH58o,播放
+v151,昴,（停下来会死，往前走也会死。那我只能选一种死法：死在保护她们的那条路上。）,（止まっても死ぬ。進んでも死ぬ。なら死に方は一つだ。彼女たちを守る道で死ぬ。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v152,托德,昴，你那天说的话，我想了很久。你说得对——想把里面的人逼出来，只有一个办法：放火烧林。上面已经批准了。,昴、あの日の言葉をずっと考えていた。お前の言う通りだ。中の者を出すなら、森を焼くしかない。上はもう許可した。,对白,bIHbv24MWmeRgasZH58o,播放
+v153,昴,……什么？烧林？你们疯了吗？那里面还有很多人——！,……何だって？森を焼く？おかしいだろ。中にはまだ人が——！,对白,I3xNWCjkgeTxRIRbjZRx,播放
+novoice-154,托德,残忍？那是你自己说漏的办法。上面点了头，这片林子今天就烧。笑一个，昴。,残酷？お前が自分で漏らした手だ。上が頷いた。この森は今日燃える。笑っておけ、昴。,改写,bIHbv24MWmeRgasZH58o,不播放（台词已改，旧mp3未重录）
+v155,昴,托德！你明明知道，烧林会死多少人！,トッド！森を焼けば何人が死ぬか、お前だってわかってるだろ！,"[angry, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v156,昴,是我……是我害了她们……,俺だ……俺が彼女たちを……,"[guilty, broken]",I3xNWCjkgeTxRIRbjZRx,播放
+v157,雷姆,昴！小心！,昴！気をつけて！,"[panicked, shouting]",iQ7FJlN6gAPb76lVrQfr,播放
+v158,昴,……雷姆……快跑……,……レム……逃げて……,"[weak, in pain]",I3xNWCjkgeTxRIRbjZRx,播放
+v159,昴,（……又来了吗。死亡回归。）,（……またか。死に戻り。）,"[whispering, grim, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v160,昴,（这次，我不能再提丛林的事。不能让他们烧林。）,（今度は、ジャングルの話はしない。森を焼かせちゃいけない。）,"[whispering, determined, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+novoice-161,托德,哟，醒了？别乱动。伤口要是裂开，我的问题可就问不成了。,やあ、起きた？動くな。傷が開いたら、質問が終わらない。,改写,bIHbv24MWmeRgasZH58o,不播放（台词已改，旧mp3未重录）
+v162,昴,……托德。我什么都不知道。我只是个路过的人。,……トッド。俺は何も知らない。ただの通りすがりだ。,"[guarded, careful]",I3xNWCjkgeTxRIRbjZRx,播放
+v163,托德,……是吗？你的眼神，可不像什么都不知道。,……そうか？でもお前の目つきは、何も知らない奴の目じゃないな。,"[probing, calm]",bIHbv24MWmeRgasZH58o,播放
+v164,托德,昴。你刚才，有一瞬间在害怕。害怕什么？,昴。さっき、一瞬怯えたな。何を怖がってる？,"[sharp, probing]",bIHbv24MWmeRgasZH58o,播放
+v165,昴,（糟了。他看出来了。）,（まずい。見抜かれた。）,"[whispering, panicked, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v166,昴,……好吧，我说实话。我可以带你们进丛林，但条件是：不许动那两个女孩。,……わかった、正直に言う。俺がジャングルに案内してやる。ただし条件がある。その二人の女の子には手を出すな。,"[serious, bargaining]",I3xNWCjkgeTxRIRbjZRx,播放
+v167,托德,……成交。不过，你最好别耍花样。,……取引成立だ。ただし、変な真似はするなよ。,"[calm, warning]",bIHbv24MWmeRgasZH58o,播放
+v168,昴,（计划是这样：把士兵引到魔兽出没的地方，趁乱带雷姆她们走。）,（作戦はこうだ。兵士たちを魔獣の出る場所に誘い込んで、混乱に乗じてレムたちを連れて逃げる。）,"[whispering, plotting, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v169,昴,……陷阱……全都是陷阱……,……罠……全部罠だ……,"[weak, in pain]",I3xNWCjkgeTxRIRbjZRx,播放
+v170,昴,雷姆……露伊……对不起……我又……,レム……ルイ……ごめん……また……,"[guilty, broken]",I3xNWCjkgeTxRIRbjZRx,播放
+v171,昴,……这里是……木笼？,……ここは……木の檻？,"[confused, weak]",I3xNWCjkgeTxRIRbjZRx,播放
+v172,蒙面男子,……你也醒了。看来，我们都被抓了。,……お前も目覚めたか。どうやら、俺たちは二人とも捕まったらしい。,"[calm, dry]",pNInz6obpgDQGcFmaJgB,播放
+v173,昴,……是你。蒙面……你怎么也在这里？,……お前か。覆面……どうしてお前もここにいるんだ？,[surprised],I3xNWCjkgeTxRIRbjZRx,播放
+v174,蒙面男子,一时兴起罢了。不过现在，我们有共同的问题：怎么让外面那些人，相信我们不是敌人。,気まぐれだよ。だが今は、共通の問題がある。外の奴らに、俺たちが敵じゃないと信じさせる方法だ。,"[calm, dry]",pNInz6obpgDQGcFmaJgB,播放
+v175,昴,……外面那些人，是修德拉格？,……外の奴らって、シュドラクなのか？,[questioning],I3xNWCjkgeTxRIRbjZRx,播放
+v176,蒙面男子,嗯。接下来，我会提出一个办法。你只需要，照我说的做。,ああ。次に、俺が方法を提案する。お前は、俺の言う通りにすればいい。,"[calm, commanding]",pNInz6obpgDQGcFmaJgB,播放
+v177,蒙面男子,……昴。别急着绝望。笼子关得住人，关不住主意。,……昴。絶望は早い。檻は人を閉じ込めても、考えまでは閉じ込めない。,对白,pNInz6obpgDQGcFmaJgB,播放
+v178,昴,……你到底是什么人？为什么总是在我最狼狈的时候出现？,……お前は結局何者だ。どうして、俺が一番みじめなときに現れる。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v179,蒙面男子,……一个也在找路的人。等到了村子，你自然会知道。,……同じように道を探している者だ。村に着けば、自然と分かる。,对白,pNInz6obpgDQGcFmaJgB,播放
+v180,昴,……好。我信你这一次。但如果这是陷阱，我第一个拿你垫背。,……いい。今回は信じる。罠なら、最初にお前を盾にする。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v181,蒙面男子,……呵。成交。,……ふ。成交だ。,对白,pNInz6obpgDQGcFmaJgB,播放
+v182,昴,（雷姆，露伊。等我。我一定会带着一个能让你们安全待着的答案，回到你们身边。）,（レム、ルイ。待っていろ。二人が無事でいられる答えを持って、必ず戻る。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v183,米泽尔达,……就是你们，闯进我们的森林？,……お前たちが、俺たちの森に忍び込んだ奴らか？,"[cold, stern]",hpp4J3VqNfWAUOO0d1Us,播放
+v184,昴,……是。我们不是来打仗的。我们只是……迷路了。,……そうだ。俺たちは戦いに来たんじゃない。ただ……道に迷っただけだ。,"[guarded, earnest]",I3xNWCjkgeTxRIRbjZRx,播放
+v185,米泽尔达,迷路？迷路的人，会带着帝国军的刀？,道に迷った？迷った人間が、帝国軍の刀を持ってるのか？,"[cold, suspicious]",hpp4J3VqNfWAUOO0d1Us,播放
+v186,昴,那把刀……是别人给我的。我没有用它伤过任何人。,その刀は……人に貰ったんだ。俺はそれで誰も傷つけてない。,[earnest],I3xNWCjkgeTxRIRbjZRx,播放
+v187,米泽尔达,撒谎的人，在这里活不长。塔莉塔，看着他。,嘘をつく奴は、ここでは長生きできない。タリッタ、こいつを見張れ。,"[stern, commanding]",hpp4J3VqNfWAUOO0d1Us,播放
+v188,塔莉塔,……姐姐，交给我。,……姉さん、任せて。,[firm],Xb7hH8MSUJpSbSDYk0k2,播放
+v189,昴,（姐姐？米泽尔达是族长，塔莉塔是她妹妹。河岸上那一箭，也是她射的。）,（姉上？ミゼルダが族長で、タリッタが妹。河原のあの矢も、彼女が射った。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v190,昴,……我叫昴。这两位是我的家人，雷姆和露伊。她们没有武器，也不会伤人。,……俺は昴。こちらの二人は家族のレムとルイだ。武器は持ってないし、誰も傷つけたりしない。,[earnest],I3xNWCjkgeTxRIRbjZRx,播放
+v191,米泽尔达,……家人。好吧，昴。我给你一个机会，证明你不是帝国军的走狗。,……家族か。いいだろう、昴。お前が帝国軍の手先じゃないと証明する機会をやる。,"[stern, measured]",hpp4J3VqNfWAUOO0d1Us,播放
+v192,乌塔卡塔,……你、你别过来！外人……不许碰我们的东西！,……こ、こっち来ないで！よそ者……俺たちの物を触っちゃいけないの！,"[frightened, wary]",FGY2WhTYpPnrIDTdsKH5,播放
+novoice-193,露伊,啊……呜。,あ……う。,改写,cgSgspJ2msm6clMCkdW9,不播放（台词已改，旧mp3未重录）
+v194,乌塔卡塔,……我的弓……是妈妈给我的。,……俺の弓……お母さんがくれたの。,"[hesitant, proud]",FGY2WhTYpPnrIDTdsKH5,播放
+novoice-195,露伊,呜、啊……,う、あ……,改写,cgSgspJ2msm6clMCkdW9,不播放（台词已改，旧mp3未重录）
+v196,乌塔卡塔,……嗯！她是……她是最厉害的猎人！,……うん！彼女は……一番すごい狩人なの！,"[proud, bright]",FGY2WhTYpPnrIDTdsKH5,播放
+v197,昴,（露伊和这个孩子，意外地合得来。也许……这就是突破口。）,（ルイとこの子、意外と気が合うな。もしかして……これが突破口になるかもしれない。）,"[whispering, hopeful, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v198,雷姆,……你又在想什么危险的事了。,……また何か危ないことを考えてるんでしょう。,"[cold, knowing]",iQ7FJlN6gAPb76lVrQfr,播放
+v199,昴,被你看出来了啊。,見抜かれちゃったか。,"[wry, sheepish]",I3xNWCjkgeTxRIRbjZRx,播放
+v200,雷姆,……哼。别死。,……ふん。死ぬなよ。,"[cold, soft]",iQ7FJlN6gAPb76lVrQfr,播放
+v201,米泽尔达,听好了，昴。想成为修德拉格的兄弟，只有一条路：血之仪式。,よく聞け、昴。シュドラクの兄弟になりたければ、道は一つだけだ。血の儀式だ。,"[stern, formal]",hpp4J3VqNfWAUOO0d1Us,播放
+v202,昴,……血之仪式？,……血の儀式？,[questioning],I3xNWCjkgeTxRIRbjZRx,播放
+v203,米泽尔达,一个人，独自面对一只魔兽。活下来，你就是我们的兄弟。死……就不用我说了。,一人で、魔獣と向き合うんだ。生き残れば、お前は俺たちの兄弟だ。死ねば……言うまでもない。,[stern],hpp4J3VqNfWAUOO0d1Us,播放
+v204,昴,……我接受。,……受ける。,[determined],I3xNWCjkgeTxRIRbjZRx,播放
+v205,雷姆,……等一下。你连对手是什么都不知道，就说接受？,……待ってください。相手が何なのかも知らないのに、受けるんですか。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v206,昴,我知道。就是因为不知道，我才更要接受——我不能再让你们替我挡在前面了。,分かってる。知らないからこそ受ける。もう、お前たちを前に立たせない。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v207,雷姆,……哼。别死。,……ふん。死ぬなよ。,"[cold, soft]",iQ7FJlN6gAPb76lVrQfr,播放
+v208,塔莉塔,……喂，昴。仪式不是比力气，是比谁先活下来。记住，魔兽也会累，也会怕。,……おい、昴。儀式は力比べじゃない。先に生き残る方だ。覚えろ。魔獣も疲れるし、怖がる。,对白,Xb7hH8MSUJpSbSDYk0k2,播放
+v209,昴,……谢谢，塔莉塔。这句话，我记住了。,……ありがとう、タリッタ。その言葉、覚えておく。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v210,昴,（来了……这就是血之仪式的对手，丛林里的魔兽，艾尔吉纳斯。）,（来た……これが血の儀式の相手、ジャングルの魔獣、エルギーナだ。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v211,昴,……好大……！这根本不是“打一架”的体型！,……でかい……！喧嘩の相手の大きさじゃない！,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v212,昴,（正面打不过。塔莉塔说得对：它也会累，也会怕。让我怕的，是它；让它怕的，是地形。）,（正面からは勝てない。タリッタの言う通りだ。あれも疲れるし、怖がる。俺が恐れるのはあれで、あれが恐れるのは地形だ。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v213,昴,……陷阱……树根……还有它自己的冲力……！,……罠……木の根……それに、あいつの勢い……！,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v214,昴,……还没完……！再来一次……！,……まだだ……！もう一回……！,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v215,米泽尔达,……你……居然真的赢了。,……お前……本当に勝ったのか。,"[surprised, impressed]",hpp4J3VqNfWAUOO0d1Us,播放
+v216,昴,……运气……好而已……,……運が……よかっただけ……,"[weak, breathless]",I3xNWCjkgeTxRIRbjZRx,播放
+v217,雷姆,……活着就好。,……生きていれば、それでいい。,对白,iQ7FJlN6gAPb76lVrQfr,播放
+v218,米泽尔达,……不。运气，也是实力的一部分。从今天起，你是修德拉格的兄弟。,……いや。運も、実力の一部だ。今日から、お前はシュドラクの兄弟だ。,"[firm, approving]",hpp4J3VqNfWAUOO0d1Us,播放
+v219,昴,……谢谢。从今天起，我也是你们的兄弟了。,……ありがとう。今日から、俺もお前たちの兄弟だ。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v220,蒙面男子,……昴。仪式结束之后，有件事，该告诉你了。,……昴。儀式が終わった今、教えておくべきことがある。,"[calm, serious]",pNInz6obpgDQGcFmaJgB,播放
+v221,昴,……什么事？,……何だ？,[questioning],I3xNWCjkgeTxRIRbjZRx,播放
+v222,文森特,我的真名，叫文森特·佛拉基亚。佛拉基亚帝国的皇帝。,俺の本名は、ヴィンセント・ヴォラキア。ヴォラキア帝国の皇帝だ。,"[calm, revealing]",pNInz6obpgDQGcFmaJgB,播放
+v223,昴,……皇帝？！你、你就是那个皇帝？！,……皇帝！？お、お前があの皇帝なのか！？,[shocked],I3xNWCjkgeTxRIRbjZRx,播放
+v224,文森特,嗯。被自己的部下背叛，流落到这里。现在，我需要你们的力量，夺回瓜拉尔。,ああ。自分の部下に裏切られ、ここに流れ着いた。今、俺はお前たちの力が必要だ。グアラルを取り戻すために。,"[calm, serious]",pNInz6obpgDQGcFmaJgB,播放
+v225,昴,……所以，你一开始就知道我是谁？,……つまり、お前は最初から俺が誰か知ってたのか？,"[surprised, questioning]",I3xNWCjkgeTxRIRbjZRx,播放
+v226,文森特,我知道你不是帝国军的人。我也知道，你想要的，和我想要的，刚好在同一条路上。,お前が帝国軍の人間じゃないことは知ってた。それに、お前の望みと俺の望みが、ちょうど同じ道の上にあることもな。,"[calm, knowing]",pNInz6obpgDQGcFmaJgB,播放
+v227,米泽尔达,……既然你是兄弟，修德拉格就不会丢下你。塔莉塔，霍莉，库娜，准备出发。,……お前が兄弟なら、シュドラクはお前を見捨てない。タリッタ、ホーリィ、クーナ、出発の準備をしろ。,"[firm, commanding]",hpp4J3VqNfWAUOO0d1Us,播放
+v228,塔莉塔,……是，姐姐。我会盯着这个男人，不让他再乱来。,……はい、姉さん。この男を見張って、もう勝手なことはさせません。,[firm],Xb7hH8MSUJpSbSDYk0k2,播放
+v229,昴,……谢谢。真的，谢谢你们。,……ありがとう。本当に、ありがとう。,"[grateful, earnest]",I3xNWCjkgeTxRIRbjZRx,播放
+v230,文森特,别谢得太早，昴。瓜拉尔的仗，才刚刚开始。,礼を言うのはまだ早い、昴。グアラルの戦いは、まだ始まったばかりだ。,"[calm, warning]",pNInz6obpgDQGcFmaJgB,播放
+v231,雷姆,……走吧。再磨蹭，天就要黑了。,……行こう。ぐずぐずしてたら、日が暮れるよ。,"[cold, practical]",iQ7FJlN6gAPb76lVrQfr,播放
+v232,米泽尔达,……兄弟。记住，修德拉格不会丢下自己人。你去瓜拉尔，我们就跟你去。,……兄弟。覚えろ。シュドラクは身内を捨てない。お前がグラルへ行くなら、私たちも行く。,对白,hpp4J3VqNfWAUOO0d1Us,播放
+v233,塔莉塔,……我会盯着这个男人，不让他再一个人乱来。,……この男から目を離さない。もう一人で無茶はさせない。,对白,Xb7hH8MSUJpSbSDYk0k2,播放
+v234,霍莉,嘻嘻，放心吧。路上我来负责逗大家笑，免得气氛太沉。,えへへ、任せて。道中は私が笑わせる。沈んだままじゃ行けないもの。,对白,XrExE9yKIg1WjnnlVkGX,播放
+v235,库娜,……哼。别在路上出丑就行。,……ふん。道で恥をかかなければ、それでいい。,对白,pFZP5JQG7iQjIQuC4Bku,播放
+v236,昴,……谢谢你们。真的，谢谢。,……ありがとう。本当に、ありがとう。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v239,弗洛普,哟哟，几位客人，要进城的话，检查可是很严的哦。,ようよう、お客さん方。入城するなら、検査は厳しいですよ。,"[cheerful, merchant]",TX3LPaxmHKxFdv7VOQHJ,播放
+v240,昴,……我们没有身份证明，也没有贿赂的钱。,……俺たちには身分証明も、賄賂の金もない。,[troubled],I3xNWCjkgeTxRIRbjZRx,播放
+v241,弗洛普,哈哈，那就交给我吧。商人嘛，最擅长的就是……把“没有”变成“有”。,ははは、それなら俺に任せな。商人ってのはね、一番得意なのが……「無い」を「有る」に変えることなんだよ。,"[laughing, confident]",TX3LPaxmHKxFdv7VOQHJ,播放
+v242,米蒂安,哥哥，别光说大话。先帮他们把马车藏好。,お兄ちゃん、口だけじゃだめよ。まず彼らの馬車を隠してあげて。,"[cheerful, scolding]",FGY2WhTYpPnrIDTdsKH5,播放
+v243,弗洛普,是是，妹妹大人。,はいはい、妹様。,[easygoing],TX3LPaxmHKxFdv7VOQHJ,播放
+v244,昴,（弗洛普和米蒂安……意外的可靠。这两个人，也许能成为同伴。）,（フロップとメディウム……意外と頼りになる。この二人、仲間になれるかもしれない。）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v245,托德,……站住。,……止まれ。,对白,bIHbv24MWmeRgasZH58o,播放
+v246,昴,托德……！你怎么会在这里？！,トッド……！なんでお前がここにいる！,对白,I3xNWCjkgeTxRIRbjZRx,播放
+novoice-245,托德,……呵。我就知道你没死透。军营那天我就决定了：再见面，不留活口。,……ふ。死にきれてないとは思っていた。軍営のあの日に決めた。次に会ったら、生かしてはおかない。,改写,bIHbv24MWmeRgasZH58o,不播放（台词已改，旧mp3未重录）
+v248,弗洛普,哟哟，这位军爷，认错人了吧？我们只是路过的商人——,ようよう、兵隊さん、人違いかな？私たちはただの通りがかりの商人で——,对白,TX3LPaxmHKxFdv7VOQHJ,播放
+v249,托德,商人？商人会带着一身杀气逛街市吗？你这种人，活着就是危险。,商人？殺気をまとって街を歩く商人がいるか。お前のような奴は、生きているだけで危ない。,对白,bIHbv24MWmeRgasZH58o,播放
+v250,昴,……呃……！,……ぐっ……！,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v251,昴,（……又来了吗。死亡回归。）,（……またか。死に戻り。）,"[whispering, grim, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v252,昴,……托德。你以为，我是一个人来的吗？我知道你在这里——城里到处都是我们的人。,……トッド。俺が一人で来たと思うか。お前がここにいるのは知っている。街には、こちらの人間がいる。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v253,托德,……什么？,……何だ？,对白,bIHbv24MWmeRgasZH58o,播放
+v254,露伊,……昴！趴下！,……昴！伏せて！,对白,cgSgspJ2msm6clMCkdW9,播放
+v255,托德,……有意思。昴，我记住你了。,……面白い。昴、覚えたぞ。,对白,bIHbv24MWmeRgasZH58o,播放
+v256,贾马尔,托德！街口已经封住了，他们跑不掉——,トッド！街の出口は塞いだ。逃げられん——,对白,SOYHLrjzK2X1ezoPC6cr,播放
+v257,昴,……听好了。想混进一座要塞都市，光靠一张嘴可不行——得靠一张脸、一支舞，还有一个让人记不住真名的名字。扮成舞团混进去，就是最无害的模样。,……いいか。要塞都市に紛れ込むのに、口先だけじゃ足りない。顔と、踊りと、本名を覚えさせない名前だ。舞団に化けて入る。それが一番無害に見える。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v258,米蒂安,……昴的主意不错。先把马车藏好，再把乐器擦亮。,……昴の考えは悪くない。先に荷車を隠して、楽器を磨こう。,对白,FGY2WhTYpPnrIDTdsKH5,播放
+v259,弗洛普,哟哟，扮成舞团？小子，你脑子转得挺快嘛。,ようよう、舞団に化ける？坊主、頭の回転がいいな。,对白,TX3LPaxmHKxFdv7VOQHJ,播放
+v260,文森特,嗯。城门检查只认“看起来无害的人”。舞团，就是最无害的模样。,ああ。城門は「無害に見える者」しか通さない。舞団は、その最たるものだ。,对白,pNInz6obpgDQGcFmaJgB,播放
+v261,昴,（……呼。还好他们都同意了。只要能进城，扮什么都行。）,（……ふう。同意してくれてよかった。中に入れるなら、何に化けてもいい。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v262,弗洛普,哈哈，那就这么定了。你们五个——昴、文森特、我、库娜、塔莉塔——负责上台；其他人负责接应。,はは、決まりだ。舞台に立つのは五人——昴、ヴィンセント、俺、クーナ、タリッタ。残りは控えだ。,对白,TX3LPaxmHKxFdv7VOQHJ,播放
+v263,昴,……为什么……为什么是我要穿裙子啊？！,……どうして……どうして俺がスカートを穿かなきゃいけないんだよ！？,"[panicked, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v264,文森特,因为你最合适，昴。别抱怨了，我和弗洛普都准备好了。,お前が一番似合うからだ、昴。文句はよせ。俺もフロップも、もう支度はできている。,对白,pNInz6obpgDQGcFmaJgB,播放
+v265,弗洛普,哈哈，娜姿蜜小姐，你今天可真漂亮。,ははは、ナツミお嬢さん、今日は本当にお綺麗だ。,"[laughing, teasing]",TX3LPaxmHKxFdv7VOQHJ,播放
+v266,昴,……闭嘴，弗洛普。你自己的裙子也好不到哪去。,……黙れ、フロップ。お前のスカートだって大して変わらないだろ。,[annoyed],I3xNWCjkgeTxRIRbjZRx,播放
+v267,塔莉塔,……行了，别闹了。城门检查一过，我们五个一起上台——我和库娜也扮舞者。,……もういい、騒ぐな。城門を抜けたら、五人で舞台だ。クーナも私も、踊り手に化ける。,对白,Xb7hH8MSUJpSbSDYk0k2,播放
+v268,库娜,……哼。你们三个，最好别在台上出丑。,……ふん。お前たち三人、舞台で恥をかくんじゃないよ。,[sullen],pFZP5JQG7iQjIQuC4Bku,播放
+v269,霍莉,嘻嘻，放心吧。我跟着乐器混进大厅里等着——要是有人追进来，我拦住他。,えへへ、大丈夫。私は楽器に紛れて広間で待つ。誰かが追ってきたら、止めてあげる。,对白,XrExE9yKIg1WjnnlVkGX,播放
+v270,库娜,……谁会和人吵起来啊！,……誰が人と喧嘩するって言うのよ！,"[annoyed, shouting]",pFZP5JQG7iQjIQuC4Bku,播放
+novoice-269,齐克尔,……先看人，再谈请不请。可疑的舞团，我这阵子见得够多了。,……先に人を見る。招くかどうかは、そのあとだ。怪しい舞団は、このところ見飽きた。,改写,pqHfZKP75CvOlQylNhV4,不播放（台词已改，旧mp3未重录）
+v272,齐克尔,……不过，音乐好听是一回事，人可疑是另一回事。,……ただし、音楽がいいことと、人が怪しいことは、別だ。,对白,pqHfZKP75CvOlQylNhV4,播放
+v273,齐克尔,（那个叫娜姿蜜的舞者，舞步很稳，眼神却不像舞者。像一个在战场上数过脚步的人。）,（ナツミという踊り手は、足取りが安定している。目は踊り手のものじゃない。戦場で歩数を数えてきた目だ。）,内心,pqHfZKP75CvOlQylNhV4,不播放（内心）
+v274,齐克尔,……有意思。瓜拉尔最近，来了不少“有意思”的人。,……面白い。グラルには最近、「面白い」人間がよく来る。,对白,pqHfZKP75CvOlQylNhV4,播放
+v275,齐克尔,（不管你们是谁，只要不先动手，我就先看你们跳完这一支舞。）,（何者でもいい。先に手を出さないなら、この一曲は最後まで見てやる。）,内心,pqHfZKP75CvOlQylNhV4,不播放（内心）
+v276,齐克尔,……哦？舞团？最近城里气氛紧张，正好需要一点音乐。,……ほう？舞踏団か。最近、城の中は物々しいから、ちょうど音楽が欲しかったところだ。,"[mild, interested]",pqHfZKP75CvOlQylNhV4,播放
+v277,昴,（他就是齐克尔·奥斯曼，瓜拉尔的二等将军。看起来……完全不像将军。）,（こいつがジークル・オスマン、グアラルの二等将軍か。見た目は……全然将軍らしくない。）,"[whispering, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v278,齐克尔,哈哈，别看我这样，我可是很懂欣赏的。你们，就在士兵面前表演一场吧。,はは、見た目はこうでも、俺は鑑賞にはうるさいんだよ。お前たち、兵士たちの前で一曲披露してくれ。,"[laughing, hearty]",pqHfZKP75CvOlQylNhV4,播放
+v279,昴,……好。我们表演。,……わかった。披露する。,"[serious, resolved]",I3xNWCjkgeTxRIRbjZRx,播放
+v280,齐克尔,……嗯。你们的舞，很有意思。尤其是你，娜姿蜜小姐。,……うん。お前たちの踊り、面白いな。特に君、ナツミお嬢さん。,"[pleased, probing]",pqHfZKP75CvOlQylNhV4,播放
+v281,昴,（他的目光停在我身上，比停在别人身上久了一点。是欣赏，还是怀疑？）,（あいつの視線が、俺の上で少し長い。鑑賞か、疑いだ。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v282,昴,（别慌。舞团的娜姿蜜，不会慌。）,（慌てるな。舞団のナツミは、慌てない。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v283,昴,（糟了……他是不是看出来了？）,（まずい……見抜かれたか？）,"[whispering, panicked, inner thoughts]",I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v284,昴,（……开始了。别去想剑，别去想齐克尔。想舞步，想音乐，想——活下去。）,（……始まった。剣は考えるな。シクルも考えるな。ステップと、音楽と——生きることだけ考えろ。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v285,弗洛普,（小声）哟，娜姿蜜，笑一个。台下可全是拿剑的人。,（小声）よう、ナツミ、笑って。下は剣を持った連中ばかりだ。,内心,TX3LPaxmHKxFdv7VOQHJ,不播放（内心）
+v286,文森特,（小声）……别说话。跳。,（小声）……話すな。踊れ。,内心,pNInz6obpgDQGcFmaJgB,不播放（内心）
+v287,昴,（音乐……比排练的时候更快。心跳也更快。）,（音楽が……稽古のときより速い。心臓も、それ以上に速い。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v288,齐克尔,……哦？,……ほう？,对白,pqHfZKP75CvOlQylNhV4,播放
+v289,齐克尔,（这支舞……不只是好看。每个人的脚步，都像在数着什么。）,（この踊りは……見た目だけじゃない。誰の足も、何かを数えている。）,内心,pqHfZKP75CvOlQylNhV4,不播放（内心）
+v290,昴,（他的目光……一直在我身上。不对，是在比安卡身上。）,（視線は……ずっと俺か。違う。ビアンカの方だ。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+v291,文森特,（……很好。他的注意力，全在我这里。）,（……よし。あいつの注意は、全部こちらにある。）,内心,pNInz6obpgDQGcFmaJgB,不播放（内心）
+v292,齐克尔,哈哈哈！好！跳得好！,ははは！いい！よく踊った！,对白,pqHfZKP75CvOlQylNhV4,播放
+v293,齐克尔,（……太美了。这支舞，像有什么魔力。）,（……美しい。この踊りには、何かがかかっている。）,内心,pqHfZKP75CvOlQylNhV4,不播放（内心）
+v294,齐克尔,……跳得太好了。这把剑，配得上今晚的舞——拿着它，再跳一支。,……よく踊った。この剣は、今夜の舞にふさわしい。持って、もう一曲だ。,对白,pqHfZKP75CvOlQylNhV4,播放
+v295,文森特,齐克尔·奥斯曼。我不是来和你打仗的。我是来，拿回属于我的东西的。,シクル・オスマン。戦いに来たのではない。自分のものを、取りに来た。,对白,pNInz6obpgDQGcFmaJgB,播放
+v296,齐克尔,……你……！,……お前……！,对白,pqHfZKP75CvOlQylNhV4,播放
+v297,文森特,我是文森特·佛拉基亚，第七十七代皇帝。瓜拉尔，从今夜起，回到我的手中。,私はヴィンセント・ヴォラキア、第七十七代皇帝だ。グラルは今夜から、私の手に戻る。,对白,pNInz6obpgDQGcFmaJgB,播放
+v298,齐克尔,……皇帝陛下。您亲自来，瓜拉尔……就没有再抵抗的理由了。,……皇帝陛下。あなた自らお越しなら、グアラルに……抵抗する理由はありません。,"[respectful, surprised]",pqHfZKP75CvOlQylNhV4,播放
+v299,文森特,嗯。打开城门，不要流血。,うむ。城門を開けよ。血を流すな。,"[calm, commanding]",pNInz6obpgDQGcFmaJgB,播放
+v300,齐克尔,……遵命。瓜拉尔，归顺于您。,……承知しました。グアラルは、あなたに帰順いたします。,[respectful],pqHfZKP75CvOlQylNhV4,播放
+v301,昴,……真的……不流血就拿下了？,……本当に……血を流さずに落としたのか？,[surprised],I3xNWCjkgeTxRIRbjZRx,播放
+v302,文森特,因为齐克尔不是为了打仗而打仗的人。这座城，从一开始就不是我们的敌人。,ジークルは戦うために戦う男じゃない。この城は、最初から俺たちの敵じゃなかったんだ。,[calm],pNInz6obpgDQGcFmaJgB,播放
+v303,昴,（没有箭，没有火，没有人倒下——至少，夺城的这一刻是这样。这座城，就这样换了一个主人。）,（矢もない。火もない。倒れた者もいない——少なくとも、城を取るこの瞬間は。この城は、こうして主を変えた。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+novoice-302,齐克尔,……皇帝陛下。大厅里这一刻，不会有人为夺城拔剑。城外和后半夜，我不敢打包票。,……皇帝陛下。広間のこの瞬間、城を奪うために剣を抜く者はいません。城の外と、深夜のことは、請け合えません。,改写,pqHfZKP75CvOlQylNhV4,不播放（台词已改，旧mp3未重录）
+v305,文森特,昴。去烧了市政厅屋顶上的旗。让整座城都看见，瓜拉尔换了主人。,昴。市庁の屋根の旗を焼け。街中に見せろ。グラルの主が変わったと。,对白,pNInz6obpgDQGcFmaJgB,播放
+v306,昴,……嗯。我知道了。,……ああ。分かった。,对白,I3xNWCjkgeTxRIRbjZRx,播放
+v307,托德,……那个烧旗的人……是昴。,……旗を焼いているのは……昴だ。,对白,bIHbv24MWmeRgasZH58o,播放
+v308,贾马尔,托德！大厅里还有我们的人——,トッド！広間にはまだ味方の者が——,对白,SOYHLrjzK2X1ezoPC6cr,播放
+novoice-307,托德,……不用追了。大厅归了皇帝。再进去，死的是我们。走。,……追うな。広間は皇帝のものだ。入れば死ぬのは俺たちだ。行くぞ。,改写,bIHbv24MWmeRgasZH58o,不播放（台词已改，旧mp3未重录）
+v310,阿拉基亚,……皇帝……你以为，躲在这里就安全了吗？,……皇帝……ここに隠れていれば安全だと思ったのか？,"[cold, menacing]",Xb7hH8MSUJpSbSDYk0k2,播放
+v311,米泽尔达,……什么人？！,……何者だ！？,"[shocked, shouting]",hpp4J3VqNfWAUOO0d1Us,播放
+v312,阿拉基亚,……九神将第二，阿拉基亚。来取你性命的。,……九神将第二位、アラキア。お前の命を取りに来た。,[cold],Xb7hH8MSUJpSbSDYk0k2,播放
+v313,米泽尔达,……呃……！腿……！,……うっ……！足……！,[in pain],hpp4J3VqNfWAUOO0d1Us,播放
+v314,昴,米泽尔达！！,ミゼルダ！！,"[panicked, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v315,阿拉基亚,……下一个，就是你，皇帝。,……次は、お前だ、皇帝。,"[cold, menacing]",Xb7hH8MSUJpSbSDYk0k2,播放
+v316,文森特,……阿拉基亚。退下。朕还不需要你来替朕决定生死。,……アラキア。下がれ。朕の生死を、お前に決めさせる必要はない。,"[calm, imperial]",pNInz6obpgDQGcFmaJgB,播放
+v317,阿拉基亚,……呵。皇帝的命令，对我可不管用。,……ふん。皇帝の命令なんて、俺には通じない。,"[cold, defiant]",Xb7hH8MSUJpSbSDYk0k2,播放
+v318,昴,米泽尔达！先退后！我来挡——,ミゼルダ！下がれ！俺が止める——,"[panicked, shouting]",I3xNWCjkgeTxRIRbjZRx,播放
+v319,文森特,……昴，退下。她的目标是我。,……昴、下がれ。あいつの的は私だ。,对白,pNInz6obpgDQGcFmaJgB,播放
+v320,昴,（不行……这样下去，所有人都会死在这里……必须有人，打破这个局面。）,（だめだ……このままでは、全員ここで死ぬ……誰かが、この局面を破らないと。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
+novoice-319,普莉希拉,……呵呵。神将也敢挡在本小姐面前。你的眼睛，倒还认得人。,……ふふ。神将ともあろう者が、わらわの前に立つ。その目は、まだ人を覚えているようだな。,改写,pFZP5JQG7iQjIQuC4Bku,不播放（台词已改，旧mp3未重录）
+novoice-320,阿拉基亚,……公主大人。是你。这张脸，这把还没出鞘就要发光的剑，我都认得。,……姫様。あなただ。この顔も、まだ抜かずに光りたがっているその剣も、知っている。,改写,Xb7hH8MSUJpSbSDYk0k2,不播放（台词已改，旧mp3未重录）
+novoice-321,普莉希拉,认得就不必再问名字。本小姐不会向旧识自报家门。,覚えているなら、名を聞くことはない。わらわは、旧知に名乗り直したりはしない。,改写,pFZP5JQG7iQjIQuC4Bku,不播放（台词已改，旧mp3未重录）
+v324,昴,……那把剑……红色的光……！,……あの剣……赤い光……！,[shocked],I3xNWCjkgeTxRIRbjZRx,播放
+v325,普莉希拉,阳剑啊，回应我的呼唤吧。,陽剣よ、私の呼びかけに応えなさい。,"[proud, commanding]",pFZP5JQG7iQjIQuC4Bku,播放
+novoice-324,普莉希拉,……你的血冲着我来也没用。阿拉基亚，你的对手从一开始就是我。,……その血をわらわに向けても無駄だ。アラキヤ、お前の相手は最初からわらわだ。,改写,pFZP5JQG7iQjIQuC4Bku,不播放（台词已改，旧mp3未重录）
+novoice-325,文森特,……普莉希拉。你果然来了。她认得你，比认得这整座城都清楚。,……プリシラ。やはり来たか。彼女はお前を知っている。この城より、はっきりと。,改写,pNInz6obpgDQGcFmaJgB,不播放（台词已改，旧mp3未重录）
+novoice-326,昴,（她们认识。阿拉基亚看她的眼神，不像在看路人，像在看一个不该出现、却偏偏出现的人。）,（知り合いだ。アラキヤの目は、通りすがりの者を見る目じゃない。ここにいるはずのない人が、いる、という目だ。）,改写,I3xNWCjkgeTxRIRbjZRx,不播放（台词已改，旧mp3未重录）
+novoice-327,阿拉基亚,你把我丢下的那天，可没有这么从容。今天，我不会再让你走。,私を置いていったあの日は、こんなに余裕がなかった。今日は、もう行かせない。,改写,Xb7hH8MSUJpSbSDYk0k2,不播放（台词已改，旧mp3未重录）
+novoice-328,普莉希拉,……来吧。太阳不躲血。你要试，就现在试。,……来い。太陽は血を避けない。試すなら、今だ。,改写,pFZP5JQG7iQjIQuC4Bku,不播放（台词已改，旧mp3未重录）
+novoice-329,普莉希拉,……够了。你的血连我的衣角都碰不到。,……十分だ。お前の血は、わらわの裾にも届かない。,改写,pFZP5JQG7iQjIQuC4Bku,不播放（台词已改，旧mp3未重录）
+novoice-330,阿拉基亚,……呃……！这把剑……公主大人的剑……！,……くっ……！この剣は……姫様の剣……！,改写,Xb7hH8MSUJpSbSDYk0k2,不播放（台词已改，旧mp3未重录）
+v333,普莉希拉,……结束了。把她关进地下牢房——这样的人，杀了太可惜，留着才有用。,……終わりだ。地下牢へ入れろ。こういう者は、殺すには惜しい。置いておく方が役に立つ。,对白,pFZP5JQG7iQjIQuC4Bku,播放
+v334,托德,……守卫都解决了。贾马尔，动作快。,……見張りは片付けた。ジャマル、急げ。,对白,bIHbv24MWmeRgasZH58o,播放
+v335,贾马尔,托德，你确定要这么做？大厅里还有人——,トッド、本当にやるのか。広間にはまだ人が——,对白,SOYHLrjzK2X1ezoPC6cr,播放
+v336,霍莉,嘻嘻，站住——这里，可不是你们该来的地方。,えへへ、そこで止まれ。ここは、あなたたちが来る場所じゃない。,对白,XrExE9yKIg1WjnnlVkGX,播放
+v337,贾马尔,……托德，你先走。这里交给我。,……トッド、先に行け。ここは俺が引き受ける。,对白,SOYHLrjzK2X1ezoPC6cr,播放
+v338,托德,贾马尔——,ジャマル——,对白,bIHbv24MWmeRgasZH58o,播放
+v339,贾马尔,……别回头。能带阿拉基亚大人出去的人，只有你。,……振り返るな。アラキヤ様を連れ出せるのは、お前だけだ。,对白,SOYHLrjzK2X1ezoPC6cr,播放
+v340,普莉希拉,……哦？你也来了，阿尔。,……ほう。アルも来たか。,对白,pFZP5JQG7iQjIQuC4Bku,播放
+v341,阿尔,……普莉希拉大人。来晚了——不过，看起来，您已经不需要我了。,……プリシラ様。遅れました。ですが、どうやら、もう私は必要ないようで。,对白,,播放
+v342,普莉希拉,……哼。来得正好，阿尔。这座城，接下来有的忙了。,……ふん。いいときに来た、アル。この城は、これから忙しくなる。,对白,pFZP5JQG7iQjIQuC4Bku,播放
+novoice-341,昴,……七个人。不是舞会上死的。后半夜托德摸进市政厅，守卫倒了七个。不流血的，只是夺城的那一刻。,……七人だ。踊りの席で死んだんじゃない。深夜、トッドが市庁に潜り込んで、見張りが七人倒れた。血を流さなかったのは、城を取るあの瞬間だけだ。,改写,I3xNWCjkgeTxRIRbjZRx,不播放（台词已改，旧mp3未重录）
+novoice-342,文森特,……舞会上没有人拔剑。这七个，记在托德账上。夺城没有变成战场，这件事同样是真的。记住他们，然后往前走。,……踊りの席で剣を抜いた者はいない。この七人は、トッドの勘定だ。城を取る戦いにはならなかった。それも本当だ。覚えて、前へ進め。,改写,pNInz6obpgDQGcFmaJgB,不播放（台词已改，旧mp3未重录）
+v345,昴,（……嗯。记住他们。然后，继续往前走。）,（……ああ。覚えておく。それから、前へ進む。）,内心,I3xNWCjkgeTxRIRbjZRx,不播放（内心）
