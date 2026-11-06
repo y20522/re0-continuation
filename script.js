@@ -33,6 +33,13 @@ window.SCRIPT = String.raw`
 @bgm tension 1500
 @amb stop
 @title 第二十六卷　序章
+@scene 监视塔的人们
+@black
+塔上的战斗停下来了。石栏外的风还在响，喊声却已经散尽。
+还留在塔里的人开始一个一个地数。少了两个。
+黑发的少年不在。闭着眼睛的蓝发少女也不在。刚才明明还在这一层。
+有人跑下楼梯，有人把走廊的门一扇扇推开。阳台边没有脚印，窗口外也没有绳索。
+没有人应。没有人留下一句要走的话。空出来的，只是两个人原本站着的那块地面。
 @scene 序幕
 ……塔里的战斗结束了。至少，昴是这么以为的。
 @se teleport
@@ -683,7 +690,7 @@ window.SCRIPT = String.raw`
 昴|（雷姆，露伊。等我。我一定会带着一个能让你们安全待着的答案，回到你们身边。）||v182
 @bgm title 2000
 @black
-@scene 待续：修德拉格村·血之仪式
+@scene 笼外·前往修德拉格村
 
 @label village_start
 @black
@@ -837,16 +844,36 @@ window.SCRIPT = String.raw`
 @show subaru normal left
 昴|……谢谢你们。真的，谢谢。||v236
 @se footsteps
-@bgm title 2000
+@bgm tension 1800
 @black
-@scene 待续：瓜拉尔·要塞都市之战
 
 @label guaral_start
-@black
-@bgm guaral 2000
 @title 第二十七卷第三章　城塞都市瓜拉尔
-@scene 城门·商队
+@scene 城外·逼近
+@bgm tension 2000
+@bg forest black
+林子在身后合拢。路变平了，前方的地平线上立起一座城。
+@show subaru serious left
+@show vincent normal right
+城墙又高又直。垛口上有人来回走动，旗帜被风扯得很响。
+文森特|撞开门，会死很多人。这座城我要拿回来，不是要把它烧掉。||
+@show mizelda normal center
+米泽尔达|修德拉格不怕打仗。但兄弟说过，进城的人还要活着出来。||
+@show taritta normal right
+@hide vincent
+塔莉塔|弓够得着垛口。够不着城门后面。||
+@show subaru calm left
+昴|那就不从墙上打。让他们自己把我们放进去。||
+昴|检查的人看刀，不看鼓。舞团、商人、看起来没威胁的队伍，才走得进城门。||
+@show vincent normal right
+文森特|……可以。先到门口。怎么混进去，交给会说话的人。||
 @bg guaral_gate fade
+@hideall
+@scene 城门前
+城门前已经排起了队。车子、箱子、被拦住再三盘问的行人。守门的人把每张脸都看两遍。
+他们停在队列外面。城还没有开，仗也还没有打响。
+@bgm guaral 2000
+@scene 城门·商队
 @show flop normal center
 弗洛普|哟哟，几位客人，要进城的话，检查可是很严的哦。||v239
 @show subaru serious left
@@ -1009,10 +1036,11 @@ window.SCRIPT = String.raw`
 @bg guaral_hall fade
 齐克尔|……跳得太好了。这把剑，配得上今晚的舞——拿着它，再跳一支。||v294
 @dance off
-@bgm tension 2000
+@bgm tension 150
 @se dagger
 比安卡接过剑。下一瞬，剑尖已经抵在了齐克尔的咽喉上。
 比安卡抬手扯下了假发——那张脸，是文森特·佛拉基亚。
+@hide vincent_dress
 @show vincent normal center
 文森特|齐克尔·奥斯曼。我不是来和你打仗的。我是来，拿回属于我的东西的。||v295
 @show zikr normal right
@@ -1126,6 +1154,7 @@ window.SCRIPT = String.raw`
 @scene 夜·潜入
 @bgm danger 2000
 @bg guaral_city fade
+@hideall
 夜里，托德和贾马尔从地下水道潜进市政厅，目标只有一个：被关在地下牢房的阿拉基亚。
 地下水道口倒着七名守卫。托德数得很清楚，一个不多，一个不少。夺城的舞会上没有人死；死在这里的，是这一夜里的人。
 @show todd normal center
@@ -1146,15 +1175,18 @@ window.SCRIPT = String.raw`
 @scene 市政厅·阿尔
 @bgm warm 2000
 @bg guaral_city fade
-@show priscilla normal center
+@hideall
+@show priscilla normal right
+@show al normal left
 普莉希拉|……哦？你也来了，阿尔。||v340
-一个独臂的男人停在门口的阴影里，脸上带着一道旧伤疤，腰间的剑鞘空空如也。灯照不到他，他也不往前走——普莉希拉的骑士，阿尔迪巴兰，人在画外。
+走进来的人戴着盖住整张脸的头盔，一边的袖子空着，剑还挂在腰侧。声音从头盔里面传出来。他是普莉希拉的骑士，阿尔迪巴兰。
 阿尔|……普莉希拉大人。来晚了——不过，看起来，您已经不需要我了。||v341
 普莉希拉|……哼。来得正好，阿尔。这座城，接下来有的忙了。||v342
 
 @scene 清晨·七人
 @bgm sorrow 2000
 @bg guaral_city fade
+@hideall
 @show subaru serious left
 昴|……七个人。不是舞会上死的。后半夜托德摸进市政厅，守卫倒了七个。不流血的，只是夺城的那一刻。||
 @show vincent normal right
