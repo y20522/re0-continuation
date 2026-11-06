@@ -12,6 +12,7 @@
 //   @amb 名称 / @amb stop                   环境音循环（audio/se/amb_xxx.mp3）
 //   @se 名称                                 一次性音效（audio/se/名称.mp3）
 //   @wait 毫秒                               停顿
+//   @cg 文件名                               全屏 CG（video/文件名.mp4，播放视频原声，期间压低游戏音乐和语音）
 //   语音：对白行末 ||vNNN 绑定现有 voice/vNNN.mp3。旁白不配音。
 //   改写后与录音对不上的句子写成「名字|台词||」，不播放旧 mp3，也不要改文件名。
 //   以（开头的对白是内心：不显示名字、不播放语音、不动嘴。
@@ -1012,6 +1013,7 @@ window.SCRIPT = String.raw`
 @show natsumi normal center
 @show vincent_dress normal left
 @show flop_dress normal right
+@cg cg_dress_dance
 @se rustle
 昴|（……开始了。别去想剑，别去想齐克尔。想舞步，想音乐，想——活下去。）||v284
 @se footsteps
