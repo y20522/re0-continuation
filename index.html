@@ -126,7 +126,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 /* ===== title ===== */
 #titleScr{z-index:30;overflow:hidden}
 #titleScr.off{display:none}
-#titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg) center/cover;animation:kb 26s ease-in-out infinite alternate}
+#titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg?v2.4) center/cover;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{0%{transform:scale(1.02) translate(0,0)}100%{transform:scale(1.08) translate(-14px,-8px)}}
 #titleScr .vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.28),transparent 45%),radial-gradient(ellipse at 60% 50%,transparent 55%,rgba(10,20,30,.45)),linear-gradient(0deg,rgba(10,25,20,.45),transparent 30%)}
 #titleScr .glow{position:absolute;left:50%;top:64%;width:940px;height:320px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,222,150,.30),rgba(255,200,120,.12) 45%,transparent 70%);animation:glowPulse 5s ease-in-out infinite alternate;pointer-events:none}
@@ -207,19 +207,22 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div class="glow"></div><canvas id="embers"></canvas><div id="motes"></div>
-    <div id="logo"><img src="img/title_logo.png" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
+    <div id="logo"><img src="img/title_logo.png?v2.4" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v2.3</div>
+    <div id="ver">v2.4</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
 </div></div>
-<script src="script.js"></script>
-<script src="voice/voice_data.js"></script>
-<script src="audio/audio_data.js"></script>
+<script src="script.js?v2.4"></script>
+<script src="voice/voice_data.js?v2.4"></script>
+<script src="audio/audio_data.js?v2.4"></script>
 <script>
+// 资源版本号：每次发版改这里，所有图片/音频/剧本 URL 都会带上它，浏览器就不会再用旧缓存。
+const VER='v2.4';
+const av=u=>u+(u.includes('?')?'&':'?')+'v='+VER;
 (function(){
 const $=s=>document.getElementById(s);
 const stage=$('stage');
@@ -276,7 +279,7 @@ let dancing=false; // 舞蹈模式：表演时立绘随节拍起伏摇摆（@dan
 const CW=1000,CH=1220,REFH=1150;
 const actors={};
 const now=()=>performance.now();
-function img(src,onerr){const im=new Image();if(onerr)im.onerror=onerr;im.src=src;return im;}
+function img(src,onerr){const im=new Image();if(onerr)im.onerror=onerr;im.src=av(src);return im;}
 function getActor(id){let a=actors[id];
   if(!a){const cv=document.createElement('canvas');cv.width=CW;cv.height=CH;cv.dataset.id=id;
     const k=690*(SCALE[id]||1)/REFH;cv.style.height=Math.round(CH*k)+'px';cv.style.width=Math.round(CW*k)+'px';
@@ -380,7 +383,7 @@ function audioTick(){
     if(tr.g<=0.001&&tr.tg===0&&!tr.el.paused){tr.el.pause();}}
 }
 setInterval(audioTick,50);
-function playLoop(tr,name,src,ms){tr.name=name;tr.el.src=src;tr.el.currentTime=0;tr.g=0;tr.tg=1;tr.rate=50/Math.max(50,ms);const p=tr.el.play();if(p&&p.catch)p.catch(()=>{});}
+function playLoop(tr,name,src,ms){tr.name=name;tr.el.src=av(src);tr.el.currentTime=0;tr.g=0;tr.tg=1;tr.rate=50/Math.max(50,ms);const p=tr.el.play();if(p&&p.catch)p.catch(()=>{});}
 function bgm(name,ms){ms=ms==null?1800:ms;
   if(name==='stop'||!name){music.forEach(tr=>{tr.tg=0;tr.rate=50/Math.max(50,ms);tr.name=null;});if(S)S.bgm=null;return;}
   if(S)S.bgm=name;const f=music[mFront];if(f.name===name&&f.tg>0)return;
@@ -389,11 +392,11 @@ function bgm(name,ms){ms=ms==null?1800:ms;
 function ambient(name,ms){ms=ms==null?1500:ms;
   if(name==='stop'||!name){amb.tg=0;amb.rate=50/ms;amb.name=null;if(S)S.amb=null;return;}
   if(S)S.amb=name;if(amb.name===name&&amb.tg>0)return;const info=AD.se[name];if(!info)return;playLoop(amb,name,'audio/se/'+info.f,ms);}
-function se(name){if(skip||ctrl)return;const info=AD.se[name];if(!info)return;const a=new Audio('audio/se/'+info.f);a.volume=Math.min(1,vol('vs')*(info.lv||1));const p=a.play();if(p&&p.catch)p.catch(()=>{});}
+function se(name){if(skip||ctrl)return;const info=AD.se[name];if(!info)return;const a=new Audio(av('audio/se/'+info.f));a.volume=Math.min(1,vol('vs')*(info.lv||1));const p=a.play();if(p&&p.catch)p.catch(()=>{});}
 // voice
 const vEl=new Audio();vEl.preload='auto';let vCur=null;
 function stopVoice(){if(!vEl.paused)vEl.pause();vCur=null;}
-function playVoice(id){stopVoice();if(!id||!VD[id]||vol('vv')<=0)return;vCur=id;vEl.src='voice/'+id+'.mp3';vEl.volume=vol('vv');vEl.currentTime=0;const p=vEl.play();if(p&&p.catch)p.catch(()=>{vCur=null;});}
+function playVoice(id){stopVoice();if(!id||!VD[id]||vol('vv')<=0)return;vCur=id;vEl.src=av('voice/'+id+'.mp3');vEl.volume=vol('vv');vEl.currentTime=0;const p=vEl.play();if(p&&p.catch)p.catch(()=>{vCur=null;});}
 function voiceOn(){return !!vCur&&!vEl.paused&&!vEl.ended;}
 function voiceLevel(){if(!voiceOn())return -1;const d=VD[vCur];if(!d||!d.e)return -1;const k=Math.floor(vEl.currentTime*d.r);const c=d.e.charCodeAt(Math.min(k,d.e.length-1))-48;return Math.max(0,c)/9;}
 vEl.addEventListener('ended',()=>{vCur=null;scheduleAuto();});
@@ -405,7 +408,7 @@ addEventListener('pointerdown',armTitle,true);addEventListener('keydown',armTitl
 
 // ---------- visuals ----------
 let front='bgA';
-function bgUrl(n){return 'img/bg_'+n+'.jpg';}
+function bgUrl(n){return av('img/bg_'+n+'.jpg');}
 function setBgInstant(n){S.bg=n;const a=$(front);a.style.backgroundImage=n?'url('+bgUrl(n)+')':'none';a.style.transition='none';a.style.opacity=1;
   const b=$(front==='bgA'?'bgB':'bgA');b.style.opacity=0;requestAnimationFrame(()=>{a.style.transition='';});}
 async function changeBg(n,mode){
@@ -612,8 +615,8 @@ addEventListener('keydown',e=>{
 addEventListener('keyup',e=>{if(e.key==='Control'){ctrl=false;updMode();}});
 
 // preload
-['bg_forest','bg_clearing','bg_waterfall','bg_jungle_night'].forEach(n=>{new Image().src='img/'+n+'.jpg';});
-['subaru_calm','subaru_normal','subaru_serious','subaru_pain','subaru_shock','subaru_sad','subaru_hurt','subaru_arrow','rem_cold','rem_angry','rem_soft','rem_confused','rem_shy','masked_man_normal','masked_man_smirk','louis_normal','shudraq_hunter_normal'].forEach(n=>{new Image().src='img/'+n+'.png';if(BLINK[n])new Image().src='img/'+n+'_blink.png';if(MOUTH[n]){new Image().src='img/'+n+'_mouth.png';new Image().src='img/'+n+'_mouth2.png';}});
+['bg_forest','bg_clearing','bg_waterfall','bg_jungle_night'].forEach(n=>{new Image().src=av('img/'+n+'.jpg');});
+['subaru_calm','subaru_normal','subaru_serious','subaru_pain','subaru_shock','subaru_sad','subaru_hurt','subaru_arrow','rem_cold','rem_angry','rem_soft','rem_confused','rem_shy','masked_man_normal','masked_man_smirk','louis_normal','shudraq_hunter_normal'].forEach(n=>{new Image().src=av('img/'+n+'.png');if(BLINK[n])new Image().src=av('img/'+n+'_blink.png');if(MOUTH[n]){new Image().src=av('img/'+n+'_mouth.png');new Image().src=av('img/'+n+'_mouth2.png');}});
 window.__VN={cmds,labels,get S(){return S},advance,startNew,actors,music,amb,vEl,get vCur(){return vCur},setSkip};
 })();
 </script>
