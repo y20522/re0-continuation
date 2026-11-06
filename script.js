@@ -997,10 +997,11 @@ window.SCRIPT = String.raw`
 @label vol27_ch6
 齐克尔|……跳得太好了。这把剑，配得上今晚的舞——拿着它，再跳一支。
 @dance off
-@bgm tension 2000
+@bgm tension 150
 @se dagger
 比安卡接过剑。下一瞬，剑尖已经抵在了齐克尔的咽喉上。
 比安卡抬手扯下了假发——那张脸，是文森特·佛拉基亚。
+@hide vincent_dress
 @show vincent normal center
 文森特|齐克尔·奥斯曼。我不是来和你打仗的。我是来，拿回属于我的东西的。
 @show zikr normal right
