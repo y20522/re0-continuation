@@ -17,6 +17,8 @@ html,body{width:100%;height:100%;background:#000;overflow:hidden;font-family:"VN
 #sprites canvas{position:absolute;bottom:-14px;transform:translateX(-50%);filter:drop-shadow(0 0 5px rgba(20,10,30,.45));transition:filter .35s ease}
 #sprites canvas.dim{filter:brightness(.6) saturate(.85) drop-shadow(0 0 5px rgba(20,10,30,.45))}
 #overlay{background:#000;opacity:0;transition:opacity .8s ease;pointer-events:none}
+#cgv{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;z-index:6;display:none}
+#cgv.on{display:block}
 #flash{opacity:0;pointer-events:none}
 .shake{animation:shake .45s}
 @keyframes shake{0%,100%{transform:translate(0,0)}20%{transform:translate(-12px,6px)}40%{transform:translate(10px,-8px)}60%{transform:translate(-8px,4px)}80%{transform:translate(6px,-3px)}}
@@ -126,7 +128,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 /* ===== title ===== */
 #titleScr{z-index:30;overflow:hidden}
 #titleScr.off{display:none}
-#titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg?v3.3) center/cover;animation:kb 26s ease-in-out infinite alternate}
+#titleScr .cov{position:absolute;inset:-20px;background:url(img/cover.jpg?v3.4) center/cover;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{0%{transform:scale(1.02) translate(0,0)}100%{transform:scale(1.08) translate(-14px,-8px)}}
 #titleScr .vig{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.28),transparent 45%),radial-gradient(ellipse at 60% 50%,transparent 55%,rgba(10,20,30,.45)),linear-gradient(0deg,rgba(10,25,20,.45),transparent 30%)}
 #titleScr .glow{position:absolute;left:50%;top:64%;width:940px;height:320px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(255,222,150,.30),rgba(255,200,120,.12) 45%,transparent 70%);animation:glowPulse 5s ease-in-out infinite alternate;pointer-events:none}
@@ -153,6 +155,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="layer" id="bgLayer"><div class="bg" id="bgA"></div><div class="bg" id="bgB" style="opacity:0"></div></div>
   <div class="layer" id="sprites"></div>
   <div class="layer" id="overlay"></div>
+  <video id="cgv" playsinline preload="auto" disablepictureinpicture></video>
   <div class="layer" id="flash"></div>
   <div class="layer" id="chapter"><div class="card"></div></div>
   <div id="aff">♥ 雷姆的信赖 <span id="affv">0</span></div>
@@ -207,21 +210,21 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
   <div class="layer" id="titleScr">
     <div class="cov"></div><div class="vig"></div><div class="glow"></div><canvas id="embers"></canvas><div id="motes"></div>
-    <div id="logo"><img src="img/title_logo.png?v3.3" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
+    <div id="logo"><img src="img/title_logo.png?v3.4" alt="Re:从零开始的异世界生活 帝国篇第二十七卷"></div>
     <div class="menu">
       <button class="obtn sel" id="tStart">开始游戏</button><button class="obtn" id="tCh">章节选择</button><button class="obtn" id="tLoad">读取进度</button><button class="obtn" id="tCfg">设置</button><button class="obtn" id="tHelp">操作说明</button>
     </div>
-    <div id="ver">v3.3</div>
+    <div id="ver">v3.4</div>
     <div class="note">个人非商业同人作品 · 剧情原创改写 · 图片为 AI 生成 · 配音/音乐/音效见 CREDITS.txt</div>
   </div>
   <div id="toast"></div>
 </div></div>
-<script src="script.js?v3.3"></script>
-<script src="voice/voice_data.js?v3.3"></script>
-<script src="audio/audio_data.js?v3.3"></script>
+<script src="script.js?v3.4"></script>
+<script src="voice/voice_data.js?v3.4"></script>
+<script src="audio/audio_data.js?v3.4"></script>
 <script>
 // 资源版本号：每次发版改这里，所有图片/音频/剧本 URL 都会带上它，浏览器就不会再用旧缓存。
-const VER='v3.3';
+const VER='v3.4';
 const av=u=>u+(u.includes('?')?'&':'?')+'v='+VER;
 (function(){
 const $=s=>document.getElementById(s);
@@ -404,7 +407,7 @@ function mkTrack(){const a=new Audio();a.loop=true;a.preload='auto';return {el:a
 const music=[mkTrack(),mkTrack()];let mFront=0;const amb=mkTrack();
 let fadeIv=null;
 function audioTick(){
-  for(const tr of [...music,amb]){if(tr.g!==tr.tg){const st=tr.rate||0.05;tr.g+=Math.sign(tr.tg-tr.g)*Math.min(Math.abs(tr.tg-tr.g),st);}
+  for(const tr of [...music,amb]){if(cgAudioHeld){tr.el.pause();continue;}if(tr.g!==tr.tg){const st=tr.rate||0.05;tr.g+=Math.sign(tr.tg-tr.g)*Math.min(Math.abs(tr.tg-tr.g),st);}
     const base=tr===amb?vol('vs')*0.55:vol('vb')*(tr.lv||1);tr.el.volume=Math.max(0,Math.min(1,tr.g*base));
     if(tr.g<=0.001&&tr.tg===0&&!tr.el.paused){tr.el.pause();}}
 }
@@ -505,6 +508,55 @@ function endType(){clearInterval(tTimer);typing=false;$('text').textContent=full
 function scheduleAuto(){clearTimeout(autoTimer);if(!waiting)return;
   if(skip||ctrl)autoTimer=setTimeout(advance,70);else if(auto){if(voiceOn())return;autoTimer=setTimeout(advance,vCur===null&&lastVoiced?Math.max(600,cfg.as*0.6):cfg.as+full.length*35);}}
 
+// ---------- CG（全屏视频，播放原声；期间暂停游戏音乐和语音）----------
+let cgSkip=null,cgAudioHeld=false;
+function holdGameAudio(){
+  if(cgAudioHeld)return;
+  cgAudioHeld=true;stopVoice();
+  for(const tr of [...music,amb]){tr._cgWasPlaying=!tr.el.paused&&tr.tg>0;tr.el.pause();}
+}
+function releaseGameAudio(){
+  if(!cgAudioHeld)return;
+  cgAudioHeld=false;
+  for(const tr of [...music,amb]){if(tr._cgWasPlaying){const p=tr.el.play();if(p&&p.catch)p.catch(()=>{});}tr._cgWasPlaying=false;}
+}
+function stopCg(){
+  cgSkip=null;releaseGameAudio();
+  const v=$('cgv');if(!v)return;
+  v.onended=null;
+  try{v.pause();}catch(e){}
+  v.classList.remove('on');
+}
+function playCg(name,gen){
+  if(skip||ctrl)return Promise.resolve();
+  const v=$('cgv');
+  v.muted=false;v.defaultMuted=false;v.volume=1;
+  const src=av('video/'+name+'.mp4');
+  if(!v.src||v.src.indexOf(name+'.mp4')<0)v.src=src;
+  try{v.currentTime=0;}catch(e){}
+  v.classList.add('on');
+  $('box').classList.add('hide');$('bar').style.opacity='0';
+  holdGameAudio();
+  let done=false;
+  const finish=()=>{done=true;};
+  cgSkip=finish;v.onended=finish;
+  const p=v.play();if(p&&p.catch)p.catch(()=>{});
+  return new Promise(resolve=>{
+    const tick=()=>{
+      if(done||!alive(gen)||skip||ctrl){
+        cgSkip=null;v.onended=null;
+        try{v.pause();}catch(e){}
+        v.classList.remove('on');
+        releaseGameAudio();
+        if(alive(gen)){if(!uiHidden)$('box').classList.remove('hide');$('bar').style.opacity='1';}
+        resolve();return;
+      }
+      setTimeout(tick,40);
+    };
+    tick();
+  });
+}
+
 // ---------- runner ----------
 let runGen=0;
 function alive(gen){return gen===runGen;}
@@ -533,6 +585,7 @@ async function run(){
       case 'flash':await flash(c.args[0]);if(!alive(gen))return;break;
       case 'shake':shake();break;
       case 'dance':dancing=(c.args[0]==='on');break;
+      case 'cg':case 'video':S.i++;await playCg(c.args[0]||'cg_dress_dance',gen);if(!alive(gen))return;continue;
       case 'jump':S.i=labels[c.args[0]];continue;
       case 'if':{const m=c.args[0].match(/aff>=(\d+)/);if(m&&S.aff>=+m[1]){S.i=labels[c.args[1]];continue;}break;}
       case 'end':if(alive(gen)){busy=false;endGame();}return;
@@ -545,6 +598,7 @@ let preSnap=null;
 function snapPre(preview){preSnap={i:S.i,aff:S.aff,bg:S.bg,black:S.black,scene:S.scene,chapter:S.chapter||S.scene,bgm:S.bgm,amb:S.amb,sprites:JSON.parse(JSON.stringify(S.sprites)),log:log.slice(),preview:preview!=null?preview:(full||'')};}
 function advance(){
   clearTimeout(autoTimer);
+  if(cgSkip){cgSkip();return;}
   if(anyPanel()||$('choices').classList.contains('on')||!inGame)return;
   if(uiHidden){toggleHide();return;}
   if(typing){endType();return;}
@@ -565,7 +619,7 @@ function endGame(){
 
 // ---------- modes ----------
 function setAuto(v){auto=v;document.querySelector('[data-a=auto]').classList.toggle('act',v);updMode();if(v&&waiting)scheduleAuto();}
-function setSkip(v){skip=v;document.querySelector('[data-a=skip]').classList.toggle('act',v);updMode();if(v){if(typing)endType();else if(waiting)scheduleAuto();}}
+function setSkip(v){skip=v;document.querySelector('[data-a=skip]').classList.toggle('act',v);updMode();if(v&&cgSkip)cgSkip();if(v){if(typing)endType();else if(waiting)scheduleAuto();}}
 function updMode(){const m=$('mode');const t=skip||ctrl?'▶▶ 快进中':auto?'▶ 自动中':'';m.textContent=t;m.style.display=t?'block':'none';}
 function toggleHide(){uiHidden=!uiHidden;$('box').classList.toggle('hide',uiHidden);$('bar').style.display=uiHidden?'none':'flex';}
 
@@ -616,7 +670,7 @@ function openSlots(mode){
   openP('slotP');
 }
 function loadData(d){
-  runGen++;enterGame();S=newState();S.i=d.i;S.aff=d.aff||0;S.scene=d.scene||'';S.chapter=d.chapter||d.scene||'';S.play=d.play||0;log=d.log||[];
+  runGen++;stopCg();enterGame();S=newState();S.i=d.i;S.aff=d.aff||0;S.scene=d.scene||'';S.chapter=d.chapter||d.scene||'';S.play=d.play||0;log=d.log||[];
   clearSprites(true);
   if(d.bg){setBgInstant(d.bg);}
   S.black=!!d.black;$('overlay').style.opacity=S.black?1:0;
@@ -628,9 +682,9 @@ function loadData(d){
 
 // ---------- title ----------
 function enterGame(){$('titleScr').classList.add('off');inGame=true;uiHidden=false;$('box').classList.remove('hide');$('bar').style.display='flex';$('bar').style.opacity=1;$('choices').classList.remove('on');}
-function goTitle(){runGen++;busy=false;inGame=false;dancing=false;stopVoice();ambient('stop',1200);bgm('title',2000);holdAuto=false;holdSkip=false;setAuto(false);setSkip(false);closeP();clearTimeout(autoTimer);clearInterval(tTimer);typing=false;waiting=false;
+function goTitle(){runGen++;stopCg();busy=false;inGame=false;dancing=false;stopVoice();ambient('stop',1200);bgm('title',2000);holdAuto=false;holdSkip=false;setAuto(false);setSkip(false);closeP();clearTimeout(autoTimer);clearInterval(tTimer);typing=false;waiting=false;
   $('choices').classList.remove('on');$('titleScr').classList.remove('off');updAff();}
-function startNew(){enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
+function startNew(){stopCg();enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();}
 $('tStart').onclick=startNew;
 const CHAPTERS=[
  ['start','第二十六卷　序章 · 序幕'],
@@ -653,7 +707,7 @@ const CHAPTERS=[
  ['vol27_ch6','第二十七卷第五章 · 不流血的夺城'],
  ['ch6_red','第二十七卷第六章 · 桀骜不驯之红']
 ];
-function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{runGen++;closeP();enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;S.black=true;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
+function jumpToChapter(label){if(!(label in labels)){toast('该章节暂未开放');return;}const go=()=>{runGen++;stopCg();closeP();enterGame();stopVoice();dancing=false;bgm('stop',1500);ambient('stop',1000);S=newState();S.i=labels[label];log=[];clearSprites(true);setBgInstant(null);$('overlay').style.opacity=1;S.black=true;$('text').textContent='';$('name').classList.add('empty');updAff();busy=false;run();};if(inGame)askConfirm('跳转章节会从新状态开始，好感度归零，未保存的进度将会丢失。确定跳转吗？',go);else go();}
 function openChapters(){const w=$('chList');w.innerHTML='';CHAPTERS.forEach(([label,title])=>{const b=document.createElement('button');b.textContent=title;b.onclick=e=>{e.stopPropagation();jumpToChapter(label);};w.appendChild(b);});openP('chP');}
 $('tCh').onclick=openChapters;
 $('tLoad').onclick=()=>openSlots('load');
@@ -685,7 +739,7 @@ addEventListener('keydown',e=>{
   if(!inGame){if(e.key==='ArrowDown'){e.preventDefault();selT(tSel+1);}else if(e.key==='ArrowUp'){e.preventDefault();selT(tSel-1);}
     else if(e.key==='Enter'||e.key===' '){e.preventDefault();tBtns[tSel].click();}return;}
   if(e.key===' '||e.key==='Enter'){e.preventDefault();advance();}
-  else if(e.key==='Control'){if(!ctrl){ctrl=true;updMode();if(typing)endType();else scheduleAuto();}}
+  else if(e.key==='Control'){if(!ctrl){ctrl=true;updMode();if(cgSkip)cgSkip();if(typing)endType();else scheduleAuto();}}
   else if(e.key==='a'||e.key==='A')setAuto(!auto);
   else if(e.key==='s'||e.key==='S')setSkip(!skip);
   else if(e.key==='l'||e.key==='L')openLog();
@@ -696,6 +750,7 @@ addEventListener('blur',()=>{if(ctrl){ctrl=false;updMode();}});
 
 // preload
 ['bg_forest','bg_clearing','bg_waterfall','bg_jungle_night','bg_military_camp','bg_shudrak_village','bg_ritual','bg_guaral_gate','bg_guaral_city','bg_guaral_hall'].forEach(n=>{new Image().src=av('img/'+n+'.jpg');});
+{const v=$('cgv');v.preload='auto';v.src=av('video/cg_dress_dance.mp4');}
 ['subaru_calm','subaru_normal','subaru_serious','subaru_pain','subaru_shock','subaru_sad','subaru_hurt','subaru_arrow','rem_cold','rem_angry','rem_soft','rem_confused','rem_shy','masked_man_normal','masked_man_smirk','louis_normal','taritta_normal','todd_normal','mizelda_normal','jamal_normal','vincent_normal','priscilla_normal','natsumi_normal','vincent_dress_normal','flop_dress_normal','flop_normal','zikr_normal','arakiya_normal','al_normal'].forEach(n=>{new Image().src=av('img/'+n+'.png');if(BLINK[n])new Image().src=av('img/'+n+'_blink.png');if(MOUTH[n]){new Image().src=av('img/'+n+'_mouth.png');new Image().src=av('img/'+n+'_mouth2.png');}});
 window.__VN={cmds,labels,get S(){return S},advance,startNew,actors,music,amb,vEl,get vCur(){return vCur},setSkip};
 })();
