@@ -719,7 +719,7 @@ window.SCRIPT = String.raw`
 @show utakata normal center
 乌塔卡塔|……你、你别过来！外人……不许碰我们的东西！||v192
 @show louis normal right
-露伊|啊……呜。||
+露伊|啊……呜。||v112
 她把手指停在半空，眼睛盯着那张弓，到底没有碰上去。
 @show utakata normal center
 乌塔卡塔|……我的弓……是妈妈给我的。||v194
